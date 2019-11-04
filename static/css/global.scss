@@ -1,0 +1,16 @@
+$background:rgba(10,10,10,0.9);
+$foreground:rgba(80,80,250,9);
+$accent:rgba(100,255,100,9);
+@mixin horizontal{
+    left:50%;
+    transform:translateX(-50%);
+}
+@mixin vertical{
+    top:50%;
+    transform: translateY(-50%);
+}
+@mixin center{
+    top:50%;
+    left:50%;
+    transform:translate(-50%,-50%);
+}
