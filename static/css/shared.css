@@ -195,4 +195,20 @@ div.service {
 h4.subheader {
   font-size: 18px;
 }
+
+@media only screen and (max-width: 700px) {
+  div.bigcard {
+    width: 90%;
+    display: block;
+  }
+  div.image {
+    height: 100px;
+    width: 100px;
+    border-radius: 50%;
+    position: relative;
+    left: 50%;
+    -webkit-transform: translateX(-50%);
+            transform: translateX(-50%);
+  }
+}
 /*# sourceMappingURL=shared.css.map */

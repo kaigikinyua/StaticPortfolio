@@ -1,0 +1,40 @@
+@import 'global';
+body{
+    background-image: url('../images/1.png');
+    background-position: center;
+    background-attachment: fixed;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+div.pcontainer{
+    background:none;
+    position:relative;
+    @include center;
+    max-width:900px;
+    padding:0px;
+}
+div.project{
+    color:white;
+    background:$background;
+    padding:10px;
+    font-family: Arial, Helvetica, sans-serif;
+    font-size:18px;
+}
+div.project h3{
+    font-family:Arial, Helvetica, sans-serif;
+    font-weight:lighter;
+    margin:10px 0px;
+    color:$accent;
+}
+div.pimage{
+    position: relative;
+    width:100%;
+    max-height: 50%;
+}
+div.pimage img{
+    position:relative;
+    height:auto;
+    width:100%;
+    left:50%;
+    transform: translateX(-50%);
+}
