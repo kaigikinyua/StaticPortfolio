@@ -210,5 +210,8 @@ h4.subheader {
     -webkit-transform: translateX(-50%);
             transform: translateX(-50%);
   }
+  div.contentcard p {
+    font-size: 16px;
+  }
 }
 /*# sourceMappingURL=shared.css.map */

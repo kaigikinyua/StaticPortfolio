@@ -46,4 +46,10 @@ div.pimage img {
   -webkit-transform: translateX(-50%);
           transform: translateX(-50%);
 }
+
+@media only screen and (max-width: 700px) {
+  div.project {
+    margin-bottom: 30px;
+  }
+}
 /*# sourceMappingURL=projects.css.map */
