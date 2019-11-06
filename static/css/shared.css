@@ -183,13 +183,59 @@ div.serv {
 }
 
 div.service {
-  padding: 10px;
   text-align: center;
-  margin: auto;
   background: rgba(10, 10, 10, 0.9);
   position: relative;
   height: 100%;
   margin: 20px 20px;
+  background-position: center;
+  background-size: cover;
+  background-repeat: no-repeat;
+  -webkit-box-shadow: 20px 10px 20px 10px #323232;
+          box-shadow: 20px 10px 20px 10px #323232;
+}
+
+div.serHeader {
+  position: relative;
+  width: 100%;
+  color: #64ff64;
+  padding: 10px 0px;
+  font-size: 25px;
+  background: rgba(10, 10, 10, 0.9);
+}
+
+ul.checklist {
+  list-style-type: none;
+  position: relative;
+  left: 50%;
+  -webkit-transform: translateX(-50%);
+          transform: translateX(-50%);
+  color: black;
+  background: #9a9a9a;
+}
+
+ul.checklist li {
+  padding: 5px;
+  margin: 10px 0px;
+  font-size: 18px;
+  color: white;
+}
+
+ul.checklist i {
+  color: #64ff64;
+  font-size: 12px;
+  margin: 0 10px;
+}
+
+div.serBottom {
+  position: absolute;
+  background: rgba(10, 10, 10, 0.9);
+  padding: 10px 0px;
+  bottom: 0px;
+  text-align: center;
+  width: 100%;
+  color: #64ff64;
+  font-size: 20px;
 }
 
 h4.subheader {
@@ -215,6 +261,12 @@ h4.subheader {
   }
   div.serv {
     display: block;
+    height: auto;
+  }
+  div.serBottom {
+    position: relative;
+  }
+  div.service {
     height: auto;
   }
 }
