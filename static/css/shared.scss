@@ -3,12 +3,20 @@
     padding:0px;
     margin:0px;
 }
+::-webkit-scrollbar{
+    width:5px;
+    background: none;
+}
+::-webkit-scrollbar-thumb{
+    width:7px;
+    background: $accent;
+}
 html{
     scroll-behavior: smooth;
 }
 body{
     overflow-x:hidden;
-    background:gray;
+    background:$background;
 }
 a{
     text-decoration: none;
@@ -41,26 +49,43 @@ div.sidenav{
     position:fixed;
     right:20px;
     width:10px;
+    margin-right: 20px;
     @include vertical;
+    z-index: 100;
 }
 ul.nav{
     list-style: none;
 }
-ul.nav li{
+ul.nav a li{
     height:20px;
     width:20px;
-    border:2px solid white;
+    border:2px solid $accent;
     border-radius:50%;
     background:none;
-    margin:40px 0px;
+    margin:40px 5px;
     transition:1s;
+    color:white;
+    padding:5px;
+    
+    i{
+        position: relative;
+        @include center;
+    }
 }
+
 ul.nav li:hover{
-    background:white;
+    border:2px solid white;
+    color:$accent;
 }
 section.section{
-    height:100vh;
+    position: relative;
+    margin:20px 0px;
     width:100vw;
+    height:100vh;
+}
+section#landing{
+    position: relative;
+    height:100vh;
     background-size: cover;
     background-attachment: fixed;
     background-position: center;
@@ -85,7 +110,6 @@ div.img{
     font-size:80px;
 }
 div.text{
-    background:$background;
     padding:20px;
     color:white;
     text-align:center;
@@ -124,14 +148,36 @@ div.contentcard p{
     font-size:20px;
     margin:10px 0px;
 }
-ul.skills{
-    list-style: none;
-    font-size:18px;
-    position: relative;
-    @include horizontal;
+h4.title{
+    font-size: 19px;
+    margin:10px;
 }
-ul.skills li{
-    padding:10px 5px;
+i.fa-html5{
+    color:#FF0F0F;
+}
+i.fa-css3{
+    color:#5959FF;
+}
+i.fa-server{
+    color:lightseagreen;
+}
+div.technologies{
+    position: relative;
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    
+}
+div.tech{
+    position: relative;
+    max-width: 300px;
+    margin:5px 5px;
+    padding:10px;
+    border-bottom: 1px solid $accent;
+    h4.title{
+        text-align: center;
+        padding:10px;
+        font-size: 22px;
+    }
 }
 div.serv{
     margin:20px 0px;
@@ -188,7 +234,19 @@ div.serBottom{
 h4.subheader{
     font-size:18px;
 }
+section.animation{
+    position: relative;
+    width:100vw;
+    height:100vh;
+    background-attachment: fixed;
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+}
 @media only screen and (max-width:700px){
+    section#proff{
+        height:1400px;
+    }
     div.bigcard{
         width:90%;
         display:block;
@@ -202,6 +260,9 @@ h4.subheader{
     }
     div.contentcard p{
         font-size:16px;
+        position: relative;
+        top:0px;
+        @include horizontal;
     }
     div.serv{
         display:block;
@@ -212,5 +273,13 @@ h4.subheader{
     }
     div.service{
         height:auto;
+    }
+    div.technologies{
+        margin-top:100px;
+        display: block;
+        div.tech{
+            position: relative;
+            @include vertical;
+        }
     }
 }

@@ -7,26 +7,26 @@
     <link rel="shortcut icon" href="./static/images/me.jpg" type="image/x-icon">
     <link rel="stylesheet" href="./static/css/shared.css"/>
     <link rel="stylesheet" href="./static/css/all.min.css"/>
-    <link rel="stylesheet" href="./static/css/animations.css"/>
 </head>
 <body>
     <div class="topnav">
         <center><h2>Antony Kaigi</h2></center>
         <div>
-            <button class="active">Home</button>
-            <a href="projects.html"><button>Projects</button></a>
+            <button class="active"><i class="fa fa-home"></i></button>
+            <a href="projects.html"><button><i class="fa fa-cogs"></i></button></a>
         </div>
     </div>
     <div class="sidenav">
         <ul class="nav">
-            <a href="#landing"><li></li></a>
-            <a href="#proff"><li></li></a>
-            <a href="#education"><li></li></a>
-            <a href="#collaborate"><li></li></a>
+            <a href="#landing"><li><i class="fa fa-home"></i></li></a>
+            <a href="#proff"><li><i class="fa fa-code"></i></li></a>
+            <a href="#education"><li><i class="fa fa-user-graduate"></i></li></a>
+            <a href="#collaborate"><li><i class="fa fa-users"></i></li></a>
+            <a href="#business"><li><i class="fa fa-briefcase"></i></li></a>
         </ul>
     </div>
     <!---landing-->
-    <section class="section" id="landing" style="background-image:url('./static/images/comp.jpg')">
+    <section id="landing" style="background-image:url('./static/images/comp.jpg')">
         <div class="bigcard">
             <div class="image" style="background-image:url('./static/images/me.jpg')"></div>
             <div class="text">
@@ -34,6 +34,7 @@
                 <p>I am <i>Antony</i>,</p>
                 <p>a freelance full stack web developer dealing with a variety of web technologies.</p>
                 <table class="contacts">
+                    <tr><td><i class="fab fa-github"></i></td><td>kaigikinyua</td></tr>
                     <tr><td><i class="fab fa-twitter"></i></td><td>@tonnymacoin</td></tr>
                     <tr><td><i class="fab fa-facebook-f"></i></td><td>tonny macoin</td></tr>
                     <tr><td><i class="fab fa-reddit-alien"></i></td><td>r/o_sider</td></tr>
@@ -47,9 +48,35 @@
         <div class="contentcard">
             <div>
                 <h3 class="header">Technologies and Skills</h3>
-                <p>I mainly use <i class="html">HTML</i>, <i class="saas">Saas</i>, <i class="js">Javascript</i> for the front-end. For the backend I use <i class="py">Django</i> and <i clas="njs">NodeJs</i></p>
-                <p>I can also work with relational databases such as MySQL and SQLite</p>
-                <p>For desktop application programming I mainly work with Python3 and tkinter GUI library</p>
+                <div class="technologies">
+                    <div class="tech">
+                        <h4 class="title"><i class="fab fa-html5"></i> & <i class="fab fa-css3"></i></h4>
+                        <p>HTML5, CSS3,SaaS and Javasript are the main tools I use for the frontend of the websites I create</p>
+                        <p>I also use frontend framworks mainly VueJs to develop a much reactive and dynamic sites.</p>
+                    </div>
+                    <div class="tech">
+                        <h4 class="title"><i class="fa fa-server"></i></h4>
+                        <p>I can use Django,flask,express or PHP for the backend</p>
+                        <p>Since mainly I am a web developer I can do much of the tasks from desining,securing,hosting and developing apis and webapplications</p>
+                    </div>
+                    <div class="tech">
+                        <h4 class="title"><i class="fa fa-desktop"></i></h4>
+                        <p>I can develop desktop applications that are GUI based or even terminal scripts</p>
+                        <p>I mainly use Unix based OS and thus very effective with Ubuntu and also shell scripts</p>
+                    </div>
+                    <div class="tech">
+                        <h4 class="title"><i class="fa fa-database"></i></h4>
+                        <p>I am comfotable with MySql and Sqlite3 databases in building any application whether api,webapplication or desktop</p>
+                    </div>
+                    <div class="tech">
+                        <h4 class="title"><i class="fab fa-git"></i></h4>
+                        <p>My goto versioning application is git since it is easy to use,fast and has a large support community</p>
+                    </div>
+                    <div class="tech">
+                        <h4 class="title"><i class="fa fa-mobile"></i></h4>
+                        <p>I play around with Kotlin and Dart just to build some of my mobile application projects</p>
+                    </div>
+                </div>
             </div>
         </div>
     </section>
@@ -57,58 +84,33 @@
     <section class="section" id="education">
         <div class="bigcard">
             <div class="text">
-                <h3 class="header">Education</h3>
+                <h3 class="header"><i class="fa fa-user-graduate"></i></h3>
                 <p>I am have a degree in Computer Science from the Dedan Kimathi University in Nyeri, Kenya.</p>
                 <p>Mainly I am a self taught developer who practices the many concepts learnt from my degree to make better and efficient applications that are secure, and reliable</p>
-                <i class="fa fa-user-graduate"></i>
             </div>
             <div class="image" style="background-image:url('./static/images/college.jpg')">
             </div>
         </div>
     </section>
-    <!--Charges-->
     <section class="section" id="collaborate">
         <div class="contentcard">
-            <h3 class="header">Services</h3>
-            <p>If you would like to hire my services here are some price tables for freelance services I offer the prices are negotiable</p>
-            <div class="serv">
-                <div class="service">
-                    <div class="serHeader">Website</div>
-                    <ul class="checklist">
-                        <li><i class="fa fa-check"></i> Less than 4 pages</li>
-                        <li><i class="fa fa-check"></i> Custom UI</li>
-                        <li><i class="fa fa-check"></i> Maintainance</li>
-                        <li><i class="fa fa-times"></i> Hosting</li>
-                    </ul>
-                    <div class="serBottom">Ksh 4,000</div>
+            <h3 class="header">Freelance</h3>
+                <div class="text">
+                    <p>If you would like for me to build you a website or maintain your current site you can contact me via the email kaigikinyua@gmail.com</p>
+                    <p>I can offer the following services</p>
                 </div>
-                <div class="service">
-                    <div class="serHeader">Server Side</div>     
-                    <ul class="checklist">
-                        <li><i class="fa fa-check"></i> Full Server side</li>
-                        <li><i class="fa fa-check"></i> Database Intergration</li>
-                        <li><i class="fa fa-check"></i> Basic Frontend Design</li>
-                        <li><i class="fa fa-times"></i> API intergration</li>
-                    </ul>
-                    <div class="serBottom">Ksh 18,000</div>
+                <div class="technologies">
+                    <div class="tech">
+                        <h4 class="title">Front End</h4>
+                        <ul>
+                            
+                        </ul>
+                    </div>
                 </div>
-                <div class="service">
-                    <div class="serHeader">API</div>     
-                    <ul class="checklist">
-                        <li><i class="fa fa-check"></i> API intergration</li>
-                        <li><i class="fa fa-check"></i> Custom API</li>
-                        <li><i class="fa fa-check"></i> Database Intergration</li>
-                        <li><i class="fa fa-times"></i>Hosting</li>
-                    </ul>
-                    <div class="serBottom">Ksh 10,000</div>
-                </div>
-            </div>
         </div>
     </section>
-    <section class="animation">
-        <div class="outer_ring">
-            <!--<i class="fa fa-atom"></i>-->
-        </div>
+    <section class="animation"  style="background-image:url('./static/images/antony.png')">
+        
     </section>
     <!--Contacts-->
 </body>
