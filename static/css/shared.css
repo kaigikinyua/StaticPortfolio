@@ -150,6 +150,10 @@ h3.header {
   margin-bottom: 10px;
 }
 
+.darkbg {
+  background: rgba(10, 10, 10, 0.9);
+}
+
 div.text p {
   font-size: 24px;
   margin: 20px 0px;
@@ -266,13 +270,12 @@ ul.checklist {
   -webkit-transform: translateX(-50%);
           transform: translateX(-50%);
   color: black;
-  background: #9a9a9a;
+  text-align: center;
 }
 
 ul.checklist li {
-  padding: 5px;
-  margin: 10px 0px;
-  font-size: 18px;
+  margin: 5px 0px;
+  font-size: 16px;
   color: white;
 }
 

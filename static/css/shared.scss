@@ -119,6 +119,9 @@ h3.header{
     font-family: Arial, Helvetica, sans-serif;
     margin-bottom: 10px;
 }
+.darkbg{
+    background:$background;
+}
 div.text p{
     font-size:24px;
     margin:20px 0px;
@@ -208,12 +211,11 @@ ul.checklist{
     position: relative;
     @include horizontal;
     color:black;
-    background: lighten(gray,10);
+    text-align: center;
 }
 ul.checklist li{
-    padding:5px;
-    margin:10px 0px;
-    font-size: 18px;
+    margin:5px 0px;
+    font-size: 16px;
     color:white;
 }
 ul.checklist i{
