@@ -81,7 +81,7 @@ section.section{
     position: relative;
     margin:20px 0px;
     width:100vw;
-    height:100vh;
+    height: 100vh;
 }
 section#landing{
     position: relative;
@@ -89,6 +89,9 @@ section#landing{
     background-size: cover;
     background-attachment: fixed;
     background-position: center;
+}
+section#collaborate{
+    height:120vh;
 }
 div.bigcard{
     position: relative;
@@ -239,15 +242,22 @@ h4.subheader{
 section.animation{
     position: relative;
     width:100vw;
-    height:100vh;
+    height:70vh;
+    background: $background;
     background-attachment: fixed;
     background-position: center;
     background-size: cover;
     background-repeat: no-repeat;
+    div.darkbg{
+        background: none;
+    }
 }
 @media only screen and (max-width:700px){
     section#proff{
         height:1600px;
+    }
+    section.animation{
+        margin-top:150px;
     }
     div.bigcard{
         width:90%;

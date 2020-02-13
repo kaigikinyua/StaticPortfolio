@@ -111,6 +111,10 @@ section#landing {
   background-position: center;
 }
 
+section#collaborate {
+  height: 120vh;
+}
+
 div.bigcard {
   position: relative;
   top: 50%;
@@ -303,16 +307,24 @@ h4.subheader {
 section.animation {
   position: relative;
   width: 100vw;
-  height: 100vh;
+  height: 70vh;
+  background: rgba(10, 10, 10, 0.9);
   background-attachment: fixed;
   background-position: center;
   background-size: cover;
   background-repeat: no-repeat;
 }
 
+section.animation div.darkbg {
+  background: none;
+}
+
 @media only screen and (max-width: 700px) {
   section#proff {
     height: 1600px;
+  }
+  section.animation {
+    margin-top: 150px;
   }
   div.bigcard {
     width: 90%;
