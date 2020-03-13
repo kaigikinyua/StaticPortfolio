@@ -1,0 +1,26 @@
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>My Games</title>
+    <link rel="stylesheet" href="./static/css/all.min.css">
+    <link rel="stylesheet" href="./static/games/air.css">
+</head>
+<body>
+    <div class="game">
+        <canvas class="air" id="planes" ></canvas>
+        <div class="controls">
+            <div class="c1">
+                <input class="power" type="range" name="power" id="power">
+                <button class="control"><i class="fa fa-power-off"></i></button>
+            </div>
+            <div class="c2">
+                <button class="control"><i class="fa fa-arrow-circle-left"></i></button>
+                <button class="control"><i class="fa fa-arrow-circle-right"></i></button>
+            </div>
+        </div>
+    </div>
+</body>
+<script src="/static/js/games/plane.js"></script>
+</html>
