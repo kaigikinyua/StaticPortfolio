@@ -1,0 +1,99 @@
+* {
+  padding: 0px;
+  margin: 0px;
+}
+
+div.navbar {
+  position: fixed;
+  left: 0px;
+  top: 0px;
+  height: 100vh;
+  max-width: 200px;
+  background: red;
+  z-index: 10;
+  color: white;
+  padding: 10px;
+}
+
+div.navbar ul.menu {
+  font-family: Arial;
+  list-style-type: none;
+}
+
+div.navbar ul.menu li {
+  margin: 10px 0px;
+  padding: 5px;
+  font-size: 20px;
+}
+
+div.landing {
+  position: absolute;
+  height: 100vh;
+  width: 100vw;
+  background: green;
+  background-image: url("./download.png");
+  background-repeat: no-repeat;
+  background-position: center;
+}
+
+div.landing img {
+  image-rendering: auto;
+}
+
+div.controls {
+  position: fixed;
+  bottom: 0px;
+  width: 100vw;
+  max-height: 300px;
+  background: white;
+  text-align: center;
+  padding: 5px;
+}
+
+div.slidder {
+  position: relative;
+  height: 50px;
+  background: black;
+  z-index: 11;
+  margin-top: -25px;
+  padding: 5px;
+}
+
+div.slidder input.slidder {
+  -webkit-appearance: none;
+  -moz-appearance: none;
+       appearance: none;
+  width: 350px;
+  height: 2px;
+  background: lightgray;
+  outline: none;
+  border-radius: 5px;
+}
+
+div.slidder input.slidder::-moz-range-thumb {
+  width: 25px;
+  height: 25px;
+  border-radius: 50%;
+  background: #4CAF50;
+  cursor: pointer;
+}
+
+input.slidder::-webkit-slider-thumb {
+  -webkit-appearance: none;
+  appearance: none;
+  width: 25px;
+  height: 25px;
+  border-radius: 50%;
+  background: white;
+  cursor: pointer;
+}
+
+div.buttons {
+  padding: 10px;
+}
+
+button.control {
+  padding: 10px;
+  font-size: 18px;
+}
+/*# sourceMappingURL=main.css.map */

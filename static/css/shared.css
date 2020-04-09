@@ -368,4 +368,33 @@ section.animation div.darkbg {
             transform: translateY(-50%);
   }
 }
+
+svg.loading {
+  position: fixed;
+  height: 100%;
+  width: 100%;
+  z-index: 200;
+  background: black;
+}
+
+svg.loading .icon {
+  stroke: #64ff64;
+  stroke-width: 5;
+  fill: transparent;
+  stroke-dasharray: 100;
+  -webkit-animation: loader 2s linear infinite;
+          animation: loader 2s linear infinite;
+}
+
+@-webkit-keyframes loader {
+  to {
+    stroke-dashoffset: 200;
+  }
+}
+
+@keyframes loader {
+  to {
+    stroke-dashoffset: 200;
+  }
+}
 /*# sourceMappingURL=shared.css.map */

@@ -23,16 +23,22 @@ function startGame(){
 
 
 function drawPlane(){
-    context.clearRect(0, 0, canvasWidth, canvasHeight);
+    plane.style.transform="rotate(40deg)"
     context.drawImage(plane,planeCordinates.x,planeCordinates.y,200,140);
     planeCordinates.x-=0
     planeCordinates.y-=1
-    context.clearRect(0, 0, canvasWidth, canvasHeight);
+    if(planeCordinates.x+plane.width>canvas.style.width || canvas.style.width-(plane.width+canvas.style.width)){
+        planeCordinates.x+=2
+    }
+    if(planeCordinates.y+plane.height>canvas.style.height || canvas.style.height-(planeCordinates.y+plane.height)<0){
+        planeCordinates.y+=2
+    }
+    planeControls()
     requestAnimationFrame(moveSky)
 }
 
 function moveSky(){
-    context.clearRect(0, 0, canvasWidth, canvasHeight);
+    context.clearRect(0, 0, 500, 700);
     drawPlane();
 }
 function addPower(){}
@@ -40,7 +46,10 @@ function deductPower(){}
 
 function moveUp(){
     context.clearRect(0, 0, canvasWidth, canvasHeight);
-    plane.style.transform="rotate(-30deg);"
+    context.translate(plane.width*0.5,plane.height*0.5)
+    context.rotate(2*0.01745)
+    context.translate(-plane.width*0.5,-plane.height*0.5)
+    drawPlane()
 }
 function moveDown(){
     context.clearRect(0, 0, canvasWidth, canvasHeight);
@@ -51,10 +60,10 @@ function planeControls(){
     document.addEventListener('keydown',function(e){
         switch(e.keyCode){
             case 38:
-                console.log("up")
+                requestAnimationFrame(moveUp)
                 break;
             case 40:
-                console.log("down")
+                requestAnimationFrame(moveDown)
                 break;
         }
     });

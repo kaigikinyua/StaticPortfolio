@@ -295,3 +295,23 @@ section.animation{
         }
     }
 }
+
+svg.loading{
+    position: fixed;
+    height:100%;
+    width:100%;
+    z-index: 200;
+    background:black;
+    .icon{
+        stroke:$accent;
+        stroke-width: 5;
+        fill:transparent;
+        stroke-dasharray: 100;
+        animation:loader 2s linear infinite;
+    }
+}
+@keyframes loader{
+    to{
+        stroke-dashoffset: 200;
+    }
+}
