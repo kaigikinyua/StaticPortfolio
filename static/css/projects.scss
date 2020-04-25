@@ -38,6 +38,21 @@ div.pimage img{
     left:50%;
     transform: translateX(-50%);
 }
+section.project_images{
+    position: fixed;
+    width:100vw;
+    height:70vh;
+    background:rgba(10,10,10,0.93);
+    bottom:0px;
+    div.project_title{
+        padding:10px;
+        color:white;
+        font-family: Arial;
+        margin-bottom: 20px;
+    }
+}
+
+
 @media only screen and (max-width:700px){
     div.project{
         margin-bottom:30px;

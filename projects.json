@@ -1,0 +1,48 @@
+{
+    "projects":[
+            {"project":[
+                {"title":"PyN"},
+                {"link":"https://localhost:5000","type":"documentation"},
+                {"description":[
+                        {"paragraph":"Have you ever wanted to watch a film on your phone from your laptop? Look no further PyN will do the trick!!"},
+                        {"paragraph":"PyN is a file sharing application that I created. It composes of a desktop application built with Python and a webserver built using nodeJS that distributes the files. Users can access files from the browser if the host  and the client are on the same network You can read the documentation on my github"}
+                    ]
+                },
+                {"images":[
+                        {"image":"static/Projects/share.png"},
+                        {"image":"static/Projects/nest.png"}
+                    ]
+                }
+            ]},
+
+            {"project":[
+                {"title":"Blogger Web Application"},
+                {"link":"https://localhost:5000","type":"view"},
+                {"description":[
+                        {"paragraph":"In this particular blogger application is a web application that I built using Flask,HTML5 and CSS3"},
+                        {"paragraph":"The blogger can login and create a new blogg where the readers can be able to read it latter on when the blogger "}
+                    ]
+                },
+                {"images":[
+                        {"image":"static/Projects/codebug.png"}
+                    ]
+                }
+
+                ]
+            },
+            {"project":[
+                {"title":"Construction Manager"},
+                {"link":"https://localhost:5000","type":"view"},
+                {"description":[
+                        {"paragraph":"This is a web and mobile applicaton where by the client can create a project list its reqirements and hire a contractor."},
+                        {"paragraph":"A contractor can also manage an ongoing project using this application. Currently it is under development and will soon be in production."},
+                        {"paragraph":"In this project I am a fullstack web developer working on the API and the Web frontend. Technologies used Django,djangorestframework and VueJS"}   
+                    ]
+                },
+                {"images":[
+                    {"image":"static/Projects/nest.png"}
+                    ]
+                }
+            ]}
+    ]
+}

@@ -9,6 +9,10 @@
     <link rel="stylesheet" href="./static/css/projects.css"/>
 </head>
 <body>
+    <svg class="loading" id="loading">
+        <rect class="icon" x="50%" y="50%" height="100px" width="100px"></rect>
+    </svg>
+
     <div class="topnav">
         <center><h2>Projects</h2></center>
         <div>
@@ -18,86 +22,35 @@
             <a href="https://github.com/kaigikinyua"><button><i class="fab fa-github"></i></button></a>
         </div>
     </div>
-    <!--UserInterfaces-->
-    <section class="section">
-        <div class="pcontainer">
-            <div class="project">
-                <h3>PyN</h3>
-                <p>Have you ever wanted to watch a film on your phone from your laptop? Look no further PyN will do the trick!!</p>
-                <p>PyN is a file sharing application that I created. It composes of a desktop application built with Python
-                and a webserver built using nodeJS that distributes the files. Users can access files from the browser if the host  and the client are on the same network
-                You can read the documentation on my github</p>
-            </div>
-            <div class="pimage">
-                <img src="./static/Projects/share.png"/>
-            </div>
-        </div>
-    </section>
-
-    <section class="section">
-        <div class="pcontainer">
-            <div class="project">
-                <h3>Blogger Web Application</h3>
-                <p>In this particular blogger application is a web application that I built using Flask,HTML5 and CSS3</p>
-                <p>The blogger can login and create a new blogg where the readers can be able to read it latter on when the blogger </p>
-            </div>
-            <div class="pimage">
-                    <img src="./static/Projects/codebug.png">
-            </div>
-        </div>
-    </section>
-    <section class="section">
-        <div class="pcontainer">
-            <div class="project">
-                <h3>Construction Manager</h3>
-                <p>This is a web and mobile applicaton where by the client can create a project list its reqirements and hire a contractor.</p>
-                <p>A contractor can also manage an ongoing project using this application. Currently it is under development and will soon be in production.</p>
-                <p>In this project I am a fullstack web developer working on the API and the Web frontend. Technologies used Django,djangorestframework and VueJS</p>
-            </div>
-            <div class="pimage">
-                <img src="./static/Projects/nest.png">
-            </div>
-        </div>
-    </section>
-    <section class="section">
-        <div class="pcontainer">
+    <section class="projects" id="myprojects">
         <div class="project">
-            <h3>User Interfaces</h3>
-            <p>Responsive designs are a must these days, I can make a website that is responsive on any device.</p>
-            <p>Here is a sample Responsive UI but you can still visit my github page to view others</p>
+            <div class="project_title">
+                <!--img class="logo"-->
+                <h3 class="title"></h3>
+            </div>
+            <div class="description">
+
+            </div>
+            <div class="links"></div>
         </div>
-        <div class="pimage">
-            <img src="./static/Projects/formula1.png"/>
+    </section>
+    
+    <section class="project_images" id="project_slidder">
+        <div class="project_title" id="project_title">
+            
         </div>
+
+        <div class="project_images">
+            <button class="next"></button>
+            <div class="project_slider" id="projectImages" >
+
+            </div>
+            <button class="previous"></button>
         </div>
     </section>
 
-    <!--EBook-->
-    <section class="section">
-        <div class="pcontainer">
-            <div class="project">
-                <h3>Online Lib</h3>
-                <p>Here is a sample of a site that I designed the front end and part of the backed</p>
-                <p>It is an Online Book store mainly dealing with ordering of bulky quantities of books</p>
-            </div>
-            <div class="pimage">
-                <img src="./static/Projects/online.png"/>
-            </div>
-        </div>
-    </section>
 
-    <section class="section">
-        <div class="pcontainer">
-            <div class="project">
-                <h3>Android Todolist</h3>
-                <p>Here is an example of a very simple todolist android application that I created using Kotlin</p>
-                <p>A user can use it to save some of the things he/she would like todo and when it is done by just tapping on the todo it will be crossed out</p>
-                <p>I used the local sqlite3 database to store the users todos.</p>
-            </div>
-            <div class="pimage">
-                <center><video height="600px" width="400px" controls src="./static/videos/todolist.mp4"/></center>
-            </div>
-        </div>
-    </section>
 </body>
+<script src="static/js/UI.js"></script>
+<script src="static/js/projects.js"></script>
 </html>
