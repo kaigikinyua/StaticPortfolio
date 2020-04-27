@@ -62,16 +62,29 @@ div.projectlinks button.link:hover {
 section.project_images {
   position: fixed;
   width: 100vw;
-  height: 80vh;
+  height: 70vh;
   background: rgba(10, 10, 10, 0.93);
   bottom: 0px;
+  display: none;
+}
+
+section.project_images div.close {
+  position: relative;
+  height: 30px;
+  width: 100%;
+  text-align: center;
+  font-size: 22px;
+}
+
+section.project_images div.close i {
+  color: crimson;
 }
 
 section.project_images div.project_title {
   padding: 10px;
   color: white;
   font-family: Arial;
-  margin-bottom: 20px;
+  margin-bottom: 10px;
 }
 
 section.project_images div.images_container {

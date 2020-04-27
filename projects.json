@@ -9,14 +9,16 @@
                     ]
                 },
                 {"images":[
-                        {"image":"static/Projects/share.png"},
-                        {"image":"static/Projects/nest.png"}
+                        {"image":"static/Projects/share/share.png"},
+                        {"image":"static/Projects/share/tab.png"},
+                        {"image":"static/Projects/share/desktop.png"},
+                        {"image":"static/Projects/share/dashboard.png"}
                     ]
                 }
             ]},
 
             {"project":[
-                {"title":"Blogger Web Application"},
+                {"title":"Blogger"},
                 {"link":"https://localhost:5000","type":"view"},
                 {"description":[
                         {"paragraph":"In this particular blogger application is a web application that I built using Flask,HTML5 and CSS3"},
@@ -24,14 +26,14 @@
                     ]
                 },
                 {"images":[
-                        {"image":"static/Projects/codebug.png"}
+                        {"image":"static/Projects/codebug/codebug.png"}
                     ]
                 }
 
                 ]
             },
             {"project":[
-                {"title":"Construction Manager"},
+                {"title":"Construction_Manager"},
                 {"link":"https://localhost:5000","type":"view"},
                 {"description":[
                         {"paragraph":"This is a web and mobile applicaton where by the client can create a project list its reqirements and hire a contractor."},
@@ -40,9 +42,26 @@
                     ]
                 },
                 {"images":[
-                    {"image":"static/Projects/nest.png"}
+                    {"image":"static/Projects/nest/nest.png"}
                     ]
                 }
-            ]}
+            ]},
+            {
+                "project":[
+                    {"title":"UI/UX"},
+                    {"link":"https://localhost:5000","type":"documentation"},
+                    {"description":[
+                        {"paragraph":"This is my collection of User Interface and User Experience design and implementation of varous apps and sites"}
+                    ]
+                    },
+                    {
+                        "images":[
+                            {"image":"static/Projects/ui/1.png"},
+                            {"image":"static/Projects/ui/2.png"},
+                            {"image":"static/Projects/ui/3.png"}
+                        ]
+                    }
+                ]
+            }
     ]
 }

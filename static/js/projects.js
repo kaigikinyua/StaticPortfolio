@@ -1,5 +1,5 @@
 const debug=true
-var baseUrl="http://127.0.0.1:5500/";
+var baseUrl="http://192.168.0.134:5500/";
 
 var projects=[]
 
@@ -34,10 +34,10 @@ function getProjects(){
 }
 
 function addProject(project){
-    console.log(project["project"][0]["title"])
-    console.log(project["project"][1]["link"])
-    console.log(project["project"][2]["description"])
-    console.log(project["project"][3]["images"])
+    //console.log(project["project"][0]["title"])
+    //console.log(project["project"][1]["link"])
+    //console.log(project["project"][2]["description"])
+    //console.log(project["project"][3]["images"])
     var page=document.getElementById("myprojects")
     var newProject=document.createElement("div")
     newProject.classList.add("project");
@@ -72,7 +72,7 @@ function addProject(project){
     viewImages.classList.add("link")
     viewImages.innerHTML="<i class='fa fa-image' data-project="+project["project"][0]["title"]+"></i>"
     viewImages.addEventListener('click',(e)=>{
-       // console.log(e.target.dataset["project"]);
+       //console.log(e.target.dataset["project"]);
         showProjectImages(e.target.dataset["project"]);
     });
     plinks.appendChild(extraLink)
@@ -85,7 +85,6 @@ function addProject(project){
 
 function showProjectImages(projectName){
     //search project name in projects
-    var imgNum=0
     projects.forEach(proj=>{
         if(proj["project"][0]["title"]==projectName){
             console.log(proj["project"][3]["images"])
@@ -110,40 +109,60 @@ function showProjectImages(projectName){
                 imageCover.appendChild(image)
                 projectImages.appendChild(imageCover)
             });
+            var imageSlidder=document.getElementById('project_slidder')
+            imageSlidder.style.display="block"
             //projectImages.style.width=imgNum+"00%";
         }
     })
 
 }
 
+function imageCounter(){
+    console.log(currImageNum+"/"+currProjectImages.length)
+}
 function nextImage(){
-    if(currImageNum<currProjectImages.length-1 && currImageNum>-1){
-        console.log(currImageNum) 
+    if(currImageNum<currProjectImages.length-1 && currImageNum>-1){ 
         var active=document.querySelector('div.activeSlide')
-        active.classList.remove('activeSlide');
-        active.classList.add('deactiveSlide');
+        try{
+            active.classList.remove('activeSlide');
+            active.classList.add('deactiveSlide');
+         }
+         catch(error){
+            active=document.querySelectorAll('div.activeSlide')
+            active.forEach(elem=>{
+                elem.classList.remove('activeslide')
+            })
+         }
         var imageCovers =document.querySelectorAll("div.imageCover");
-        imageCovers[currImageNum+1].classList.remove("deactiveSlide");
-        imageCovers[currImageNum+1].classList.add("activeSlide")
-        currImageNum+=1
-    }else{
-        currImageNum=0
-        nextImage()
+        if(currImageNum+1<currProjectImages.length){
+            imageCovers[currImageNum+1].classList.remove("deactiveSlide");
+            imageCovers[currImageNum+1].classList.add("activeSlide")
+            currImageNum+=1
+        }else{
+            currImageNum=currImageNum.length-1
+            imageCovers[currImageNum].classList.remove("deactiveSlide");
+            imageCovers[currImageNum].classList.add("activeSlide")
+        }
+        imageCounter()
     }
 }
 function prevImage(){
     if(currImageNum>0){
-        console.log(currImageNum)
         var active=document.querySelector('div.activeSlide')
         active.classList.remove('activeSlide');
         active.classList.add('deactiveSlide');
         var imageCovers=document.querySelectorAll("div.imageCover");
-        imageCovers[currImageNum-1].classList.remove("deactiveSlide");
-        imageCovers[currImageNum-1].classList.add("aciveSlide")
-        currImageNum=currImageNum-1
-     }else{
-         currImageNum=currProjectImages.length-1
-         prevImage()
+        if(currImageNum-1>0){
+            imageCovers[currImageNum-1].classList.remove("deactiveSlide");
+            imageCovers[currImageNum-1].classList.add("aciveSlide")
+            currImageNum-=1
+
+        }else{
+            currImageNum=0
+            imageCovers[currImageNum].classList.remove("deactiveSlide");
+            imageCovers[currImageNum].classList.add("aciveSlide")
+        }
+        imageCounter()
      }
 }
 
