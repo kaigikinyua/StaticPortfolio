@@ -6,42 +6,55 @@ body{
     background-repeat: no-repeat;
     background-size: cover;
 }
-div.pcontainer{
+section.projects{
+    margin-top:150px;
+}
+//project
+div.project{
     background:none;
     position:relative;
     @include center;
     max-width:900px;
-    padding:0px;
+    padding:20px;
 }
-div.project{
-    color:white;
-    background:$background;
-    padding:10px;
-    font-family: Arial, Helvetica, sans-serif;
-    font-size:18px;
-}
-div.project h3{
+div.project h3.title{
     font-family:Arial, Helvetica, sans-serif;
     font-weight:lighter;
     margin:10px 0px;
     color:$accent;
 }
-div.pimage{
-    position: relative;
-    width:100%;
-    max-height: 50%;
+div.description{
+    padding:10px;
+    font-size: 18px;
+    font-family: Arial;
+    color:white;
 }
-div.pimage img{
-    position:relative;
-    height:auto;
-    width:100%;
-    left:50%;
-    transform: translateX(-50%);
+div.projectlinks{
+    text-align: center;
+    padding:5px;
+    button.link{
+        padding:10px;
+        margin:0px 10px;
+        border:none;
+        outline:none;
+        background:darken($accent,30%);
+        color:white;
+        border-radius: 20px;
+        border:2px solid transparent;
+        transition:1s;
+    }
+    button.link:hover{
+        background:$background;
+        border:2px solid darken($accent,30%);
+        color:1px solid darken($accent,30%);
+    }
 }
+
+
 section.project_images{
     position: fixed;
     width:100vw;
-    height:70vh;
+    height:80vh;
     background:rgba(10,10,10,0.93);
     bottom:0px;
     div.project_title{
@@ -49,6 +62,71 @@ section.project_images{
         color:white;
         font-family: Arial;
         margin-bottom: 20px;
+    }
+    div.images_container{
+        position: relative;
+        height:70%;
+        width:100%;
+        overflow: hidden;
+        div.project_slider{
+            position: relative;
+            height:100%;
+            width:100%;
+            overflow: hidden;
+            div.imageCover{
+                position: absolute;
+                height:100%;
+                width:100%;
+                text-align: center;
+                img{
+                    position: relative;
+                    height: 100%;
+                    width:auto;
+                }
+            }
+            .activeSlide{
+                position: relative;
+                left:0%;
+                top:0px;
+                display: inline-block;
+                animation:1s showSlide 0s ease-in;
+            }
+            .deactiveSlide{
+                position: relative;
+                left:-100%;
+                top:0px;
+                display: inline-block;
+                animation:1s hideSlide 0s ease-in;
+            }
+        }
+    }
+    div.controlls{
+        text-align: center;
+    }
+    button.control{
+        padding:10px;
+        background:none;
+        border:none;
+        outline: none;
+        color:$accent;
+    }
+}
+
+
+@keyframes showSlide{
+    from{
+        left:100%;
+    }
+    to{
+        left:0%;
+    }
+}
+@keyframes hideSlide{
+    from{
+        left:0%;
+    }
+    to{
+        left:-100%;
     }
 }
 

@@ -2,7 +2,10 @@ const debug=true
 var baseUrl="http://127.0.0.1:5500/";
 
 var projects=[]
+
+//project images
 var currProjectImages=[]
+var currImageNum=0
 
 if(debug==false){
     var base="https://kaigikinyua.github.io/StaticPortfolio/"
@@ -86,19 +89,62 @@ function showProjectImages(projectName){
     projects.forEach(proj=>{
         if(proj["project"][0]["title"]==projectName){
             console.log(proj["project"][3]["images"])
+            currProjectImages=proj["project"][3]["images"]
+            console.log(currProjectImages)
             imgNum=proj["project"][3]["images"].length
             var projTitle=document.getElementById("project_title");
             projTitle.innerHTML="<h3 class='title'>"+projectName+"</h3>"
             var projectImages=document.getElementById("projectImages");
+            var index=0;
             proj["project"][3]["images"].forEach(img=>{
+                var imageCover=document.createElement("div");
+                imageCover.classList.add("imageCover");
+                if(index==0){
+                    imageCover.classList.add('activeSlide');
+                }else{
+                    imageCover.classList.add('deactiveSlide');
+                }index+=1;
                 var image=document.createElement("img")
                 image.src=img["image"]
                 image.classList.add("projectImage");
-                projectImages.appendChild(image)
+                imageCover.appendChild(image)
+                projectImages.appendChild(imageCover)
             });
+            //projectImages.style.width=imgNum+"00%";
         }
     })
 
+}
+
+function nextImage(){
+    if(currImageNum<currProjectImages.length-1 && currImageNum>-1){
+        console.log(currImageNum) 
+        var active=document.querySelector('div.activeSlide')
+        active.classList.remove('activeSlide');
+        active.classList.add('deactiveSlide');
+        var imageCovers =document.querySelectorAll("div.imageCover");
+        imageCovers[currImageNum+1].classList.remove("deactiveSlide");
+        imageCovers[currImageNum+1].classList.add("activeSlide")
+        currImageNum+=1
+    }else{
+        currImageNum=0
+        nextImage()
+    }
+}
+function prevImage(){
+    if(currImageNum>0){
+        console.log(currImageNum)
+        var active=document.querySelector('div.activeSlide')
+        active.classList.remove('activeSlide');
+        active.classList.add('deactiveSlide');
+        var imageCovers=document.querySelectorAll("div.imageCover");
+        imageCovers[currImageNum-1].classList.remove("deactiveSlide");
+        imageCovers[currImageNum-1].classList.add("aciveSlide")
+        currImageNum=currImageNum-1
+     }else{
+         currImageNum=currProjectImages.length-1
+         prevImage()
+     }
 }
 
 
