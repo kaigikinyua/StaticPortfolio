@@ -117,15 +117,15 @@ function showProjectImages(projectName){
                 
                 var imageLoading=document.createElement("div")
                 imageLoading.classList="imageLoading"
-                if(!image.complete){
-                    imageCover.appendChild(image) 
-                    imageLoaders=document.querySelectorAll("div.imageLoading");
+                imageCover.appendChild(imageLoading)
+                imageCover.appendChild(image)
+                image.onload=()=>{
+                    var imageLoaders=document.querySelectorAll("div.imageLoading");
                     imageLoaders.forEach(loader=>{
                         loader.style.display="none"
                         console.log("remove")
-                    })   
-                }else{
-                    imageCover.appendChild(imageLoading)
+                    })
+                    
                 }
                 projectImages.appendChild(imageCover)
                 

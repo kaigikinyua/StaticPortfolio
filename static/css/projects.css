@@ -162,31 +162,37 @@ section.project_images button.control {
 
 div.imageLoading {
   position: relative;
-  height: 100%;
-  width: 100%;
-  -webkit-animation: 3s loading 0s;
-          animation: 3s loading 0s;
+  top: 50%;
+  left: 50%;
+  -webkit-transform: translate(-50%, -50%);
+          transform: translate(-50%, -50%);
+  height: 100px;
+  width: 100px;
+  -webkit-animation: 2s loading 0s infinite ease-in;
+          animation: 2s loading 0s infinite ease-in;
+  border-radius: 50%;
+  background-image: radial-gradient(#64ff64, rgba(10, 10, 10, 0.9));
 }
 
 @-webkit-keyframes loading {
   from {
-    background: -webkit-gradient(linear, left top, left bottom, from(#64ff64), to(rgba(10, 10, 10, 0.9)));
-    background: linear-gradient(#64ff64, rgba(10, 10, 10, 0.9));
+    background-image: radial-gradient(rgba(10, 10, 10, 0.9), #64ff64);
+    -webkit-box-shadow: 1px 1px 10px 10px rgba(100, 200, 100, 0.5);
+            box-shadow: 1px 1px 10px 10px rgba(100, 200, 100, 0.5);
   }
   to {
-    background: -webkit-gradient(linear, left top, left bottom, from(#64ff64), to(rgba(10, 10, 10, 0.9)));
-    background: linear-gradient(#64ff64, rgba(10, 10, 10, 0.9));
+    background-image: radial-gradient(#64ff64, rgba(10, 10, 10, 0.9));
   }
 }
 
 @keyframes loading {
   from {
-    background: -webkit-gradient(linear, left top, left bottom, from(#64ff64), to(rgba(10, 10, 10, 0.9)));
-    background: linear-gradient(#64ff64, rgba(10, 10, 10, 0.9));
+    background-image: radial-gradient(rgba(10, 10, 10, 0.9), #64ff64);
+    -webkit-box-shadow: 1px 1px 10px 10px rgba(100, 200, 100, 0.5);
+            box-shadow: 1px 1px 10px 10px rgba(100, 200, 100, 0.5);
   }
   to {
-    background: -webkit-gradient(linear, left top, left bottom, from(#64ff64), to(rgba(10, 10, 10, 0.9)));
-    background: linear-gradient(#64ff64, rgba(10, 10, 10, 0.9));
+    background-image: radial-gradient(#64ff64, rgba(10, 10, 10, 0.9));
   }
 }
 

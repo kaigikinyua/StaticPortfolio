@@ -145,16 +145,21 @@ section.project_images{
 
 div.imageLoading{
     position: relative;
-    height:100%;
-    width:100%;
-    animation: 3s loading 0s;
+    @include center;
+    height:100px;
+    width:100px;
+    animation: 2s loading 0s infinite ease-in;
+    border-radius: 50%;
+    background-image: radial-gradient($accent,$background);    
+    
 }
 @keyframes loading{
     from{
-        background:linear-gradient($accent,$background);
+        background-image: radial-gradient($background,$accent);
+        box-shadow: 1px 1px 10px 10px rgba(100,200,100,0.5);    
     }
     to{
-        background:linear-gradient($accent,$background);
+        background-image: radial-gradient($accent,$background);
     }
 }
 
