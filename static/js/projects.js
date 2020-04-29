@@ -8,7 +8,7 @@ var currProjectImages=[]
 var currImageNum=0
 
 if(debug==false){
-    var base="https://kaigikinyua.github.io/StaticPortfolio/"
+    var baseUrl="https://kaigikinyua.github.io/StaticPortfolio/"
 }
 
 window.onload=()=>{
