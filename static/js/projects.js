@@ -1,4 +1,4 @@
-const debug=true
+const debug=false
 var baseUrl="http://192.168.0.134:5500/";
 
 var projects=[]
