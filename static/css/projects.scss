@@ -1,21 +1,36 @@
 @import 'global';
 body{
-    background-image: url('../images/1.png');
+    background-image: url('../images/1.jpg');
     background-position: center;
     background-attachment: fixed;
     background-repeat: no-repeat;
     background-size: cover;
 }
+
+div.space{
+    position: relative;
+    height:80px;
+}
+
+section.blur_cover{
+    background:rgba(10,10,10,0.5);
+    padding:0px;
+    height:100vh;
+    width:100vw;
+    position: absolute;
+    overflow-y: scroll;
+}
 section.projects{
-    margin-top:150px;
+  
 }
 //project
 div.project{
-    background:none;
     position:relative;
-    @include center;
+    @include horizontal;
     max-width:900px;
     padding:20px;
+    background:rgba(10,10,10,0.7);
+    margin-bottom:20px;
 }
 div.project h3.title{
     font-family:Arial, Helvetica, sans-serif;

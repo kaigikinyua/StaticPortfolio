@@ -83,8 +83,15 @@ function addProject(project){
 }
 
 
+function clearProjectImages(){
+    var images=document.querySelectorAll("div.imageCover")
+    images.forEach(active=>{
+        active.parentNode.removeChild(active)
+    })
+}
 function showProjectImages(projectName){
     //search project name in projects
+    clearProjectImages()
     projects.forEach(proj=>{
         if(proj["project"][0]["title"]==projectName){
             console.log(proj["project"][3]["images"])
@@ -120,19 +127,16 @@ function showProjectImages(projectName){
 function imageCounter(){
     console.log(currImageNum+"/"+currProjectImages.length)
 }
+function removeAciveClass(){
+    var active=document.querySelectorAll("div.imageCover")
+    active.forEach(elem=>{
+        elem.classList.remove("activeSlide")
+        elem.classList.add("deactiveSlide")
+    })
+}
 function nextImage(){
     if(currImageNum<currProjectImages.length-1 && currImageNum>-1){ 
-        var active=document.querySelector('div.activeSlide')
-        try{
-            active.classList.remove('activeSlide');
-            active.classList.add('deactiveSlide');
-         }
-         catch(error){
-            active=document.querySelectorAll('div.activeSlide')
-            active.forEach(elem=>{
-                elem.classList.remove('activeslide')
-            })
-         }
+        removeAciveClass()
         var imageCovers =document.querySelectorAll("div.imageCover");
         if(currImageNum+1<currProjectImages.length){
             imageCovers[currImageNum+1].classList.remove("deactiveSlide");
@@ -148,10 +152,8 @@ function nextImage(){
 }
 function prevImage(){
     if(currImageNum>0){
-        var active=document.querySelector('div.activeSlide')
-        active.classList.remove('activeSlide');
-        active.classList.add('deactiveSlide');
-        var imageCovers=document.querySelectorAll("div.imageCover");
+        removeAciveClass()
+        var imageCovers=document.querySelectorAll("div.imageCover")
         if(currImageNum-1>0){
             imageCovers[currImageNum-1].classList.remove("deactiveSlide");
             imageCovers[currImageNum-1].classList.add("aciveSlide")

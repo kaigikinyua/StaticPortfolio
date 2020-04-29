@@ -1,24 +1,34 @@
 body {
-  background-image: url("../images/1.png");
+  background-image: url("../images/1.jpg");
   background-position: center;
   background-attachment: fixed;
   background-repeat: no-repeat;
   background-size: cover;
 }
 
-section.projects {
-  margin-top: 150px;
+div.space {
+  position: relative;
+  height: 80px;
+}
+
+section.blur_cover {
+  background: rgba(10, 10, 10, 0.5);
+  padding: 0px;
+  height: 100vh;
+  width: 100vw;
+  position: absolute;
+  overflow-y: scroll;
 }
 
 div.project {
-  background: none;
   position: relative;
-  top: 50%;
   left: 50%;
-  -webkit-transform: translate(-50%, -50%);
-          transform: translate(-50%, -50%);
+  -webkit-transform: translateX(-50%);
+          transform: translateX(-50%);
   max-width: 900px;
   padding: 20px;
+  background: rgba(10, 10, 10, 0.7);
+  margin-bottom: 20px;
 }
 
 div.project h3.title {
