@@ -48,7 +48,7 @@ div.projectlinks{
     text-align: center;
     padding:5px;
     button.link{
-        padding:10px;
+        padding:5px;
         margin:0px 10px;
         border:none;
         outline:none;
@@ -57,6 +57,11 @@ div.projectlinks{
         border-radius: 20px;
         border:2px solid transparent;
         transition:1s;
+        small{
+            margin:10px 0px;
+            font-size: 15px;
+            font-weight: lighter;
+        }
     }
     button.link:hover{
         background:$background;
@@ -138,6 +143,20 @@ section.project_images{
     }
 }
 
+div.imageLoading{
+    position: relative;
+    height:100%;
+    width:100%;
+    animation: 3s loading 0s;
+}
+@keyframes loading{
+    from{
+        background:linear-gradient($accent,$background);
+    }
+    to{
+        background:linear-gradient($accent,$background);
+    }
+}
 
 @keyframes showSlide{
     from{

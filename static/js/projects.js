@@ -69,10 +69,10 @@ function addProject(project){
         plinks.appendChild(extraLink)
     }//upgrade latter 
     var viewImages=document.createElement("button")
+    viewImages.dataset["project"]=project["project"][0]["title"]
     viewImages.classList.add("link")
-    viewImages.innerHTML="<i class='fa fa-image' data-project="+project["project"][0]["title"]+"></i>"
+    viewImages.innerHTML="<i class='fa fa-image' data-project="+project["project"][0]["title"]+"></i><small data-project="+project["project"][0]["title"]+">Images</small>"
     viewImages.addEventListener('click',(e)=>{
-       //console.log(e.target.dataset["project"]);
         showProjectImages(e.target.dataset["project"]);
     });
     plinks.appendChild(extraLink)
@@ -110,11 +110,25 @@ function showProjectImages(projectName){
                 }else{
                     imageCover.classList.add('deactiveSlide');
                 }index+=1;
-                var image=document.createElement("img")
+
+                var image=new Image()//document.createElement("img")
                 image.src=img["image"]
                 image.classList.add("projectImage");
-                imageCover.appendChild(image)
+                
+                var imageLoading=document.createElement("div")
+                imageLoading.classList="imageLoading"
+                if(!image.complete){
+                    imageCover.appendChild(image) 
+                    imageLoaders=document.querySelectorAll("div.imageLoading");
+                    imageLoaders.forEach(loader=>{
+                        loader.style.display="none"
+                        console.log("remove")
+                    })   
+                }else{
+                    imageCover.appendChild(imageLoading)
+                }
                 projectImages.appendChild(imageCover)
+                
             });
             var imageSlidder=document.getElementById('project_slidder')
             imageSlidder.style.display="block"
@@ -172,6 +186,7 @@ function prevImage(){
 //services
 //service fetch
 function fetchData(url,fn){
+    console.log(url)
     fetch(url)
     .then(res=>res.json())
     .then(data=>fn(data))
