@@ -6,25 +6,34 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Antony</title>
     <link rel="stylesheet" id="theme" href="./static/css/global/theme/light_theme.css"/>
+    <link rel="stylesheet" href="./static/css/global/defaults.css"/>
+    <link rel="stylesheet" href="./static/css/pages/index.css">
 </head>
 <body>
     <nav class="topnav">
-        <div class="container">
-            <div class="banner"></div>
-            <div class="nav"></div>
+        <div class="container center">
+            <div class="banner">
+                <h3 class="banner">Antony</h3>
+            </div>
+            <div class="nav">
+                <ul class="links">
+                    <a href="#gallery"><li>Gallery</li></a>
+                    <a href="#projects"><li>Projects</li></a>
+                </ul>
+            </div>
         </div>
     </nav>
     <header class="landing">
-        <div class="container">
+        <div class="container center">
             <div class="slides" id="slides">
                 <!--Slides component-->
-                    <!--Web developer,Graphic Designer-->
+                    <!--Web developer[call_to_action='view_projects'],Graphic Designer[call_to_action='view_gallery']-->
                 <!--Slides navigation component-->
             </div>
         </div>
     </header>
     <section class="portfolio">
-        <div class="container">
+        <div class="container center">
             <h1 class="title">Web Development</h1>
 
         </div>
@@ -46,4 +55,8 @@
         </div>
     </footer>
 </body>
+<script src="./static/js/libs/react/react.js"></script>
+<script src="./static/js/libs/react/react-dom.js"></script>
+<script src="./static/js/libs/babel.js"></script>
+<script src="./static/js/pages/index.jsx" type="text/babel"></script>
 </html>
