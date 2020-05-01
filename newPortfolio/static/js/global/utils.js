@@ -32,4 +32,45 @@ var Notif = /** @class */ (function () {
     };
     return Notif;
 }());
-export { Dev, getRequest, Notif };
+var Theme = /** @class */ (function () {
+    function Theme() {
+    }
+    Theme.saveTheme = function () {
+        try {
+            localStorage.setItem('theme', Theme.theme);
+        }
+        catch (e) {
+            Notif.userError("Could not save theme setting");
+            Notif.devError("Could not save theme\nerror:" + e);
+        }
+    };
+    Theme.getTheme = function () {
+        var theme = '';
+        try {
+            theme = localStorage.getItem('theme');
+        }
+        catch (e) {
+            theme = Theme.theme;
+            Notif.devError("Could not load theme\nError:" + e);
+        }
+        return theme;
+    };
+    Theme.changeTheme = function () {
+        var themes_location = "./static/css/global/theme/";
+        var filenames = { dark: "dark_theme.css", light: "light_theme.css" };
+        var t = Theme.getTheme();
+        if (t === 'light') {
+            themes_location += filenames.dark;
+            Theme.theme = 'dark';
+        }
+        else {
+            themes_location += filenames.light;
+            Theme.theme = 'light';
+        }
+        var theme_link = document.getElementById('theme');
+        theme_link === null || theme_link === void 0 ? void 0 : theme_link.setAttribute('href', themes_location);
+    };
+    Theme.theme = 'light';
+    return Theme;
+}());
+export { Dev, getRequest, Notif, Theme };

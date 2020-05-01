@@ -1,3 +1,5 @@
+@import './animations.scss';
+@import './mixins.scss';
 *{
     padding:0px;
     margin:0px;
@@ -30,11 +32,48 @@ ul.links{
 div.container{
     width:400px;
 }
+
+//alignment classes
 .center{
     position: relative;
-    left:50%;
-    transform: translateX(-50%);
+    @include center_h;
 }
+.center_v{
+    position: relative;
+    @include center_v;
+}
+.center_all{
+    position: relative;
+    @include center_all;
+}
+
+#loading_page{
+    height: 100vh;
+    width:100vw;
+    div.iron_man{
+        background:none;
+        height:300px;
+        width:300px;
+        overflow: hidden;
+        div.loading_bar{
+            position: relative;
+            background:pink;
+            position: relative;
+            height:80%;
+            width:100%;
+            bottom:-100%;
+            //animation: 10s 1s reveal_bottom ease-in infinite;
+        }
+        #loading_value{
+            position: relative;
+            height:30px;
+            text-align: center;
+            font-size:1.3em;
+            padding:10px;
+        }
+    }
+}
+
 //fonts
 .banner{
     font-weight: lighter;
