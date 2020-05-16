@@ -1,317 +1,74 @@
-@import 'global';
+@import './global.scss';
+
 *{
     padding:0px;
     margin:0px;
 }
-::-webkit-scrollbar{
-    width:5px;
-    background: none;
+body::-webkit-scrollbar{
+    width:6px;
 }
-::-webkit-scrollbar-thumb{
-    width:7px;
-    background: $accent;
+body::-webkit-scrollbar-track{
+    background: $shadow;
 }
-html{
-    scroll-behavior: smooth;
+body::-webkit-scrollbar-thumb{
+    background: $main;
 }
 body{
     overflow-x:hidden;
-    background:$background;
 }
+
 a{
     text-decoration: none;
 }
-div.topnav{
-    position:fixed;
-    top:0px;
-    width:100vw;
-    padding:20px 5px;
-    background:$background;
-    color:white;
-    display:grid;
-    grid-template-columns: 1fr 1fr;
-    font-family: Arial, Helvetica, sans-serif;
-    font-weight: lighter;
-    z-index:10;
-}
-div.topnav button{
-    padding:10px;
-    border:none;
-    border-bottom:1px solid $accent;
-    background:none;
-    color:$accent;
-}
-div.topnav button.active{
-    color:white;
-    border:1px solid white;
-}
-div.sidenav{
-    position:fixed;
-    right:20px;
-    width:10px;
-    margin-right: 20px;
-    @include vertical;
-    z-index: 100;
-}
-ul.nav{
-    list-style: none;
-}
-ul.nav a li{
-    height:20px;
-    width:20px;
-    border:2px solid $accent;
-    border-radius:50%;
-    background:none;
-    margin:40px 5px;
-    transition:1s;
-    color:white;
-    padding:5px;
-    
-    i{
-        position: relative;
-        @include center;
-    }
-}
-
-ul.nav li:hover{
-    border:2px solid white;
-    color:$accent;
-}
-section.section{
-    position: relative;
-    margin:20px 0px;
-    width:100vw;
-    height: 100vh;
-}
-section#landing{
-    position: relative;
-    height:100vh;
-    background-size: cover;
-    background-attachment: fixed;
-    background-position: center;
-}
-section#collaborate{
-    height:120vh;
-}
-div.bigcard{
-    position: relative;
-    @include center;
-    height:70%;
-    width:80%;
-    display:grid;
-    grid-template-columns: 1fr 1fr;
-}
-div.image{
-    font-size:60px;
-    text-align: center;
-    position: relative;
-    height:100%;
-    background-size: cover;
-    background-position: center;
-}
-div.img{
-    font-size:80px;
-}
-div.text{
-    padding:20px;
-    color:white;
-    text-align:center;
-}
-h3.header{
-    font-size:40px;
-    font-family: Arial, Helvetica, sans-serif;
-    margin-bottom: 10px;
-}
-.darkbg{
-    background:$background;
-}
-div.text p{
-    font-size:24px;
-    margin:20px 0px;
-    font-family: cursive;
-    font-weight: lighter;
-}
-div.text p i{
-    color:$accent;
-}
-table.contacts{
-    position:relative;
-    color:white;
-    @include horizontal;
-}
-table.contacts td{
-    padding:10px;
-    font-size:18;
-}
-div.contentcard{
-    color:white;
-    position: relative;
-    @include center;
-    height:70%;
-    width:80%;
-}
-div.contentcard p{
-    font-size:20px;
-    margin:10px 0px;
-}
-h4.title{
-    font-size: 19px;
-    margin:10px;
-}
-i.fa-html5{
-    color:#FF0F0F;
-}
-i.fa-css3{
-    color:#5959FF;
-}
-i.fa-server{
-    color:lightseagreen;
-}
-div.technologies{
-    position: relative;
-    display: grid;
-    grid-template-columns: 1fr 1fr 1fr;
-    
-}
-div.tech{
-    position: relative;
-    max-width: 300px;
-    margin:5px 5px;
-    padding:10px;
-    border-bottom: 1px solid $accent;
-    h4.title{
-        text-align: center;
-        padding:10px;
-        font-size: 22px;
-    }
-}
-div.serv{
-    margin:20px 0px;
-    display:grid;
-    grid-template-columns: repeat(3,1fr);
-}
-div.service{
-    text-align: center;
-    background:$background;
-    position:relative;
-    height:100%;
-    margin:20px 20px;
-    background-position: center;
-    background-size: cover;
-    background-repeat: no-repeat;
-    box-shadow:20px 10px 20px 10px rgba(50,50,50,3);
-}
-div.serHeader{
-    position: relative;
-    width:100%;
-    color:$accent;
-    padding:10px 0px;
-    font-size: 25px;
-    background:$background;
-}
-ul.checklist{
-    list-style-type: none;
-    position: relative;
-    @include horizontal;
-    color:black;
-    text-align: center;
-}
-ul.checklist li{
-    margin:5px 0px;
-    font-size: 16px;
-    color:white;
-}
-ul.checklist i{
-    color:$accent;
-    font-size: 12px;
-    margin:0 10px;
-}
-div.serBottom{
-    position:absolute;
-    background:$background;
-    padding:10px 0px;
-    bottom:0px;
-    text-align: center;
-    width:100%;
-    color:$accent;
-    font-size: 20px;
-}
-h4.subheader{
-    font-size:18px;
-}
-section.animation{
-    position: relative;
-    width:100vw;
-    height:70vh;
-    background: $background;
-    background-attachment: fixed;
-    background-position: center;
-    background-size: cover;
-    background-repeat: no-repeat;
-    div.darkbg{
-        background: none;
-    }
-}
-@media only screen and (max-width:700px){
-    section#proff{
-        height:1600px;
-    }
-    section.animation{
-        margin-top:150px;
-    }
-    div.bigcard{
-        width:90%;
-        display:block;
-    }
-    div.image{
-        height:100px;
-        width:100px;
-        border-radius: 50%;
-        position:relative;
-        @include horizontal;
-    }
-    div.contentcard p{
-        font-size:16px;
-        position: relative;
-        top:0px;
-        @include horizontal;
-    }
-    div.serv{
-        display:block;
-        height:auto;
-    }
-    div.serBottom{
-        position: relative;
-    }
-    div.service{
-        height:auto;
-    }
-    div.technologies{
-        margin-top:100px;
-        display: block;
-        div.tech{
-            position: relative;
-            @include vertical;
-        }
-    }
-}
-
-svg.loading{
+//topnav
+nav.topnav{
     position: fixed;
-    height:100%;
-    width:100%;
-    z-index: 200;
-    background:black;
-    .icon{
-        stroke:$accent;
-        stroke-width: 5;
-        fill:transparent;
-        stroke-dasharray: 100;
-        animation:loader 2s linear infinite;
+    top:0px;left:0px;
+    width:100vw;
+    padding:10px;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    background:white;
+    box-shadow: 1px 1px 10px 10px $shadow;
+    z-index: 10;
+}
+ul.links{
+    list-style-type: none;
+    li{
+        display: inline-block;
+        padding:5px;
+        margin:0px 5px;
     }
 }
-@keyframes loader{
-    to{
-        stroke-dashoffset: 200;
-    }
+
+//section.full
+section.full{
+    position: relative;
+    height: 100vh;
+    width:100vw;
 }
+//button
+.button{
+    @include button;
+    background:$main;
+    color:white;
+    position: relative;
+    @include horizontal;
+    margin:20px 0px;
+    box-shadow: 1px 1px 4px 4px $shadow;
+    border:1px solid transparent;
+}
+.call_to_action{
+    position: relative;
+    width:80%;
+    font-size: 18px;
+    transition:1s;
+}
+.call_to_action:hover{
+    background:white;
+    color:$accent;
+    border:1px solid $accent;
+    box-shadow: none;
+}
+//loading svg
+

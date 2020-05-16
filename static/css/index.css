@@ -142,4 +142,75 @@
             transform: rotate(0deg);
   }
 }
-/*# sourceMappingURL=animations.css.map */
+
+section.landing {
+  background-image: url("../images/colorful.png");
+  background-position: center;
+  background-size: cover;
+  background-attachment: fixed;
+}
+
+section.landing div.container {
+  position: relative;
+  top: 50%;
+  left: 50%;
+  -webkit-transform: translate(-50%, -50%);
+          transform: translate(-50%, -50%);
+  max-width: 1000px;
+  display: -ms-grid;
+  display: grid;
+  -ms-grid-columns: 1fr 2fr;
+      grid-template-columns: 1fr 2fr;
+  text-align: center;
+}
+
+section.landing img.profile_img {
+  position: relative;
+  width: 100%;
+  height: auto;
+  text-align: center;
+}
+
+section.landing div.card {
+  position: relative;
+  max-height: 300px;
+  padding: 10px;
+  -webkit-box-shadow: 1px 1px 5px 5px rgba(10, 10, 10, 0.5);
+          box-shadow: 1px 1px 5px 5px rgba(10, 10, 10, 0.5);
+  margin: 20px;
+  border-radius: 20px;
+  background: #FFFFFF;
+  text-align: left;
+}
+
+section.landing div.card h3.title {
+  margin: 10px 0px;
+  font-weight: lighter;
+  letter-spacing: 2px;
+  font-size: 22px;
+  text-align: center;
+}
+
+section.landing div.card p {
+  line-height: 24px;
+  text-align: center;
+}
+
+section.landing div.cont {
+  padding: 10px;
+  text-align: center;
+}
+
+section.landing div.cont i {
+  font-size: 27px;
+  margin: 0px 20px;
+  color: blue;
+  -webkit-transition: 1s;
+  transition: 1s;
+}
+
+section.landing div.cont i:hover {
+  -webkit-animation: 1s shake 0s ease-in-out;
+          animation: 1s shake 0s ease-in-out;
+}
+/*# sourceMappingURL=index.css.map */

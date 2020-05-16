@@ -1,0 +1,60 @@
+@import './global.scss';
+@import './animations.scss';
+//landing
+section.landing{
+    background-image: url("../images/colorful.png");
+    background-position: center;
+    background-size: cover;
+    background-attachment: fixed;
+    div.container{
+        position: relative;
+        @include center;
+        max-width: 1000px;
+        display: grid;
+        grid-template-columns: 1fr 2fr;
+        text-align: center;
+    }
+    img.profile_img{
+        position: relative;
+        width: 100%;
+        height: auto;
+        text-align: center;
+    }
+    div.card{
+        position: relative;
+        max-height: 300px;
+        padding:10px;
+        box-shadow: 1px 1px 5px 5px $shadow;
+        margin:20px;
+        border-radius: 20px;
+        background:$background;
+        text-align: left;
+        h3.title{
+            margin:10px 0px;
+            font-weight: lighter;
+            letter-spacing: 2px;
+            font-size: 22px;
+            text-align: center;
+        }
+        p{
+            line-height: 24px;
+            text-align: center;
+        }
+    }
+    div.cont{
+        padding:10px;
+        text-align: center;
+        i{
+            font-size: 27px;
+            margin:0px 20px;
+            color:blue;
+            transition:1s;
+        }
+        i:hover{
+            @include shake;
+        }
+    }
+}
+//contacts
+//about
+//skills and tech

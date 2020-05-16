@@ -1,6 +1,9 @@
-$background:rgba(10,10,10,0.9);
-$foreground:rgba(80,80,250,9);
-$accent:rgba(100,255,100,9);
+$accent:#f40552;
+$main:#05dfd7;
+$background:#FFFFFF;
+$shadow:rgba(10,10,10,0.5);
+
+//alignment
 @mixin horizontal{
     left:50%;
     transform:translateX(-50%);
@@ -13,4 +16,13 @@ $accent:rgba(100,255,100,9);
     top:50%;
     left:50%;
     transform:translate(-50%,-50%);
+}
+
+//elements
+@mixin button {
+    outline: none;
+    border:none;
+    background:none;
+    padding:10px;
+    border-radius: 20px;
 }

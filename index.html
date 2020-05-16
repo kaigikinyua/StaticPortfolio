@@ -6,11 +6,47 @@
     <title>Antony</title>
     <link rel="shortcut icon" href="./static/images/me.jpg" type="image/x-icon">
     <link rel="stylesheet" href="./static/css/all.min.css"/>
+    <link rel="stylesheet" href="./static/css/shared.css">
+    <link rel="stylesheet" href="./static/css/index.css">
 </head>
 <body>
     <!--Loading svg-->
-
+    <nav class="topnav">
+        <h3 class="title">Antony Kaigi</h3>
+        <div class="links">
+            <ul class="links">
+                <a href="#"><li>Home</li></a>
+                <a href="#"><li>About</li></a>
+                <a href="#"><li>Tech & Skills</li></a>
+                <a href="#"><li>Projects</li></a>
+            </ul>
+        </div>
+    </nav>
+    <!--landing page-->
+    <section class="full landing">
+        <div class="container">
+            <img class="profile_img parallax" data-offset="-2" src="./static/images/me.jpg"/>
+            <div class="card parallax" data-offset="2">
+                <h3 class="title">Hello there.</h3>
+                <p>I am a full stack web developer dealing with a variety of web technologies.</p>
+                <p>Take a look around at the site and don't forget to say hello &#128522</p>
+                <a href="./projects.html"><button class="button call_to_action">Projects</button></a>
+                <div class="cont">
+                    <a href="#"><i class="fab fa-github"></i></a>
+                    <a href="#"><i class="fab fa-linkedin"></i></a>
+                    <a href="#contacts"><i class="fa fa-phone"></i></a>
+                </div>
+            </div>
+        </div>
+    </section>
+    <!--about me-->
+    <section class="full about"></section>
+    <!--tech and skills-->
+    <section class="full tech"></section>
+    <!--contacts-->
+    <section class="full contacts"></section>
 </body>
 
 <script src="static/js/UI.js"></script>
+<script src="static/js/paralax.js"></script>
 </html>
