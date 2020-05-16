@@ -16,25 +16,24 @@
                     ]
                 }
             ]},
-
-            {"project":[
-                {"title":"Blogger"},
-                {"link":"https://localhost:5000","type":"view"},
-                {"description":[
-                        {"paragraph":"In this particular blogger application is a web application that I built using Flask,HTML5 and CSS3"},
-                        {"paragraph":"The blogger can login and create a new blogg where the readers can be able to read it latter on when the blogger "}
-                    ]
-                },
-                {"images":[
-                        {"image":"static/Projects/codebug/codebug.png"}
-                    ]
-                }
-
+            {
+                "project":[
+                    {"title":"AutoDoc"},
+                    {"link":"https://github.com/kaigikinyua/AutoDoc","type":"view"},
+                    {"description":[
+                            {"paragraph":"Why comment your code and then have to document it again? AutoDoc is an opensource project I am creating as a solution to autonomise code documentation"},
+                            {"paragraph":"This is to act as a solution to poor documentation due to lack of time or the source code having been too large for a person to fully document it"}
+                        ]
+                    },
+                    {"images":[
+                            {"image":"static/Projects/share/desktop.png"}
+                        ] 
+                    }
                 ]
-            },
+            }
             {"project":[
                 {"title":"Construction_Manager"},
-                {"link":"https://localhost:5000","type":"view"},
+                {"link":"https://nestfrontend.herokuapp.com/","type":"view"},
                 {"description":[
                         {"paragraph":"This is a web and mobile applicaton where by the client can create a project list its reqirements and hire a contractor."},
                         {"paragraph":"A contractor can also manage an ongoing project using this application. Currently it is under development and will soon be in production."},
@@ -49,7 +48,7 @@
             {
                 "project":[
                     {"title":"UI/UX"},
-                    {"link":"https://localhost:5000","type":"documentation"},
+                    {"link":"https://github.com/kaigikinyua/UiDesigns","type":"view"},
                     {"description":[
                         {"paragraph":"This is my collection of User Interface and User Experience design and implementation of varous apps and sites"}
                     ]
