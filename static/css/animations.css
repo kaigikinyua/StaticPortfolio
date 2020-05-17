@@ -13,6 +13,16 @@
           animation: 1s reveal_up ease-in;
 }
 
+.anim_reveal_fromLeft {
+  -webkit-animation: 1s reveal_fromLeft ease-in;
+          animation: 1s reveal_fromLeft ease-in;
+}
+
+.anim_reveal_fromRight {
+  -webkit-animation: 1s reveal_fromRight ease-in;
+          animation: 1s reveal_fromRight ease-in;
+}
+
 @-webkit-keyframes attention {
   0% {
     -webkit-transform: scale(0.6);
@@ -97,6 +107,42 @@
   }
 }
 
+@-webkit-keyframes reveal_fromLeft {
+  from {
+    left: -100%;
+  }
+  to {
+    left: 0px;
+  }
+}
+
+@keyframes reveal_fromLeft {
+  from {
+    left: -100%;
+  }
+  to {
+    left: 0px;
+  }
+}
+
+@-webkit-keyframes reveal_fromRight {
+  from {
+    right: -100%;
+  }
+  to {
+    right: 0px;
+  }
+}
+
+@keyframes reveal_fromRight {
+  from {
+    right: -100%;
+  }
+  to {
+    right: 0px;
+  }
+}
+
 @-webkit-keyframes shake {
   0% {
     -webkit-transform: rotate(0deg);
@@ -140,6 +186,52 @@
   100% {
     -webkit-transform: rotate(0deg);
             transform: rotate(0deg);
+  }
+}
+
+@-webkit-keyframes small_shake {
+  0% {
+    -webkit-transform: translateX(0px);
+            transform: translateX(0px);
+  }
+  25% {
+    -webkit-transform: translateX(20px);
+            transform: translateX(20px);
+  }
+  50% {
+    -webkit-transform: translateX(-30px);
+            transform: translateX(-30px);
+  }
+  75% {
+    -webkit-transform: translateX(-10px);
+            transform: translateX(-10px);
+  }
+  100% {
+    -webkit-transform: translateX(0px);
+            transform: translateX(0px);
+  }
+}
+
+@keyframes small_shake {
+  0% {
+    -webkit-transform: translateX(0px);
+            transform: translateX(0px);
+  }
+  25% {
+    -webkit-transform: translateX(20px);
+            transform: translateX(20px);
+  }
+  50% {
+    -webkit-transform: translateX(-30px);
+            transform: translateX(-30px);
+  }
+  75% {
+    -webkit-transform: translateX(-10px);
+            transform: translateX(-10px);
+  }
+  100% {
+    -webkit-transform: translateX(0px);
+            transform: translateX(0px);
   }
 }
 /*# sourceMappingURL=animations.css.map */

@@ -12,8 +12,19 @@
 .anim_reveal_up{
     animation: 1s reveal_up ease-in;
 }
+.anim_reveal_fromLeft{
+    animation: 1s reveal_fromLeft ease-in;
+}
+.anim_reveal_fromRight{
+    animation: 1s reveal_fromRight ease-in;
+}
+
 @mixin shake {
     animation: 1s shake 0s ease-in-out;
+}
+
+@mixin small_shake {
+    animation:0.3s small_shake ease-in-out;
 }
 
 
@@ -51,6 +62,22 @@
         bottom:0px;
     }
 }
+@keyframes reveal_fromLeft{
+    from{
+        left:-100%;
+    }
+    to{
+        left:0px;
+    }
+}
+@keyframes reveal_fromRight{
+    from{
+        right:-100%;
+    }
+    to{
+        right:0px;
+    }
+}
 
 @keyframes shake{
     0%{
@@ -67,5 +94,22 @@
     }
     100%{
         transform: rotate(0deg);
+    }
+}
+@keyframes small_shake{
+    0%{
+        transform: translateX(0px);
+    }
+    25%{
+        transform: translateX(20px);
+    }
+    50%{
+        transform: translateX(-30px);
+    }
+    75%{
+        transform: translateX(-10px);
+    }
+    100%{
+        transform: translateX(0px);
     }
 }

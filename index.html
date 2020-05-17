@@ -8,20 +8,44 @@
     <link rel="stylesheet" href="./static/css/all.min.css"/>
     <link rel="stylesheet" href="./static/css/shared.css">
     <link rel="stylesheet" href="./static/css/index.css">
+    <link rel="stylesheet" href="./static/css/animations.css">
 </head>
 <body>
     <!--Loading svg-->
     <nav class="topnav">
-        <h3 class="title">Antony Kaigi</h3>
+        <div class="barner">
+            <h3 class="title">Antony Kaigi</h3>
+        </div>
         <div class="links">
             <ul class="links">
+                <a href="#"><li><i class="fa fa-home"></i> <small>Home</small></li></a>
+                <a href="#"><li><i class="fa fa-question"></i> <small>About</small></li></a>
+                <a href="#"><li><i class="fa fa-laptop"></i><small>Tech & Skills</small></li></a>
+                <a href="#"><li><i class="fa fa-space-shuttle"></i><small>Projects</small></li></a>
+            </ul>
+            <div class="side_nav_open">
+                <i class="fa fa-bars" onclick="showSideNav()"></i>
+            </div>
+        </div>
+    </nav>
+    <!--sidenav-->
+    <nav class="sidenav hide_Right" id="sideNav">
+        <div class="barner">
+            <h3 class="title">Menu</h3>
+        </div>
+        <div class="links">
+            <ul class="list">
                 <a href="#"><li>Home</li></a>
                 <a href="#"><li>About</li></a>
                 <a href="#"><li>Tech & Skills</li></a>
                 <a href="#"><li>Projects</li></a>
             </ul>
         </div>
+        <div class="close">
+            <i class="fa fa-window-close" onclick="hideSideNav()"></i>
+        </div>
     </nav>
+    <div class="cover" id="cover"></div>
     <!--landing page-->
     <section class="full landing">
         <div class="container">
