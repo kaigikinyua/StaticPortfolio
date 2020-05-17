@@ -5,13 +5,13 @@
     margin:0px;
 }
 
-body::-webkit-scrollbar{
+::-webkit-scrollbar{
     width:6px;
 }
-body::-webkit-scrollbar-track{
+::-webkit-scrollbar-track{
     background: $shadow;
 }
-body::-webkit-scrollbar-thumb{
+::-webkit-scrollbar-thumb{
     background: $main;
 }
 body{

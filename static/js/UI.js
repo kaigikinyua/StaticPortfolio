@@ -27,6 +27,7 @@ function hideSideNav(){
     hideCover();
 }
 
+//cover
 function showCover(){
     var cover=document.getElementById('cover')
     cover.style.display="block";
@@ -35,3 +36,4 @@ function hideCover(){
     var cover=document.getElementById('cover')
     cover.style.display="none";
 }
+

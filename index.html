@@ -62,13 +62,72 @@
                 </div>
             </div>
         </div>
+        <div class="next_page parallax" data-offset="-1"><i class="fa fa-caret-down"></i></div>
     </section>
     <!--about me-->
-    <section class="full about"></section>
+    <section class="full about">
+        <div class="container">
+            <h3 class="title">About Me.</h3>
+            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Impedit obcaecati laboriosam sed et facere veritatis ut magnam, laudantium aperiam, quam libero ducimus deserunt cum! Itaque, earum. Incidunt sint sequi voluptatibus!</p>
+            <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Explicabo tempore nulla, atque, ipsam eligendi asperiores excepturi velit incidunt sint alias laborum voluptatibus, qui autem officiis minima expedita inventore ut neque!</p>
+        </div>
+    </section>
     <!--tech and skills-->
-    <section class="full tech"></section>
+    <section class="full tech">
+        <div class="container">
+            <h3 class="title">Tech and Skills</h3>
+            <div class="techScroll">
+                <div class="myTech">
+                    <h3 class="title">Web</h3>
+                    <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Esse.</p>
+                </div>
+                <div class="myTech">
+                    <h3 class="title">Web</h3>
+                    <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Esse.</p>
+                </div>
+                <div class="myTech">
+                    <h3 class="title">Web</h3>
+                    <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Esse.</p>
+                </div>
+                <div class="myTech">
+                    <h3 class="title">Web</h3>
+                    <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Esse.</p>
+                </div>
+                <div class="myTech">
+                    <h3 class="title">Web</h3>
+                        <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Esse.</p>
+                </div>
+                <div class="myTech">
+                    <h3 class="title">Web</h3>
+                    <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Esse.</p>
+                </div>
+            </div>
+        </div>
+    </section>
     <!--contacts-->
-    <section class="full contacts"></section>
+    <section class="full contacts">
+        <div class="container">
+            <h3 class="title">Contacts</h3>
+            <div class="cont">
+                <table>
+                    <tr><td><i class="fab fa-linkedin"></i></td><td>Antony Kaigi</td></tr>
+                    <tr><td><i class="fab fa-twitter"></i></td><td>@tonny_macoin</td></tr>
+                    <tr><td><i class="fab fa-instagram"></i></td><td>tonny_macoin</td></tr>
+                    <tr><td><i class="fab fa-facebook-f"></i></td><td>tonny macoin</td></tr>
+                </table>
+                <div class="supprise">
+                    <button class="button" onclick="supprise()">Click Me!</button><br/>
+                    <img class="anim_reveal_up" id ="supprise" src="./static/images/happy_coding.gif" alt="supprise">
+                    <script>
+                        function supprise(){
+                            var sup=document.getElementById('supprise');
+                            sup.style.display="block";
+                        }
+                    </script>
+                </div>
+            </div>
+        </div>
+    </section>
 </body>
 
 <script src="static/js/UI.js"></script>

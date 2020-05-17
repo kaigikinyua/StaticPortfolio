@@ -1,6 +1,27 @@
 @import './global.scss';
 @import './animations.scss';
+html{
+    scroll-snap-type: y mandatory !important;
+}
+section.full{
+    scroll-snap-align: start !important;
+}
+
+div.next_page{
+    position: absolute;
+    text-align: center;
+    font-size: 50px;
+    color:$accent;
+    padding:20px;
+    width:100%;
+    bottom:0px;
+    i{
+        @include attention;
+        padding:20px;
+    }
+}
 //landing
+
 section.landing{
     background-image: url("../images/colorful.png");
     background-position: center;
@@ -55,6 +76,111 @@ section.landing{
         }
     }
 }
-//contacts
+
+
 //about
-//skills and tech
+section.about{
+    background: $main;
+    div.container{
+        position: relative;
+        @include center;
+        height: 70%;
+        width:70%;
+        background:$background;
+        padding:10px;
+        border-radius: 20px;
+        h3.title{
+            color:$accent;
+            font-family: Arial;
+            margin:20px 0px;
+            font-weight: lighter;
+            letter-spacing: 3px;
+        }
+        p{
+            font-size: 16px;
+            letter-spacing: 1px;
+            line-height: 25px;
+            font-family: Arial;
+            font-weight: lighter;
+            margin:5px 10px;
+        }
+    }
+}
+
+
+//tech and skills
+section.tech{
+    div.container{
+        position: relative;
+        @include center;
+        width:80%;
+        h3.title{
+            color:$accent;
+            font-family: Arial;
+            margin:20px 0px;
+            font-weight: lighter;
+            letter-spacing: 3px;  
+        }
+        div.techScroll{
+            position: relative;
+            width:100%;
+            background:lightgray;
+            display: flex;
+            overflow-x:scroll;
+            scroll-snap-type: x mandatory;
+            scroll-padding: 0 10px;
+            padding:10px;
+            div.myTech{
+                scroll-snap-align: center;
+                padding:10px;
+                display: inline-block;
+                background:$background;
+                min-width: 300px;
+                min-height: 300px;
+                margin:10px;
+            }
+        }
+    }
+}
+
+
+section.contacts{
+    background:rgba(10,10,10,0.8);
+    div.container{
+        position: relative;
+        width:80%;
+        @include center;
+        color:white;
+        h3.title{
+            font-size: 30px;
+            margin-bottom: 20px;
+            font-weight: lighter;
+        }
+        td{
+            margin:0px 10px;
+            padding:10px;
+            color:white;
+            font-size: 20px;
+            letter-spacing: 2px;
+        }
+        div.cont{
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            div.supprise{
+                position: relative;
+                width:100%;
+                height: 100%;
+                img,button{
+                    transition:1s;
+                }
+                img{
+                    position: relative;
+                    height:200px;
+                    width:auto;
+                    display: none;
+                    @include bounce;
+                }
+            }
+        }
+    }
+}
