@@ -1,66 +1,52 @@
 {
     "projects":[
-            {"project":[
-                {"title":"PyN"},
-                {"link":"https://localhost:5000","type":"documentation"},
-                {"description":[
-                        {"paragraph":"Have you ever wanted to watch a film on your phone from your laptop? Look no further PyN will do the trick!!"},
-                        {"paragraph":"PyN is a file sharing application that I created. It composes of a desktop application built with Python and a webserver built using nodeJS that distributes the files. Users can access files from the browser if the host  and the client are on the same network You can read the documentation on my github"}
-                    ]
-                },
-                {"images":[
-                        {"image":"static/Projects/share/share.png"},
-                        {"image":"static/Projects/share/tab.png"},
-                        {"image":"static/Projects/share/desktop.png"},
-                        {"image":"static/Projects/share/dashboard.png"}
-                    ]
+            {"project":{
+                    "title":"PyN",
+                    "git":"https://github.com/kaigikinyua/AutoDoc",
+                    "status":"complete",
+                    "short_desc":"A file sharing application using the web",
+                    "description":[
+                            {"paragraph":"Have you ever wanted to watch a film on your phone from your laptop? Look no further PyN will do the trick!!"},
+                            {"paragraph":"PyN is a file sharing application that I created. It composes of a desktop application built with Python and a webserver built using nodeJS that distributes the files. Users can access files from the browser if the host  and the client are on the same network You can read the documentation on my github"}
+                    ],
+                    "images":[
+                                {"image":"static/Projects/share/share.png"},
+                                {"image":"static/Projects/share/tab.png"},
+                                {"image":"static/Projects/share/desktop.png"},
+                                {"image":"static/Projects/share/dashboard.png"}
+                            ]
                 }
-            ]},
+            },
             {
-                "project":[
-                    {"title":"AutoDoc"},
-                    {"link":"https://github.com/kaigikinyua/AutoDoc","type":"view"},
-                    {"description":[
+                "project":{
+                    "title":"AutoDoc",
+                    "git":"https://github.com/kaigikinyua/AutoDoc",
+                    "status":"In progress",
+                    "short_desc":"An auto source code auto documentation tool.",
+                    "description":[
                             {"paragraph":"Why comment your code and then have to document it again? AutoDoc is an opensource project I am creating as a solution to autonomise code documentation"},
                             {"paragraph":"This is to act as a solution to poor documentation due to lack of time or the source code having been too large for a person to fully document it"}
-                        ]
-                    },
-                    {"images":[
+                    ],
+                    "images":[
                             {"image":"static/Projects/share/desktop.png"}
                         ] 
-                    }
-                ]
-            }
-            {"project":[
-                {"title":"Construction_Manager"},
-                {"link":"https://nestfrontend.herokuapp.com/","type":"view"},
-                {"description":[
-                        {"paragraph":"This is a web and mobile applicaton where by the client can create a project list its reqirements and hire a contractor."},
-                        {"paragraph":"A contractor can also manage an ongoing project using this application. Currently it is under development and will soon be in production."},
-                        {"paragraph":"In this project I am a fullstack web developer working on the API and the Web frontend. Technologies used Django,djangorestframework and VueJS"}   
-                    ]
-                },
-                {"images":[
-                    {"image":"static/Projects/nest/nest.png"}
-                    ]
                 }
-            ]},
+            },
             {
-                "project":[
-                    {"title":"UI/UX"},
-                    {"link":"https://github.com/kaigikinyua/UiDesigns","type":"view"},
-                    {"description":[
+                "project":{
+                    "title":"UI/UX",
+                    "git":"https://github.com/kaigikinyua/UiDesigns",
+                    "status":"complete",
+                    "short_desc":"UI/UX concepts and implementations of various applications",
+                    "description":[
                         {"paragraph":"This is my collection of User Interface and User Experience design and implementation of varous apps and sites"}
-                    ]
-                    },
-                    {
-                        "images":[
+                    ],
+                    "images":[
                             {"image":"static/Projects/ui/1.png"},
                             {"image":"static/Projects/ui/2.png"},
                             {"image":"static/Projects/ui/3.png"}
                         ]
                     }
-                ]
             }
     ]
 }

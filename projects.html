@@ -10,8 +10,76 @@
 </head>
 <body>
     <!--loading svg-->
-    <!--project list-->
+
+    <!--Topnav-->
+    <nav class="topnav">
+        <div class="barner">
+            <h3 class="title">Antony</h3>
+        </div>
+        <div class="links">
+            <ul class="links">
+                <a href="#landing"><li><i class="fa fa-home"></i> <small>Home</small></li></a>
+                <a href="#about"><li><i class="fa fa-question"></i> <small>About</small></li></a>
+                <a href="#tech"><li><i class="fa fa-laptop"></i><small>Tech & Skills</small></li></a>
+                <a href="./projects.html"><li><i class="fa fa-space-shuttle"></i><small>Projects</small></li></a>
+            </ul>
+            <div class="side_nav_open">
+                <i class="fa fa-bars" onclick="showSideNav()"></i>
+            </div>
+        </div>
+    </nav>
+
+    <!--Sidenav-->
+    <nav class="sidenav hide_Right" id="sideNav">
+        <div class="barner">
+            <h3 class="title">Menu</h3>
+        </div>
+        <div class="links">
+            <ul class="list">
+                <a href="#landing"><li>Home</li></a>
+                <a href="#about"><li>About</li></a>
+                <a href="#tech"><li>Tech & Skills</li></a>
+                <a href="./projects.html"><li>Projects</li></a>
+            </ul>
+        </div>
+        <div class="close">
+            <i class="fa fa-window-close" onclick="hideSideNav()"></i>
+        </div>
+    </nav>
+    <div class="cover" id="cover"></div>
+    
+    <!--Project List-->
+    <section class="full projectList">
+        <div class="container" id="projectList">
+            
+        </div>
+    </section>
     <!--view project-->
+    <div class="expandProject" id="expandProject">
+        <div class="container">
+            <div class="projectTitle">
+                <h3 class="title" id="e_projectTitle">Project Title</h3>
+                <div class="extra">
+                    <div class="status">
+                        <div id="status_txt">Complete</div>
+                        <div id="status_circle"></div>
+                    </div>
+                    <div class="git_link"><i class="fab fa-github" id="git_link"></i></div>
+                </div>
+            </div>
+            <div class="projectDescript">
+                <div class="desc" id="projectDesc">
+                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Amet eius quo quos nesciunt, quod quam error doloribus dolore tempore, nam, est exercitationem? Dignissimos ducimus itaque totam error ipsam similique vero?</p>
+                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Amet eius quo quos nesciunt, quod quam error doloribus dolore tempore, nam, est exercitationem? Dignissimos ducimus itaque totam error ipsam similique vero?</p>
+                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Amet eius quo quos nesciunt, quod quam error doloribus dolore tempore, nam, est exercitationem? Dignissimos ducimus itaque totam error ipsam similique vero?</p>
+                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Amet eius quo quos nesciunt, quod quam error doloribus dolore tempore, nam, est exercitationem? Dignissimos ducimus itaque totam error ipsam similique vero?</p>
+                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Amet eius quo quos nesciunt, quod quam error doloribus dolore tempore, nam, est exercitationem? Dignissimos ducimus itaque totam error ipsam similique vero?</p>
+                </div>
+                <div class="projectImages" id="projectImages"></div>
+            </div>
+            <div class="close"><i class="fa fa-times"></i></div>
+        </div>
+    </div>
 </body>
 <script src="static/js/UI.js"></script>
 <script src="static/js/projects.js"></script>

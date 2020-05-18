@@ -18,10 +18,10 @@
         </div>
         <div class="links">
             <ul class="links">
-                <a href="#"><li><i class="fa fa-home"></i> <small>Home</small></li></a>
-                <a href="#"><li><i class="fa fa-question"></i> <small>About</small></li></a>
-                <a href="#"><li><i class="fa fa-laptop"></i><small>Tech & Skills</small></li></a>
-                <a href="#"><li><i class="fa fa-space-shuttle"></i><small>Projects</small></li></a>
+                <a href="#landing"><li><i class="fa fa-home"></i> <small>Home</small></li></a>
+                <a href="#about"><li><i class="fa fa-question"></i> <small>About</small></li></a>
+                <a href="#tech"><li><i class="fa fa-laptop"></i><small>Tech & Skills</small></li></a>
+                <a href="./projects.html"><li><i class="fa fa-space-shuttle"></i><small>Projects</small></li></a>
             </ul>
             <div class="side_nav_open">
                 <i class="fa fa-bars" onclick="showSideNav()"></i>
@@ -35,10 +35,10 @@
         </div>
         <div class="links">
             <ul class="list">
-                <a href="#"><li>Home</li></a>
-                <a href="#"><li>About</li></a>
-                <a href="#"><li>Tech & Skills</li></a>
-                <a href="#"><li>Projects</li></a>
+                <a href="#landing"><li>Home</li></a>
+                <a href="#about"><li>About</li></a>
+                <a href="#tech"><li>Tech & Skills</li></a>
+                <a href="./projects.html"><li>Projects</li></a>
             </ul>
         </div>
         <div class="close">
@@ -47,7 +47,7 @@
     </nav>
     <div class="cover" id="cover"></div>
     <!--landing page-->
-    <section class="full landing">
+    <section class="full landing" id="landing">
         <div class="container">
             <img class="profile_img parallax" data-offset="-2" src="./static/images/me.jpg"/>
             <div class="card parallax" data-offset="2">
@@ -62,10 +62,10 @@
                 </div>
             </div>
         </div>
-        <div class="next_page parallax" data-offset="-1"><i class="fa fa-caret-down"></i></div>
+        <div class="next_page parallax" data-offset="-1"><a href="#about"><i class="fa fa-caret-down"></i></a></div>
     </section>
     <!--about me-->
-    <section class="full about">
+    <section class="full about" id="about">
         <div class="container">
             <h3 class="title">About Me.</h3>
             <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Impedit obcaecati laboriosam sed et facere veritatis ut magnam, laudantium aperiam, quam libero ducimus deserunt cum! Itaque, earum. Incidunt sint sequi voluptatibus!</p>
@@ -73,7 +73,7 @@
         </div>
     </section>
     <!--tech and skills-->
-    <section class="full tech">
+    <section class="full tech" id="tech">
         <div class="container">
             <h3 class="title">Tech and Skills</h3>
             <p class="desc">Lorem ipsum dolor sit amet consectetur adipisicing elit. Assumenda soluta veritatis quod numquam placeat? Magnam error quis modi quaerat</p>

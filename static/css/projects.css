@@ -1,1 +1,499 @@
-/* No CSS *//*# sourceMappingURL=projects.css.map */
+.attention {
+  -webkit-animation: 1s attention 0s linear infinite;
+          animation: 1s attention 0s linear infinite;
+}
+
+.anim_hide_down {
+  -webkit-animation: 1s hide_down 0s ease-out;
+          animation: 1s hide_down 0s ease-out;
+}
+
+.anim_reveal_up {
+  -webkit-animation: 1s reveal_up ease-in;
+          animation: 1s reveal_up ease-in;
+}
+
+.anim_reveal_fromLeft {
+  -webkit-animation: 1s reveal_fromLeft ease-in;
+          animation: 1s reveal_fromLeft ease-in;
+}
+
+.anim_reveal_fromRight {
+  -webkit-animation: 1s reveal_fromRight ease-in;
+          animation: 1s reveal_fromRight ease-in;
+}
+
+@-webkit-keyframes attention {
+  0% {
+    -webkit-transform: scale(0.6);
+            transform: scale(0.6);
+    color: #05dfd7;
+  }
+  25% {
+    -webkit-transform: translateY(20px) scale(1.2);
+            transform: translateY(20px) scale(1.2);
+  }
+  50% {
+    -webkit-transform: translateY(-5px) scale(1.1);
+            transform: translateY(-5px) scale(1.1);
+    color: #f40552;
+  }
+  75% {
+    -webkit-transform: translateY(-20px);
+            transform: translateY(-20px);
+    scale: 0.4;
+  }
+  100% {
+    -webkit-transform: scale(0.6);
+            transform: scale(0.6);
+  }
+}
+
+@keyframes attention {
+  0% {
+    -webkit-transform: scale(0.6);
+            transform: scale(0.6);
+    color: #05dfd7;
+  }
+  25% {
+    -webkit-transform: translateY(20px) scale(1.2);
+            transform: translateY(20px) scale(1.2);
+  }
+  50% {
+    -webkit-transform: translateY(-5px) scale(1.1);
+            transform: translateY(-5px) scale(1.1);
+    color: #f40552;
+  }
+  75% {
+    -webkit-transform: translateY(-20px);
+            transform: translateY(-20px);
+    scale: 0.4;
+  }
+  100% {
+    -webkit-transform: scale(0.6);
+            transform: scale(0.6);
+  }
+}
+
+@-webkit-keyframes hide_down {
+  from {
+    bottom: 0px;
+  }
+  to {
+    bottom: -100%;
+  }
+}
+
+@keyframes hide_down {
+  from {
+    bottom: 0px;
+  }
+  to {
+    bottom: -100%;
+  }
+}
+
+@-webkit-keyframes reveal_up {
+  from {
+    bottom: -100%;
+  }
+  to {
+    bottom: 0px;
+  }
+}
+
+@keyframes reveal_up {
+  from {
+    bottom: -100%;
+  }
+  to {
+    bottom: 0px;
+  }
+}
+
+@-webkit-keyframes reveal_fromLeft {
+  from {
+    left: -100%;
+  }
+  to {
+    left: 0px;
+  }
+}
+
+@keyframes reveal_fromLeft {
+  from {
+    left: -100%;
+  }
+  to {
+    left: 0px;
+  }
+}
+
+@-webkit-keyframes reveal_fromRight {
+  from {
+    right: -100%;
+  }
+  to {
+    right: 0px;
+  }
+}
+
+@keyframes reveal_fromRight {
+  from {
+    right: -100%;
+  }
+  to {
+    right: 0px;
+  }
+}
+
+@-webkit-keyframes shake {
+  0% {
+    -webkit-transform: rotate(0deg);
+            transform: rotate(0deg);
+  }
+  25% {
+    -webkit-transform: rotate(-30deg);
+            transform: rotate(-30deg);
+  }
+  50% {
+    -webkit-transform: rotate(30deg);
+            transform: rotate(30deg);
+  }
+  75% {
+    -webkit-transform: rotate(-30deg);
+            transform: rotate(-30deg);
+  }
+  100% {
+    -webkit-transform: rotate(0deg);
+            transform: rotate(0deg);
+  }
+}
+
+@keyframes shake {
+  0% {
+    -webkit-transform: rotate(0deg);
+            transform: rotate(0deg);
+  }
+  25% {
+    -webkit-transform: rotate(-30deg);
+            transform: rotate(-30deg);
+  }
+  50% {
+    -webkit-transform: rotate(30deg);
+            transform: rotate(30deg);
+  }
+  75% {
+    -webkit-transform: rotate(-30deg);
+            transform: rotate(-30deg);
+  }
+  100% {
+    -webkit-transform: rotate(0deg);
+            transform: rotate(0deg);
+  }
+}
+
+@-webkit-keyframes small_shake {
+  0% {
+    -webkit-transform: translateX(0px);
+            transform: translateX(0px);
+  }
+  25% {
+    -webkit-transform: translateX(20px);
+            transform: translateX(20px);
+  }
+  50% {
+    -webkit-transform: translateX(-30px);
+            transform: translateX(-30px);
+  }
+  75% {
+    -webkit-transform: translateX(-10px);
+            transform: translateX(-10px);
+  }
+  100% {
+    -webkit-transform: translateX(0px);
+            transform: translateX(0px);
+  }
+}
+
+@keyframes small_shake {
+  0% {
+    -webkit-transform: translateX(0px);
+            transform: translateX(0px);
+  }
+  25% {
+    -webkit-transform: translateX(20px);
+            transform: translateX(20px);
+  }
+  50% {
+    -webkit-transform: translateX(-30px);
+            transform: translateX(-30px);
+  }
+  75% {
+    -webkit-transform: translateX(-10px);
+            transform: translateX(-10px);
+  }
+  100% {
+    -webkit-transform: translateX(0px);
+            transform: translateX(0px);
+  }
+}
+
+@-webkit-keyframes bounce {
+  0% {
+    -webkit-transform: translateY(-100px);
+            transform: translateY(-100px);
+  }
+  30% {
+    -webkit-transform: translateY(-100px);
+            transform: translateY(-100px);
+  }
+  40% {
+    -webkit-transform: translateY(-10px) scale(0.6);
+            transform: translateY(-10px) scale(0.6);
+  }
+  60% {
+    -webkit-transform: translateY(20px) scale(0.6);
+            transform: translateY(20px) scale(0.6);
+  }
+  70% {
+    -webkit-transform: scaleY(0.6);
+            transform: scaleY(0.6);
+  }
+  80% {
+    -webkit-transform: translateY(0px);
+            transform: translateY(0px);
+  }
+}
+
+@keyframes bounce {
+  0% {
+    -webkit-transform: translateY(-100px);
+            transform: translateY(-100px);
+  }
+  30% {
+    -webkit-transform: translateY(-100px);
+            transform: translateY(-100px);
+  }
+  40% {
+    -webkit-transform: translateY(-10px) scale(0.6);
+            transform: translateY(-10px) scale(0.6);
+  }
+  60% {
+    -webkit-transform: translateY(20px) scale(0.6);
+            transform: translateY(20px) scale(0.6);
+  }
+  70% {
+    -webkit-transform: scaleY(0.6);
+            transform: scaleY(0.6);
+  }
+  80% {
+    -webkit-transform: translateY(0px);
+            transform: translateY(0px);
+  }
+}
+
+@-webkit-keyframes breathing {
+  0% {
+    -webkit-transform: scale(0.8);
+            transform: scale(0.8);
+  }
+  50% {
+    -webkit-transform: scale(1.1);
+            transform: scale(1.1);
+  }
+  100% {
+    -webkit-transform: scale(0.8);
+            transform: scale(0.8);
+  }
+}
+
+@keyframes breathing {
+  0% {
+    -webkit-transform: scale(0.8);
+            transform: scale(0.8);
+  }
+  50% {
+    -webkit-transform: scale(1.1);
+            transform: scale(1.1);
+  }
+  100% {
+    -webkit-transform: scale(0.8);
+            transform: scale(0.8);
+  }
+}
+
+body {
+  background-image: url("../images/top-10-DS-projects.png");
+}
+
+section.projectList div.container {
+  position: relative;
+  width: 90%;
+  height: 70%;
+  overflow-x: hidden;
+  overflow-y: scroll;
+  top: 50%;
+  left: 50%;
+  -webkit-transform: translate(-50%, -50%);
+          transform: translate(-50%, -50%);
+  display: -ms-grid;
+  display: grid;
+  -ms-grid-columns: (1fr)[4];
+      grid-template-columns: repeat(4, 1fr);
+  padding: 5px;
+  background: rgba(10, 10, 10, 0.5);
+}
+
+section.projectList div.container div.project {
+  min-height: 200px;
+  max-height: 201px;
+  display: -ms-grid;
+  display: grid;
+  -ms-grid-rows: 1fr 3fr 1fr;
+      grid-template-rows: 1fr 3fr 1fr;
+  background: white;
+  margin: 5px;
+  -webkit-transition: 1s;
+  transition: 1s;
+}
+
+section.projectList div.container div.project h3.title {
+  text-align: center;
+  padding: 10px 0px;
+  letter-spacing: 2px;
+  font-family: Arial;
+  color: blue;
+}
+
+section.projectList div.container div.project p {
+  padding: 10px;
+  line-height: 25px;
+  letter-spacing: 1px;
+}
+
+section.projectList div.container div.project div.git_link {
+  position: relative;
+  padding: 10px;
+  text-align: center;
+  color: white;
+  background: #05dfd7;
+}
+
+section.projectList div.container div.project:hover {
+  -webkit-box-shadow: 1px 1px 10px 10px #f40552;
+          box-shadow: 1px 1px 10px 10px #f40552;
+}
+
+div.expandProject {
+  position: fixed;
+  bottom: 0px;
+  width: 100vw;
+  height: 75%;
+  background: rgba(250, 250, 250, 0.7);
+  overflow-y: scroll;
+  padding: 10px;
+}
+
+div.expandProject div.container {
+  position: relative;
+  max-width: 800px;
+  left: 50%;
+  -webkit-transform: translateX(-50%);
+          transform: translateX(-50%);
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  padding: 10px;
+  background: white;
+}
+
+div.expandProject div.container div.projectTitle, div.expandProject div.container div.projectDescript, div.expandProject div.container div.close {
+  padding: 10px;
+}
+
+div.expandProject div.container div.projectDescript {
+  overflow-y: scroll;
+}
+
+div.expandProject div.container div.projectDescript p {
+  font-family: Arial;
+  line-height: 20px;
+  margin: 10px 0px;
+}
+
+div.expandProject div.container div.close {
+  position: relative;
+  bottom: 0px;
+  text-align: center;
+  font-size: 30px;
+  color: #f40552;
+}
+
+div.expandProject div.projectImages {
+  max-height: 800px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  overflow-y: hidden;
+  overflow-x: scroll;
+  -ms-scroll-snap-type: x mandatory;
+      scroll-snap-type: x mandatory;
+}
+
+div.expandProject img {
+  scroll-snap-align: center;
+  position: relative;
+  width: 800px;
+  height: auto;
+  display: inline;
+  margin: 5px;
+}
+
+#e_projectTitle {
+  color: blue;
+}
+
+#git_link {
+  color: blue;
+  padding: 10px;
+}
+
+div.extra {
+  display: -ms-grid;
+  display: grid;
+  -ms-grid-columns: 1fr 1fr;
+      grid-template-columns: 1fr 1fr;
+}
+
+div.status {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  padding: 5px;
+}
+
+#status_txt {
+  position: relative;
+  font-size: 18px;
+  font-weight: lighter;
+  display: inline-block;
+}
+
+#status_circle {
+  display: inline;
+  height: 20px;
+  width: 20px;
+  border-radius: 50%;
+  background: red;
+  margin: 0px 10px;
+}
+/*# sourceMappingURL=projects.css.map */
