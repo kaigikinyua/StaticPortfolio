@@ -470,10 +470,19 @@ section.tech div.container h3.title {
   letter-spacing: 3px;
 }
 
+section.tech div.container p.desc {
+  font-size: 16px;
+  letter-spacing: 1px;
+  line-height: 25px;
+  font-family: Arial;
+  font-weight: lighter;
+  margin: 5px 10px;
+}
+
 section.tech div.container div.techScroll {
   position: relative;
   width: 100%;
-  background: lightgray;
+  background: rgba(10, 10, 10, 0.5);
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -485,6 +494,7 @@ section.tech div.container div.techScroll {
 }
 
 section.tech div.container div.techScroll div.myTech {
+  background: white;
   scroll-snap-align: center;
   padding: 10px;
   display: inline-block;
@@ -492,6 +502,29 @@ section.tech div.container div.techScroll div.myTech {
   min-width: 300px;
   min-height: 300px;
   margin: 10px;
+}
+
+section.tech div.container div.techScroll div.myTech h3.title {
+  margin: 10px 0px;
+  color: blue;
+}
+
+section.tech div.container div.techScroll div.myTech p {
+  font-size: 16px;
+  letter-spacing: 1px;
+  line-height: 25px;
+  font-family: Arial;
+  font-weight: lighter;
+  position: relative;
+  min-height: 60%;
+}
+
+section.tech div.container div.techScroll div.myTech div.icons {
+  position: relative;
+  bottom: 0px;
+  font-size: 30px;
+  text-align: center;
+  color: blue;
 }
 
 section.contacts {
@@ -547,5 +580,61 @@ section.contacts div.container div.cont div.supprise img {
   display: none;
   -webkit-animation: 0.2s bounce 0s ease-in-out;
           animation: 0.2s bounce 0s ease-in-out;
+}
+
+@media only screen and (max-width: 700px) {
+  body {
+    overflow-x: hidden;
+  }
+  section.landing {
+    overflow-x: hidden;
+  }
+  section.landing div.container {
+    position: relative;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    width: 100vw;
+    text-align: none;
+  }
+  section.landing img.profile_img {
+    position: relative;
+    height: 150px;
+    width: 150px;
+    border-radius: 50%;
+    margin-bottom: -50px;
+  }
+  section.landing div.card {
+    position: relative;
+    min-width: 300px;
+    max-width: 350px;
+  }
+  section.about div.container {
+    position: relative;
+    width: 100%;
+    margin-top: 20px;
+  }
+  section.tech div.container {
+    width: 100%;
+  }
+  section.tech div.container h3.title {
+    margin: 10px 0px;
+  }
+  section.tech div.container div.techScroll div.myTech {
+    min-width: 200px;
+  }
+  section.contacts div.container div.cont {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+  }
 }
 /*# sourceMappingURL=index.css.map */

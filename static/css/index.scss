@@ -121,16 +121,45 @@ section.tech{
             font-weight: lighter;
             letter-spacing: 3px;  
         }
+        p.desc{
+            font-size: 16px;
+            letter-spacing: 1px;
+            line-height: 25px;
+            font-family: Arial;
+            font-weight: lighter;
+            margin:5px 10px;
+        }
         div.techScroll{
             position: relative;
             width:100%;
-            background:lightgray;
+            background:$shadow;
             display: flex;
             overflow-x:scroll;
             scroll-snap-type: x mandatory;
             scroll-padding: 0 10px;
             padding:10px;
             div.myTech{
+                background: white;
+                h3.title{
+                    margin:10px 0px;
+                    color: blue;
+                }
+                p{
+                    font-size: 16px;
+                    letter-spacing: 1px;
+                    line-height: 25px;
+                    font-family: Arial;
+                    font-weight: lighter;
+                    position: relative;
+                    min-height: 60%;
+                }
+                div.icons{
+                    position: relative;
+                    bottom:0px;
+                    font-size: 30px;
+                    text-align: center;
+                    color:blue;
+                }
                 scroll-snap-align: center;
                 padding:10px;
                 display: inline-block;
@@ -180,6 +209,65 @@ section.contacts{
                     display: none;
                     @include bounce;
                 }
+            }
+        }
+    }
+}
+
+
+
+@media only screen and  (max-width:700px){
+    body{
+        overflow-x:hidden;
+    }
+    section.landing{
+        overflow-x:hidden;
+        div.container{
+            position: relative;
+            display: flex;
+            flex-direction: column;
+            width:100vw;
+            text-align: none;
+        }
+        img.profile_img{
+            position: relative;
+            height:150px;
+            width:150px;
+            border-radius: 50%;
+            margin-bottom:-50px;
+        }
+        div.card{
+            position: relative;
+            min-width:300px;
+            max-width: 350px;
+        }
+    }
+
+    section.about{
+        div.container{
+            position: relative;
+            width:100%;
+            margin-top:20px;
+        }
+    }
+    section.tech{
+        div.container{
+            width:100%;
+            h3.title{
+                margin:10px 0px;
+            }
+            div.techScroll{
+                div.myTech{
+                    min-width: 200px;
+                }
+            }
+        }
+    }
+    section.contacts{
+        div.container{
+            div.cont{
+                display: flex;
+                flex-direction: column;
             }
         }
     }
