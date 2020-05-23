@@ -37,3 +37,8 @@ function hideCover(){
     cover.style.display="none";
 }
 
+function hideProjectDesc(){
+    var project=document.getElementById('expandProject')
+    project.style.display="none"
+}
+

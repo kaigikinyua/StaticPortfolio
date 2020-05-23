@@ -228,6 +228,7 @@ section.contacts{
             flex-direction: column;
             width:100vw;
             text-align: none;
+            
         }
         img.profile_img{
             position: relative;
@@ -240,6 +241,8 @@ section.contacts{
             position: relative;
             min-width:300px;
             max-width: 350px;
+            justify-content: center;
+            justify-items: center;
         }
     }
 

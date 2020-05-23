@@ -1,6 +1,6 @@
 const debug=true
-var baseUrl="http://192.168.0.134:5500/";
-
+//var baseUrl="http://192.168.0.134:5500/";
+var baseUrl="http://127.0.0.1:5500/";
 var projects=[]
 
 //project images
@@ -48,7 +48,54 @@ function addProject(project){
 
 
 function expandProject(projectTitle){
-    console.log(projectTitle)
+    clearPreviousProject()
+    projects.forEach(project=>{
+        if(project.project.title==projectTitle){
+            console.log(projectTitle)
+            project=project.project
+            var pTitle=document.getElementById('e_projectTitle')
+            var pStatusTxt=document.getElementById('status_txt')
+            var pStatusCol=document.getElementById('status_circle')
+            var pGitLink=document.getElementById('git_link')
+            var projectDesc=document.getElementById('projectDesc')
+            var pImages=document.getElementById('projectImages')
+        
+            pTitle.innerHTML=projectTitle
+            pStatusTxt.innerHTML=project.status
+            pGitLink.href=project.git
+            project.description.forEach(desc=>{
+                var par=document.createElement('p')
+                par.innerHTML=desc.paragraph
+                projectDesc.appendChild(par)
+            })
+            project.images.forEach(image=>{
+                var img=document.createElement('img')
+                img.src=image.image
+                pImages.appendChild(img)
+            })
+
+            if(pStatusTxt=="complete"){
+                pStatusCol.style.background="lightgreen"
+            }else{
+                pStatusCol.style.background="yellow"
+            }
+            var expand=document.getElementById('expandProject')
+            expand.style.display="block"
+        }
+    })
+}
+
+function clearPreviousProject(){
+    var pTitle=document.getElementById('e_projectTitle')
+    var pStatusTxt=document.getElementById('status_txt')
+    var pStatusCol=document.getElementById('status_circle')
+    var pGitLink=document.getElementById('git_link')
+    var projectDesc=document.getElementById('projectDesc')
+    var pImages=document.getElementById('projectImages')
+    var previousProject=[pTitle,pStatusCol,pStatusTxt,pGitLink,projectDesc,pImages]
+    previousProject.forEach(elem=>{
+        elem.innerHTML=""
+    })
 }
 
 //services
@@ -65,4 +112,36 @@ function fetchData(url,fn){
 
 function errorMessage(message){
     console.error(message);
+}
+
+
+
+
+
+
+
+class Project{
+    projectName=""
+    constructor(projectName){
+        this.projectName=projectName
+    }
+    addProjectTile(projectName,projectShortDesc,gitLink){
+        
+    }
+    viewProject(projectName){}
+
+    //utilities
+    getProjectData(){
+        projects.forEach(project=>{
+            if(project.project.title==this.projectName){
+                return project
+            }
+        });
+        return false
+    }
+    addHtml(elementID,data){
+        var elm=document.getElementById(elementID)
+        elm.innerHTML=data
+        return elem
+    }
 }

@@ -612,6 +612,10 @@ section.contacts div.container div.cont div.supprise img {
     position: relative;
     min-width: 300px;
     max-width: 350px;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+    justify-items: center;
   }
   section.about div.container {
     position: relative;

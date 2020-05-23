@@ -1,7 +1,14 @@
+//colors
 $accent:#f40552;
 $main:#05dfd7;
 $background:#FFFFFF;
 $shadow:rgba(10,10,10,0.5);
+
+//max-width of various screenSizes
+$phone:600px;
+$tablet:800px;
+//desktop
+//$bigMonitor:;
 
 //alignment
 @mixin horizontal{
