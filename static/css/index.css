@@ -39,8 +39,8 @@
     color: #f40552;
   }
   75% {
-    -webkit-transform: translateY(-20px);
-            transform: translateY(-20px);
+    -webkit-transform: translateY(-7px);
+            transform: translateY(-7px);
     scale: 0.4;
   }
   100% {
@@ -65,8 +65,8 @@
     color: #f40552;
   }
   75% {
-    -webkit-transform: translateY(-20px);
-            transform: translateY(-20px);
+    -webkit-transform: translateY(-7px);
+            transform: translateY(-7px);
     scale: 0.4;
   }
   100% {
@@ -337,9 +337,10 @@ div.next_page {
   text-align: center;
   font-size: 50px;
   color: #f40552;
-  padding: 20px;
+  padding: 0px;
   width: 100%;
   bottom: 0px;
+  overflow: hidden;
 }
 
 div.next_page i {
@@ -482,7 +483,7 @@ section.tech div.container p.desc {
 section.tech div.container div.techScroll {
   position: relative;
   width: 100%;
-  background: rgba(10, 10, 10, 0.5);
+  background: rgba(10, 10, 10, 0.1);
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -490,22 +491,29 @@ section.tech div.container div.techScroll {
   -ms-scroll-snap-type: x mandatory;
       scroll-snap-type: x mandatory;
   scroll-padding: 0 10px;
-  padding: 10px;
+  padding: 5px;
+  margin-top: 20px;
 }
 
 section.tech div.container div.techScroll div.myTech {
+  position: relative;
   background: white;
   scroll-snap-align: center;
   padding: 10px;
-  display: inline-block;
-  background: #FFFFFF;
-  min-width: 300px;
-  min-height: 300px;
   margin: 10px;
+  display: -ms-grid;
+  display: grid;
+  -ms-grid-rows: 1fr 3fr 2fr;
+      grid-template-rows: 1fr 3fr 2fr;
+  background: #FFFFFF;
+  max-width: 300px;
+  max-height: 300px;
+  -webkit-transition: 1s;
+  transition: 1s;
 }
 
 section.tech div.container div.techScroll div.myTech h3.title {
-  margin: 10px 0px;
+  margin: 0px;
   color: blue;
 }
 
@@ -515,16 +523,25 @@ section.tech div.container div.techScroll div.myTech p {
   line-height: 25px;
   font-family: Arial;
   font-weight: lighter;
-  position: relative;
-  min-height: 60%;
 }
 
 section.tech div.container div.techScroll div.myTech div.icons {
   position: relative;
-  bottom: 0px;
   font-size: 30px;
-  text-align: center;
   color: blue;
+}
+
+section.tech div.container div.techScroll div.myTech div.icons i {
+  position: relative;
+  top: 50%;
+  left: 50%;
+  -webkit-transform: translate(-50%, -50%);
+          transform: translate(-50%, -50%);
+}
+
+section.tech div.container div.techScroll div.myTech:hover {
+  -webkit-box-shadow: 1px 1px 10px 10px rgba(10, 10, 10, 0.5);
+          box-shadow: 1px 1px 10px 10px rgba(10, 10, 10, 0.5);
 }
 
 section.contacts {
@@ -582,6 +599,7 @@ section.contacts div.container div.cont div.supprise img {
           animation: 0.2s bounce 0s ease-in-out;
 }
 
+/* mobile */
 @media only screen and (max-width: 700px) {
   body {
     overflow-x: hidden;
@@ -599,7 +617,12 @@ section.contacts div.container div.cont div.supprise img {
         -ms-flex-direction: column;
             flex-direction: column;
     width: 100vw;
-    text-align: none;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
   }
   section.landing img.profile_img {
     position: relative;
@@ -620,6 +643,7 @@ section.contacts div.container div.cont div.supprise img {
   section.about div.container {
     position: relative;
     width: 100%;
+    height: 80%;
     margin-top: 20px;
   }
   section.tech div.container {
@@ -641,4 +665,6 @@ section.contacts div.container div.cont div.supprise img {
             flex-direction: column;
   }
 }
+
+/* tablet */
 /*# sourceMappingURL=index.css.map */

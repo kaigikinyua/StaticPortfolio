@@ -12,9 +12,10 @@ div.next_page{
     text-align: center;
     font-size: 50px;
     color:$accent;
-    padding:20px;
+    padding:0px;
     width:100%;
     bottom:0px;
+    overflow: hidden;
     i{
         @include attention;
         padding:20px;
@@ -132,16 +133,27 @@ section.tech{
         div.techScroll{
             position: relative;
             width:100%;
-            background:$shadow;
+            background:rgba(10,10,10,0.1);
             display: flex;
             overflow-x:scroll;
             scroll-snap-type: x mandatory;
             scroll-padding: 0 10px;
-            padding:10px;
+            padding:5px;
+            margin-top:20px;
             div.myTech{
+                position: relative;
                 background: white;
+                scroll-snap-align: center;
+                padding:10px;
+                margin:10px;
+                display: grid;
+                grid-template-rows: 1fr 3fr 2fr;
+                background:$background;
+                max-width: 300px;
+                max-height: 300px;
+                transition:1s;
                 h3.title{
-                    margin:10px 0px;
+                    margin:0px;
                     color: blue;
                 }
                 p{
@@ -150,23 +162,19 @@ section.tech{
                     line-height: 25px;
                     font-family: Arial;
                     font-weight: lighter;
-                    position: relative;
-                    min-height: 60%;
                 }
                 div.icons{
                     position: relative;
-                    bottom:0px;
                     font-size: 30px;
-                    text-align: center;
                     color:blue;
+                    i{
+                        position: relative;
+                        @include center;
+                    }
                 }
-                scroll-snap-align: center;
-                padding:10px;
-                display: inline-block;
-                background:$background;
-                min-width: 300px;
-                min-height: 300px;
-                margin:10px;
+            }
+            div.myTech:hover{
+                box-shadow: 1px 1px 10px 10px $shadow;
             }
         }
     }
@@ -215,7 +223,7 @@ section.contacts{
 }
 
 
-
+/* mobile */
 @media only screen and  (max-width:700px){
     body{
         overflow-x:hidden;
@@ -227,7 +235,8 @@ section.contacts{
             display: flex;
             flex-direction: column;
             width:100vw;
-            text-align: none;
+            justify-content: center;
+            align-items: center;
             
         }
         img.profile_img{
@@ -250,6 +259,7 @@ section.contacts{
         div.container{
             position: relative;
             width:100%;
+            height:80%;
             margin-top:20px;
         }
     }
@@ -274,4 +284,9 @@ section.contacts{
             }
         }
     }
+}
+
+/* tablet */
+@media only screen and (max-width:$tablet){
+
 }
