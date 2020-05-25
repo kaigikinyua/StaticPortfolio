@@ -8,7 +8,7 @@
                     "description":[
                             {"paragraph":"Have you ever wanted to watch a film on your phone from your laptop? Look no further PyN will do the trick!!"},
                             {"paragraph":"PyN is a file sharing application that I created. It composes of a desktop application built with Python and a webserver built using nodeJS that distributes the files. Users can access files from the browser if the host  and the client are on the same network You can read the documentation on my github"},
-                            {"paragraph":"For the Gui I used python's tkinter gui library and on starting the server you make a system call to run the server."}
+                            {"paragraph":"For the Gui I used python's tkinter gui library and on starting the server you make a system call to run the server."},
                             {"paragraph":"NodeJS was picked for this project mainly because it can be easily packaged for distribution to other computers. However other goodies such as single threaded event loop and v8 engine were considered."}
                     ],
                     "images":[
@@ -46,7 +46,7 @@
                     "status":"complete",
                     "short_desc":"UI/UX concepts and implementations of various applications",
                     "description":[
-                        {"paragraph":"This is my collection of User Interface and User Experience design and implementation of varous apps and sites."}
+                        {"paragraph":"This is my collection of User Interface and User Experience design and implementation of varous apps and sites."},
                         {"paragraph":"These interface collection is however just a training ground to test various front end technologies and frameworks."},
                     ],
                     "images":[
