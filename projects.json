@@ -7,16 +7,17 @@
                     "short_desc":"A file sharing application using the web",
                     "description":[
                             {"paragraph":"Have you ever wanted to watch a film on your phone from your laptop? Look no further PyN will do the trick!!"},
-                            {"paragraph":"PyN is a file sharing application that I created. It composes of a desktop application built with Python and a webserver built using nodeJS that distributes the files. Users can access files from the browser if the host  and the client are on the same network You can read the documentation on my github"},
+                            {"paragraph":"PyN is a file sharing application that I created. It composes of a desktop application built with Python and a webserver built using nodeJS that distributes the files."},
+                            {"paragraph":" Users can access files from the browser if the host  and the client are on the same network You can read the documentation on my github"},
                             {"paragraph":"For the Gui I used python's tkinter gui library and on starting the server you make a system call to run the server."},
-                            {"paragraph":"NodeJS was picked for this project mainly because it can be easily packaged for distribution to other computers. However other goodies such as single threaded event loop and v8 engine were considered."},
+                            {"paragraph":"NodeJS was picked for this project mainly because it can be easily packaged for distribution to other computers. However other goodies such as single threaded event loop and v8 engine were considered."}
                     ],
                     "images":[
                                 {"image":"static/Projects/share/share.png"},
                                 {"image":"static/Projects/share/tab.png"},
                                 {"image":"static/Projects/share/desktop.png"},
-                                {"image":"static/Projects/share/dashboard.png"},
-                            ],
+                                {"image":"static/Projects/share/dashboard.png"}
+                            ]
                 }
             },
             {
@@ -30,13 +31,13 @@
                             {"paragraph":"You can checkout the github link attached to get a full disclosure of how to use it."},
                             {"paragraph":"I used Python3 to develop the cli application. This is mainly because I needed a language that can be used to do system operations with ease, shorten development time and has OOP since there are different blue prints which have simmilar behaviours"},
                             {"paragraph":"The application was developed as a cli since it is mostly designed for developers to auto generate documentation for other developers"},
-                            {"paragraph":"I have attached some design images so that you can get a clue of what is under the hood."},
+                            {"paragraph":"I have attached some design images so that you can get a clue of what is under the hood."}
                     ],
                     "images":[
                             {"image":"static/Projects/autoDoc/autoDoc.png"},
                             {"image":"static/Projects/autoDoc/logs.png"},
-                            {"image":"static/Projects/autoDoc/markdown.png"},
-                        ], 
+                            {"image":"static/Projects/autoDoc/markdown.png"}
+                        ] 
                 }
             },
             {
@@ -47,13 +48,13 @@
                     "short_desc":"UI/UX concepts and implementations of various applications",
                     "description":[
                         {"paragraph":"This is my collection of User Interface and User Experience design and implementation of varous apps and sites."},
-                        {"paragraph":"These interface collection is however just a training ground to test various front end technologies and frameworks."},
+                        {"paragraph":"These interface collection is however just a training ground to test various front end technologies and frameworks."}
                     ],
                     "images":[
                             {"image":"static/Projects/ui/1.png"},
                             {"image":"static/Projects/ui/2.png"},
-                            {"image":"static/Projects/ui/3.png"},
-                        ],
+                            {"image":"static/Projects/ui/3.png"}
+                        ]
                     }
             }
     ]
