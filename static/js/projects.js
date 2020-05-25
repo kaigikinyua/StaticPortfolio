@@ -74,7 +74,7 @@ function expandProject(projectTitle){
                 pImages.appendChild(img)
             })
 
-            if(pStatusTxt=="complete"){
+            if(project.status=="complete"){
                 pStatusCol.style.background="lightgreen"
             }else{
                 pStatusCol.style.background="yellow"
