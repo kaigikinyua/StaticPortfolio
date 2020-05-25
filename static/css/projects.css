@@ -39,8 +39,8 @@
     color: #f40552;
   }
   75% {
-    -webkit-transform: translateY(-20px);
-            transform: translateY(-20px);
+    -webkit-transform: translateY(-7px);
+            transform: translateY(-7px);
     scale: 0.4;
   }
   100% {
@@ -65,8 +65,8 @@
     color: #f40552;
   }
   75% {
-    -webkit-transform: translateY(-20px);
-            transform: translateY(-20px);
+    -webkit-transform: translateY(-7px);
+            transform: translateY(-7px);
     scale: 0.4;
   }
   100% {
@@ -346,12 +346,13 @@ section.projectList div.container {
 }
 
 section.projectList div.container div.project {
-  min-height: 200px;
-  max-height: 201px;
+  position: relative;
+  min-width: 200px;
+  max-height: 220px;
   display: -ms-grid;
   display: grid;
-  -ms-grid-rows: 1fr 3fr 1fr;
-      grid-template-rows: 1fr 3fr 1fr;
+  -ms-grid-rows: 1fr 4fr 1fr;
+      grid-template-rows: 1fr 4fr 1fr;
   background: white;
   margin: 5px;
   -webkit-transition: 1s;
@@ -496,5 +497,17 @@ div.status {
   border-radius: 50%;
   background: red;
   margin: 0px 10px;
+}
+
+@media only screen and (max-width: 700px) {
+  section.projectList div.container {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+  }
 }
 /*# sourceMappingURL=projects.css.map */

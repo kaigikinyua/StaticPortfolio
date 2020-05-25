@@ -18,10 +18,11 @@ section.projectList{
         padding:5px;
         background:$shadow;
         div.project{
-            min-height: 200px;
-            max-height: 201px;
+            position: relative;
+            min-width: 200px;
+            max-height: 220px;
             display: grid;
-            grid-template-rows: 1fr 3fr 1fr;
+            grid-template-rows: 1fr 4fr 1fr;
             background:white;
             margin:5px;
             transition:1s;
@@ -137,4 +138,16 @@ div.status{
     border-radius: 50%;
     background:red;
     margin:0px 10px;
+}
+
+
+
+@media only screen and (max-width:700px){
+    section.projectList{
+        div.container{
+            display: flex;
+            flex-direction: column;
+        }
+        
+    }
 }

@@ -1,6 +1,6 @@
-const debug=true
-//var baseUrl="http://192.168.0.134:5500/";
-var baseUrl="http://127.0.0.1:5500/";
+const debug=false
+var baseUrl="http://192.168.0.134:5500/";
+//var baseUrl="http://127.0.0.1:5500/";
 var projects=[]
 
 //project images

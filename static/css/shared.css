@@ -39,8 +39,8 @@
     color: #f40552;
   }
   75% {
-    -webkit-transform: translateY(-20px);
-            transform: translateY(-20px);
+    -webkit-transform: translateY(-7px);
+            transform: translateY(-7px);
     scale: 0.4;
   }
   100% {
@@ -65,8 +65,8 @@
     color: #f40552;
   }
   75% {
-    -webkit-transform: translateY(-20px);
-            transform: translateY(-20px);
+    -webkit-transform: translateY(-7px);
+            transform: translateY(-7px);
     scale: 0.4;
   }
   100% {

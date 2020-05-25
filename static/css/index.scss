@@ -149,7 +149,7 @@ section.tech{
                 display: grid;
                 grid-template-rows: 1fr 3fr 2fr;
                 background:$background;
-                max-width: 300px;
+                min-width: 250px;
                 max-height: 300px;
                 transition:1s;
                 h3.title{
