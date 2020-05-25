@@ -16,7 +16,7 @@
                                 {"image":"static/Projects/share/tab.png"},
                                 {"image":"static/Projects/share/desktop.png"},
                                 {"image":"static/Projects/share/dashboard.png"},
-                            ]
+                            ],
                 }
             },
             {
@@ -36,7 +36,7 @@
                             {"image":"static/Projects/autoDoc/autoDoc.png"},
                             {"image":"static/Projects/autoDoc/logs.png"},
                             {"image":"static/Projects/autoDoc/markdown.png"},
-                        ] 
+                        ], 
                 }
             },
             {
@@ -53,7 +53,7 @@
                             {"image":"static/Projects/ui/1.png"},
                             {"image":"static/Projects/ui/2.png"},
                             {"image":"static/Projects/ui/3.png"},
-                        ]
+                        ],
                     }
             }
     ]
