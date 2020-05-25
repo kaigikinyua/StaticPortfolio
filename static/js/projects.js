@@ -61,7 +61,7 @@ function expandProject(projectTitle){
             var pImages=document.getElementById('projectImages')
         
             pTitle.innerHTML=projectTitle
-            pStatusTxt.innerHTML=project.status
+            pStatusTxt.innerHTML="Status:"+project.status
             pGitLink.href=project.git
             project.description.forEach(desc=>{
                 var par=document.createElement('p')
