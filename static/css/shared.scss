@@ -41,6 +41,7 @@ nav.topnav{
         letter-spacing: 2px;
         h3.title{
             font-weight: lighter;
+            color:blue;
         }
     }
     div.links{
@@ -105,6 +106,7 @@ nav.sidenav{
     ul.list{
         position: relative;
         max-width: 200px;
+        margin-left:40px;
         li{
             color:rgba(10,10,10,0.8);
             border-bottom: 1px solid $main;

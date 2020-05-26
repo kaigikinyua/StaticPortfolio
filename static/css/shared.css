@@ -375,6 +375,7 @@ nav.topnav div.barner {
 
 nav.topnav div.barner h3.title {
   font-weight: lighter;
+  color: blue;
 }
 
 nav.topnav div.links ul.links a li small {
@@ -448,6 +449,7 @@ nav.sidenav div.links {
 nav.sidenav ul.list {
   position: relative;
   max-width: 200px;
+  margin-left: 40px;
 }
 
 nav.sidenav ul.list li {

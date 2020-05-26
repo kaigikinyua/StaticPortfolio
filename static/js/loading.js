@@ -4,7 +4,7 @@ window.onload=()=>{
 }
 loadingText()
 function  loadingText(){
-    var messages=['Hello There','Just setting up ....','... 1 more sec']
+    var messages=['Hello There...','Just setting up ....','... 1 more sec']
     var messagePanel=document.getElementById('emojiLoad')
     messages.forEach(message=>{
         var m=document.createElement('p')
