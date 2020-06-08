@@ -463,6 +463,13 @@ section.about div.container p {
   margin: 5px 10px;
 }
 
+section.about div.container .cv {
+  width: 100px;
+  background: blue;
+  color: white;
+  border-radius: 10px;
+}
+
 section.tech div.container {
   position: relative;
   top: 50%;
