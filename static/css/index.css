@@ -431,6 +431,7 @@ section.landing div.cont i:hover {
 
 section.about {
   background: #04c6bf;
+  overflow: hidden;
 }
 
 section.about div.container {
@@ -444,6 +445,7 @@ section.about div.container {
   background: #FFFFFF;
   padding: 10px;
   border-radius: 20px;
+  overflow-y: scroll;
 }
 
 section.about div.container h3.title {

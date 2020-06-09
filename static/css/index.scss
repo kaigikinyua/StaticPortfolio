@@ -88,6 +88,7 @@ section.landing{
 //about
 section.about{
     background: darken($main,5%);
+    overflow:hidden;
     div.container{
         position: relative;
         @include center;
@@ -96,6 +97,7 @@ section.about{
         background:$background;
         padding:10px;
         border-radius: 20px;
+        overflow-y:scroll;
         h3.title{
             color:blue;
             font-family: Arial;
