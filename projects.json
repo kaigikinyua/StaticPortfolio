@@ -1,6 +1,24 @@
 {
     "projects":[
             {"project":{
+                    "title":"MWD",
+                    "git":"https://github.com/kaigikinyua/MWD",
+                    "status":"In Progress",
+                    "short_desc":"A multiplayer tic tac toe game",
+                    "description":[
+                            {"paragraph":"This web application allows you to play tic tac toe with a wide variety of people online"},
+                            {"paragraph":"You can get an invite or send a player an invite and if either party accepts then you are directed to an arena"},
+                            {"paragraph":"I am currently working on the various observation improvements after releasing the beta on 22 June 2020"},
+                            {"paragraph":"If you would like to have a go at it you can visit https://antonytictac.herokuapp.com/  dont forget to invite a friend :)"}
+                    ],
+                    "images":[
+                                {"image":"static/Projects/mwd/Landing.png"},
+                                {"image":"static/Projects/mwd/players.png"}
+                            ]
+                }
+            },
+
+            {"project":{
                     "title":"PyN",
                     "git":"https://github.com/kaigikinyua/AutoDoc",
                     "status":"complete",
