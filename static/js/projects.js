@@ -38,7 +38,7 @@ function addProject(project){
    var project_UI=document.createElement('div')
    project_UI.dataset.projectname=project.title
    project_UI.classList.add('project')
-   var html="<h3 class='title'>"+project.title+"</h3><p class='s_desc'>"+project.short_desc+"</p><a href='"+project.git+"'><div class='git_link'><i class='fab fa-github'></i></div></a>"
+   var html="<h3 class='title'>"+project.title+"</h3><p class='s_desc'>"+project.short_desc+"</p><div class='more'>Read More</div><a href='"+project.git+"'><div class='git_link'><i class='fab fa-github'></i></div></a>"
    project_UI.innerHTML=html
    project_UI.addEventListener('click',(e)=>{
     expandProject(project.title)

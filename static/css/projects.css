@@ -325,6 +325,7 @@
 
 body {
   background-image: url("../images/top-10-DS-projects.png");
+  font-family: Arial;
 }
 
 section.projectList div.container {
@@ -350,14 +351,15 @@ section.projectList div.container div.project {
   max-height: 220px;
   display: -ms-grid;
   display: grid;
-  -ms-grid-rows: 1fr 4fr 1fr;
-      grid-template-rows: 1fr 4fr 1fr;
+  -ms-grid-rows: 2fr 4fr 1fr 1fr;
+      grid-template-rows: 2fr 4fr 1fr 1fr;
   background: white;
   margin: 10px;
   -webkit-box-shadow: 2px 2px 10px 10px rgba(0, 0, 0, 0.5);
           box-shadow: 2px 2px 10px 10px rgba(0, 0, 0, 0.5);
   -webkit-transition: 1s;
   transition: 1s;
+  overflow: hidden;
 }
 
 section.projectList div.container div.project h3.title {
@@ -365,13 +367,35 @@ section.projectList div.container div.project h3.title {
   padding: 10px 0px;
   letter-spacing: 2px;
   font-family: Arial;
-  color: blue;
+  color: white;
+  background: #05dfd7;
+  padding-bottom: 30px;
+  border-bottom-right-radius: 100px;
+  border-bottom-left-radius: 100px;
+  -webkit-transition: 1s;
+  transition: 1s;
 }
 
 section.projectList div.container div.project p {
   padding: 10px;
   line-height: 25px;
   letter-spacing: 1px;
+}
+
+section.projectList div.container div.project div.more {
+  padding: 10px;
+  text-align: center;
+  font-family: Arial;
+  background: #05dfd7;
+  color: white;
+  margin-bottom: 5px;
+  font-size: 15px;
+  position: relative;
+  max-width: 100px;
+  left: 50%;
+  -webkit-transform: translateX(-50%);
+          transform: translateX(-50%);
+  border-radius: 20px;
 }
 
 section.projectList div.container div.project div.git_link {
@@ -385,6 +409,21 @@ section.projectList div.container div.project div.git_link {
 section.projectList div.container div.project:hover {
   -webkit-box-shadow: 1px 1px 10px 10px #024947;
           box-shadow: 1px 1px 10px 10px #024947;
+  background: blue;
+}
+
+section.projectList div.container div.project:hover h3.title {
+  border-bottom-right-radius: 0px;
+  border-bottom-left-radius: 0px;
+  background: blue;
+}
+
+section.projectList div.container div.project:hover p {
+  color: white;
+}
+
+section.projectList div.container div.project:hover div.more {
+  background: #1dfaf2;
 }
 
 div.expandProject {

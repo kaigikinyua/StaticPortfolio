@@ -4,6 +4,7 @@
 
 body{
     background-image: url('../images/top-10-DS-projects.png');
+    font-family: Arial;
 }
 section.projectList{
     div.container{
@@ -21,22 +22,41 @@ section.projectList{
             min-width: 200px;
             max-height: 220px;
             display: grid;
-            grid-template-rows: 1fr 4fr 1fr;
+            grid-template-rows: 2fr 4fr 1fr 1fr;
             background:white;
             margin:10px;
             box-shadow: 2px 2px 10px 10px darken($shadow, 10%);
             transition:1s;
+            overflow: hidden;
             h3.title{
                 text-align: center;
                 padding:10px 0px;
                 letter-spacing: 2px;
                 font-family: Arial;
-                color:blue;
+                color:white;
+                background:$main;
+                padding-bottom: 30px;
+                border-bottom-right-radius: 100px;
+                border-bottom-left-radius: 100px;
+                transition:1s;
             }
             p{
                 padding:10px;
                 line-height: 25px;
                 letter-spacing: 1px;
+            }
+            div.more{
+                padding:10px;
+                text-align: center;
+                font-family: Arial;
+                background:$main;
+                color:white;
+                margin-bottom:5px;
+                font-size: 15px;
+                position: relative;
+                max-width: 100px;
+                @include horizontal;
+                border-radius: 20px;
             }
             div.git_link{
                 position: relative;
@@ -48,6 +68,18 @@ section.projectList{
         }
         div.project:hover{
             box-shadow: 1px 1px 10px 10px darken($main, 30);
+            background:blue;
+            h3.title{
+                border-bottom-right-radius: 0px;
+                border-bottom-left-radius: 0px;
+                background:blue;
+            }
+            p{
+                color:white;
+            }
+            div.more{
+                background:lighten($main,10%);
+            }
         }
     }
 }
