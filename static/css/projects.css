@@ -348,11 +348,7 @@ section.projectList div.container {
 section.projectList div.container div.project {
   position: relative;
   min-width: 200px;
-  max-height: 220px;
-  display: -ms-grid;
-  display: grid;
-  -ms-grid-rows: 2fr 4fr 1fr 1fr;
-      grid-template-rows: 2fr 4fr 1fr 1fr;
+  max-height: 320px;
   background: white;
   margin: 10px;
   -webkit-box-shadow: 2px 2px 10px 10px rgba(0, 0, 0, 0.5);
@@ -362,24 +358,40 @@ section.projectList div.container div.project {
   overflow: hidden;
 }
 
-section.projectList div.container div.project h3.title {
+section.projectList div.container div.project div.title {
+  position: relative;
+  -webkit-clip-path: circle(150px at center 0);
+          clip-path: circle(150px at center 0);
+  width: 100%;
+  height: 100%;
   text-align: center;
   padding: 10px 0px;
-  letter-spacing: 2px;
-  font-family: Arial;
-  color: white;
   background: #05dfd7;
-  padding-bottom: 30px;
-  border-bottom-right-radius: 100px;
-  border-bottom-left-radius: 100px;
   -webkit-transition: 1s;
   transition: 1s;
 }
 
+section.projectList div.container div.project div.title h3 {
+  letter-spacing: 2px;
+  font-family: Arial;
+  color: white;
+  font-size: 2em;
+  padding: 30px 0px;
+}
+
+section.projectList div.container div.project div.p_content {
+  position: absolute;
+  bottom: 0px;
+  text-align: center;
+}
+
 section.projectList div.container div.project p {
   padding: 10px;
+  min-width: 250px;
   line-height: 25px;
   letter-spacing: 1px;
+  -webkit-transition: 0.6;
+  transition: 0.6;
 }
 
 section.projectList div.container div.project div.more {
@@ -400,6 +412,7 @@ section.projectList div.container div.project div.more {
 
 section.projectList div.container div.project div.git_link {
   position: relative;
+  width: 100%;
   padding: 10px;
   text-align: center;
   color: white;
@@ -412,14 +425,13 @@ section.projectList div.container div.project:hover {
   background: blue;
 }
 
-section.projectList div.container div.project:hover h3.title {
-  border-bottom-right-radius: 0px;
-  border-bottom-left-radius: 0px;
-  background: blue;
+section.projectList div.container div.project:hover div.title {
+  margin-top: -40px;
 }
 
 section.projectList div.container div.project:hover p {
   color: white;
+  font-size: 22px;
 }
 
 section.projectList div.container div.project:hover div.more {
