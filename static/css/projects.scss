@@ -62,6 +62,10 @@ section.projectList{
             }
             div.more{
                 padding:10px;
+                display: grid;
+                grid-template-columns: 1fr 1fr;
+            }
+            button,a {
                 text-align: center;
                 font-family: Arial;
                 background:$main;
@@ -71,14 +75,8 @@ section.projectList{
                 position: relative;
                 max-width: 100px;
                 border-radius: 20px;
-            }
-            div.git_link{
-                position: relative;
-                width:100%;
+                border:none;
                 padding:10px;
-                text-align: center;
-                color:white;
-                background:$main;
             }
         }
         div.project:hover{
@@ -91,7 +89,7 @@ section.projectList{
                 color:white;
                 font-size: 22px;
             }
-            div.more{
+            button,a{
                 background:lighten($main,10%);
             }
         }

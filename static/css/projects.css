@@ -403,6 +403,13 @@ section.projectList div.container div.project p {
 
 section.projectList div.container div.project div.more {
   padding: 10px;
+  display: -ms-grid;
+  display: grid;
+  -ms-grid-columns: 1fr 1fr;
+      grid-template-columns: 1fr 1fr;
+}
+
+section.projectList div.container div.project button, section.projectList div.container div.project a {
   text-align: center;
   font-family: Arial;
   background: #05dfd7;
@@ -412,15 +419,8 @@ section.projectList div.container div.project div.more {
   position: relative;
   max-width: 100px;
   border-radius: 20px;
-}
-
-section.projectList div.container div.project div.git_link {
-  position: relative;
-  width: 100%;
+  border: none;
   padding: 10px;
-  text-align: center;
-  color: white;
-  background: #05dfd7;
 }
 
 section.projectList div.container div.project:hover {
@@ -438,7 +438,7 @@ section.projectList div.container div.project:hover p {
   font-size: 22px;
 }
 
-section.projectList div.container div.project:hover div.more {
+section.projectList div.container div.project:hover button, section.projectList div.container div.project:hover a {
   background: #1dfaf2;
 }
 
