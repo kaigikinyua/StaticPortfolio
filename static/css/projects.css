@@ -383,10 +383,17 @@ section.projectList div.container div.project div.p_content {
   position: absolute;
   bottom: 0px;
   text-align: center;
+  padding: 5px;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  left: 50%;
+  -webkit-transform: translateX(-50%);
+          transform: translateX(-50%);
 }
 
 section.projectList div.container div.project p {
-  padding: 10px;
+  padding: 10px 0px;
   min-width: 250px;
   line-height: 25px;
   letter-spacing: 1px;
@@ -404,9 +411,6 @@ section.projectList div.container div.project div.more {
   font-size: 15px;
   position: relative;
   max-width: 100px;
-  left: 50%;
-  -webkit-transform: translateX(-50%);
-          transform: translateX(-50%);
   border-radius: 20px;
 }
 
@@ -553,13 +557,18 @@ div.status {
 
 @media only screen and (max-width: 700px) {
   section.projectList div.container {
-    display: -webkit-box;
-    display: -ms-flexbox;
-    display: flex;
-    -webkit-box-orient: vertical;
-    -webkit-box-direction: normal;
-        -ms-flex-direction: column;
-            flex-direction: column;
+    height: 100vh;
+    width: 100vw;
+    display: -ms-grid;
+    display: grid;
+    -ms-grid-columns: (1fr)[2];
+        grid-template-columns: repeat(2, 1fr);
+  }
+  section.projectList div.container div.project {
+    position: relative;
+    max-width: 45vw;
+    min-height: 260px;
+    text-align: left;
   }
 }
 /*# sourceMappingURL=projects.css.map */
