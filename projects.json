@@ -9,7 +9,7 @@
                             {"paragraph":"This web application allows you to play tic tac toe with a wide variety of people online"},
                             {"paragraph":"You can get an invite or send a player an invite and if either party accepts then you are directed to an arena"},
                             {"paragraph":"I am currently working on the various observation improvements after releasing the beta on 22 June 2020"},
-                            {"paragraph":"If you would like to have a go at it you can visit <a href='https://antonytictac.herokuapp.com/'>antonytictac</a>dont forget to invite a friend :)"}
+                            {"paragraph":"If you would like to have a go at it you can visit <a href='https://antonytictac.herokuapp.com/' style='text-decoration:underline;color:blue;'>antonytictac</a> to have a look dont forget to invite a friend :)"}
                     ],
                     "images":[
                                 {"image":"static/Projects/mwd/Landing.png"},
