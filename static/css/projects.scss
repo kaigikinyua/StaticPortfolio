@@ -10,7 +10,7 @@ section.projectList{
     div.container{
         position: relative;
         width:90%;
-        height:70%;
+        height:90%;
         overflow-x:hidden;
         overflow-y:scroll;
         @include center;
@@ -19,8 +19,8 @@ section.projectList{
         padding:5px;
         div.project{
             position: relative;
-            min-width: 200px;
-            max-height: 320px;
+            width: 280px;
+            height: 300px;
             //display: grid;
             //grid-template-rows: 2fr 4fr 1fr 1fr;
             background:white;
@@ -191,13 +191,14 @@ div.status{
         div.container{
             height: 100vh;
             width:100vw;
-            display: grid;
-            grid-template-columns: repeat(2,1fr);
+            display: flex;
+            flex-direction: column;
+            //grid-template-columns: repeat(1,1fr);
             div.project{
                 position: relative;
-                max-width: 45vw;
-                min-height: 260px;
-                text-align: left;
+                flex-shrink: 0;
+                left:50%;
+                transform: translateX(-50%);
             }
         }
         
