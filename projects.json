@@ -83,14 +83,11 @@
                     "short_desc":"UI implementation of a hotels website",
                     "description":[
                         {"paragraph":"This is a project that features a hotel landing page, services, contacts and authentication."},
-                        {"paragraph":"This is website can be customized to fit different industries and ventures."}
+                        {"paragraph":"This is website can be customized to fit different industries and ventures."},
+                        {"paragraph":"You can visit the site using this link <a href='https://kaigikinyua.github.io/StaticPortfolio/static_web_projects/vueone/index.html'>Hotel Site</a>"}
                     ],
-                    "images":[
-                            {"image":"static/Projects/ui/1.png"},
-                            {"image":"static/Projects/ui/2.png"},
-                            {"image":"static/Projects/ui/3.png"}
-                        ]
+                    "images":[]
                     }
-            },
+            }
     ]
 }
