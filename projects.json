@@ -74,6 +74,23 @@
                             {"image":"static/Projects/ui/3.png"}
                         ]
                     }
-            }
+            },
+            {
+                "project":{
+                    "title":"Hotel Sample Project",
+                    "git":"https://github.com/kaigikinyua/Class_and_Lab/tree/master/Frontend/frameworks_and_libs/vue/vueone",
+                    "status":"complete",
+                    "short_desc":"UI implementation of a hotels website",
+                    "description":[
+                        {"paragraph":"This is a project that features a hotel landing page, services, contacts and authentication."},
+                        {"paragraph":"This is website can be customized to fit different industries and ventures."}
+                    ],
+                    "images":[
+                            {"image":"static/Projects/ui/1.png"},
+                            {"image":"static/Projects/ui/2.png"},
+                            {"image":"static/Projects/ui/3.png"}
+                        ]
+                    }
+            },
     ]
 }
