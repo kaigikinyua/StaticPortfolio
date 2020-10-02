@@ -1,0 +1,48 @@
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>VueJS</title>
+    <link rel="stylesheet" href="./css/main.css"/>
+    <link rel="stylesheet" href="./css/blogpage.css">
+    <link rel="stylesheet" href="./css/all.min.css">
+    <script src="./js/vue.js"></script>
+</head>
+<body>
+    <nav>
+        <div class="container">
+            <div class="barner">Vue | Blog</div>
+            <div class="links">
+                <ul class="horizontal links">
+                    <a href="index.html"><li><i class="fa fa-home"></i><span></span></li></a>
+                    <a href="login.html"><li>Login <span></span></li></a>
+                    <a href="signup.html"><li>SignUp <span></span></li></a>
+                </ul>
+            </div>
+        </div>
+    </nav>
+    <section class="full">
+        <section class="blogPage">
+            <div class="navigation" id="navigation">
+                <div class="search">
+                    <div class="field">
+                        <i class="fa fa-search"></i>
+                        <input type="text" class="text" placeholder="search">
+                    </div>
+                </div>
+            </div>
+            <div class="blog" id="blog">
+                <div class="title" style="background-image:url();">
+                    <h3 class="title">{{myblogs[0].title}}</h3>
+                    <div class="details">
+                        <small>{{myblogs[0].date}}</small>
+                        <small>{{myblogs[0].author}}</small>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </section>
+</body>
+<script src="./js/blogpage.js"></script>
+</html>
