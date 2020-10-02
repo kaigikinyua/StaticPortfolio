@@ -84,7 +84,8 @@
                     "description":[
                         {"paragraph":"This is a project that features a hotel landing page, services, contacts and authentication."},
                         {"paragraph":"This is website can be customized to fit different industries and ventures."},
-                        {"paragraph":"You can visit the site using this link <a style='color:blue;' href='https://kaigikinyua.github.io/StaticPortfolio/static_web_projects/vueone/index.html'>Hotel Site</a>"}
+                        {"paragraph":"You can visit the site using this link <a style='color:blue;' href='https://kaigikinyua.github.io/StaticPortfolio/static_web_projects/vueone/index.html'>Hotel Site</a>"},
+                        {"paragraph":"I built the site using the VueJS frame work, scss,html5 and JavaScript. It it a fairly simple project compared to all the others but one of my most favourite ones."}
                     ],
                     "images":[]
                     }
