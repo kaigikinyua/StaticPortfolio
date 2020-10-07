@@ -24,7 +24,7 @@
                     "description":[
                         {"paragraph":"This is a project that features an admin console app frontend to view the statistics of a his/her SaaS application or business."},
                         {"paragraph":"I mainly used vue,html5,css3 and javascript to develop the interface. It is a demo for now but it can be easily intergrated into a functioning backend using the javascript fetch api"},
-                        {"paragraph":"You can visit the site using the link &#128073<a href=''>here</a>"},
+                        {"paragraph":"You can visit the site using the link &#128073 <a style='color:blue;' href='https://kaigikinyua.github.io/StaticPortfolio/static_web_projects/admin_console/index.html'>here</a>"},
                         {"paragraph":"The main purpose of bulding this front end was to get a a deeper understanding of vuejs,fetch api,flex-box,code organization and structuring, project completion and many other developer skills."}
                     ],
                     "images":[]
