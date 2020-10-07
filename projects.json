@@ -1,5 +1,35 @@
 {
     "projects":[
+            {
+                "project":{
+                    "title":"Hotel Sample Project",
+                    "git":"https://github.com/kaigikinyua/Class_and_Lab/tree/master/Frontend/frameworks_and_libs/vue/vueone",
+                    "status":"complete",
+                    "short_desc":"UI implementation of a hotels website",
+                    "description":[
+                        {"paragraph":"This is a project that features a hotel landing page, services, contacts and authentication."},
+                        {"paragraph":"This is website can be customized to fit different industries and ventures."},
+                        {"paragraph":"You can visit the site using this link <a style='color:blue;' href='https://kaigikinyua.github.io/StaticPortfolio/static_web_projects/vueone/index.html'>Hotel Site</a>"},
+                        {"paragraph":"I built the site using the VueJS frame work, scss,html5 and JavaScript. It it a fairly simple project compared to all the others but one of my most favourite ones."}
+                    ],
+                    "images":[]
+                    }
+            },
+            {
+                "project":{
+                    "title":"Admin Console",
+                    "git":"https://github.com/kaigikinyua/Class_and_Lab/tree/master/Frontend/frameworks_and_libs/vue/admin_console",
+                    "status":"complete",
+                    "short_desc":"Sample of Admin console for stats",
+                    "description":[
+                        {"paragraph":"This is a project that features an admin console app frontend to view the statistics of a his/her SaaS application or business."},
+                        {"paragraph":"I mainly used vue,html5,css3 and javascript to develop the interface. It is a demo for now but it can be easily intergrated into a functioning backend using the javascript fetch api"},
+                        {"paragraph":"You can visit the site using the link &#128073<a href=''>here</a>"},
+                        {"paragraph":"The main purpose of bulding this front end was to get a a deeper understanding of vuejs,fetch api,flex-box,code organization and structuring, project completion and many other developer skills."}
+                    ],
+                    "images":[]
+                    }
+            }
             {"project":{
                     "title":"MWD",
                     "git":"https://github.com/kaigikinyua/MWD",
@@ -75,20 +105,5 @@
                         ]
                     }
             },
-            {
-                "project":{
-                    "title":"Hotel Sample Project",
-                    "git":"https://github.com/kaigikinyua/Class_and_Lab/tree/master/Frontend/frameworks_and_libs/vue/vueone",
-                    "status":"complete",
-                    "short_desc":"UI implementation of a hotels website",
-                    "description":[
-                        {"paragraph":"This is a project that features a hotel landing page, services, contacts and authentication."},
-                        {"paragraph":"This is website can be customized to fit different industries and ventures."},
-                        {"paragraph":"You can visit the site using this link <a style='color:blue;' href='https://kaigikinyua.github.io/StaticPortfolio/static_web_projects/vueone/index.html'>Hotel Site</a>"},
-                        {"paragraph":"I built the site using the VueJS frame work, scss,html5 and JavaScript. It it a fairly simple project compared to all the others but one of my most favourite ones."}
-                    ],
-                    "images":[]
-                    }
-            }
     ]
 }
