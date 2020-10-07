@@ -1,0 +1,214 @@
+* {
+  padding: 0px;
+  margin: 0px;
+  font-family: Arial;
+}
+
+body {
+  background: rgba(10, 10, 10, 0.8);
+  overflow-x: hidden;
+}
+
+::-webkit-scrollbar {
+  width: 5px;
+  background: rgba(10, 10, 10, 0.3);
+}
+
+::-webkit-scrollbar-thumb {
+  background: #990000;
+  border-radius: 5px;
+}
+
+a {
+  color: currentColor;
+  text-decoration: none;
+}
+
+ul {
+  list-style: none;
+}
+
+ul.links {
+  overflow: hidden;
+}
+
+ul.links li {
+  display: inline-block;
+  margin: 0px 5px;
+  padding: 5px;
+  overflow: hidden;
+}
+
+ul.links li::after {
+  content: "";
+  position: relative;
+  width: 100%;
+  margin-top: 0px;
+  margin-left: -120%;
+  height: 5px;
+  background: pink;
+  border-radius: 5px;
+  display: block;
+  -webkit-transition: 0.5s;
+  transition: 0.5s;
+}
+
+ul.links li:hover::after {
+  margin-left: 0px;
+}
+
+header.topnav {
+  position: fixed;
+  top: 0px;
+  left: 0px;
+  width: 100vw;
+  padding: 10px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: space-evenly;
+      -ms-flex-pack: space-evenly;
+          justify-content: space-evenly;
+  background: #ff4162;
+  z-index: 10;
+  -webkit-box-shadow: 1px 1px 5px 5px rgba(10, 10, 10, 0.8);
+          box-shadow: 1px 1px 5px 5px rgba(10, 10, 10, 0.8);
+  color: white;
+}
+
+div.side_nav {
+  position: fixed;
+  left: 0px;
+  top: 50%;
+  -webkit-transform: translateY(-50%);
+          transform: translateY(-50%);
+  background: #ff4162;
+  padding: 20px 5px;
+}
+
+div.side_nav ul.vert li {
+  margin: 10px 0px;
+  color: white;
+}
+
+div.side_nav ul.vert li small {
+  display: none;
+}
+
+section.app {
+  position: relative;
+  width: 100vw;
+  height: 100vh;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+}
+
+div.app_container {
+  width: 90vw;
+  position: relative;
+  margin-top: 100px;
+  background: white;
+  overflow: hidden;
+  -webkit-box-shadow: 1px 1px 20px 20px rgba(10, 10, 10, 0.3);
+          box-shadow: 1px 1px 20px 20px rgba(10, 10, 10, 0.3);
+  background: #ff5a77;
+}
+
+div.app_bar {
+  padding: 10px;
+  position: relative;
+  width: 100%;
+  font-size: 20px;
+  background: rgba(20, 20, 20, 0.9);
+  color: white;
+}
+
+div.app_bar i {
+  margin: 0px 10px;
+}
+
+div.tab_nav {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: space-evenly;
+      -ms-flex-pack: space-evenly;
+          justify-content: space-evenly;
+}
+
+div.tab_nav button {
+  position: relative;
+  width: 100%;
+  padding: 10px;
+  background: rgba(10, 10, 10, 0.1);
+  color: white;
+  border: 1px solid white;
+  border-top: none;
+  border-left: none;
+}
+
+div.tab_nav button.active {
+  background: white;
+  color: #ff274d;
+  font-weight: bolder;
+  letter-spacing: 2px;
+}
+
+div.tab {
+  position: relative;
+  height: 79%;
+  display: -ms-grid;
+  display: grid;
+  -ms-grid-columns: 1fr 2fr;
+      grid-template-columns: 1fr 2fr;
+}
+
+div.tab div.tab_main {
+  padding: 20px;
+  position: relative;
+  height: 100%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  text-align: center;
+  color: white;
+  background: rgba(10, 10, 10, 0.3);
+}
+
+div.tab div.tab_main i {
+  font-size: 60px;
+}
+
+div.tab div.tab_main h2.header {
+  font-size: 70px;
+  letter-spacing: 10px;
+  font-family: monospace;
+  font-weight: lighter;
+}
+
+div.tab div.tab_second {
+  padding: 5px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+  overflow-y: scroll;
+}
+
+div.tab div.tab_second ul.list li {
+  padding: 10px;
+  color: white;
+}
+/*# sourceMappingURL=main.css.map */
