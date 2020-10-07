@@ -29,7 +29,7 @@
                     ],
                     "images":[]
                     }
-            }
+            },
             {"project":{
                     "title":"MWD",
                     "git":"https://github.com/kaigikinyua/MWD",
@@ -104,6 +104,6 @@
                             {"image":"static/Projects/ui/3.png"}
                         ]
                     }
-            },
+            }
     ]
 }
