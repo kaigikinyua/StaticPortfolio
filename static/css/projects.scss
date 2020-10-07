@@ -10,13 +10,16 @@ section.projectList{
     div.container{
         position: relative;
         width:90%;
-        height:90%;
+        height:80%;
         overflow-x:hidden;
         overflow-y:scroll;
         @include center;
-        display: grid;
-        grid-template-columns: repeat(4,1fr);
+        //display: grid;
+        //grid-template-columns: repeat(4,1fr);
+        display:flex;
+        flex-wrap: wrap;
         padding:5px;
+        background:rgba(10,10,10,0.5);
         div.project{
             position: relative;
             width: 280px;
@@ -189,14 +192,12 @@ div.status{
 @media only screen and (max-width:700px){
     section.projectList{
         div.container{
-            height: 100vh;
+            height: 100%;
             width:100vw;
-            display: flex;
-            flex-direction: column;
             //grid-template-columns: repeat(1,1fr);
             div.project{
                 position: relative;
-                flex-shrink: 0;
+                flex-shrink: 1;
                 left:50%;
                 transform: translateX(-50%);
             }

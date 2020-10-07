@@ -331,18 +331,20 @@ body {
 section.projectList div.container {
   position: relative;
   width: 90%;
-  height: 90%;
+  height: 80%;
   overflow-x: hidden;
   overflow-y: scroll;
   top: 50%;
   left: 50%;
   -webkit-transform: translate(-50%, -50%);
           transform: translate(-50%, -50%);
-  display: -ms-grid;
-  display: grid;
-  -ms-grid-columns: (1fr)[4];
-      grid-template-columns: repeat(4, 1fr);
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
   padding: 5px;
+  background: rgba(10, 10, 10, 0.5);
 }
 
 section.projectList div.container div.project {
@@ -557,20 +559,13 @@ div.status {
 
 @media only screen and (max-width: 700px) {
   section.projectList div.container {
-    height: 100vh;
+    height: 100%;
     width: 100vw;
-    display: -webkit-box;
-    display: -ms-flexbox;
-    display: flex;
-    -webkit-box-orient: vertical;
-    -webkit-box-direction: normal;
-        -ms-flex-direction: column;
-            flex-direction: column;
   }
   section.projectList div.container div.project {
     position: relative;
-    -ms-flex-negative: 0;
-        flex-shrink: 0;
+    -ms-flex-negative: 1;
+        flex-shrink: 1;
     left: 50%;
     -webkit-transform: translateX(-50%);
             transform: translateX(-50%);
