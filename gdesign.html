@@ -4,8 +4,41 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>Antony | Graphic Design</title>
+    <link rel="shortcut icon" href="./static/images/me.jpg" type="image/x-icon">
+    <link rel="stylesheet" href="./static/css/all.min.css"/>
+    <link rel="stylesheet" href="./static/css/shared.css">
+    <link rel="stylesheet" href="./static/css/index.css">
+    <link rel="stylesheet" href="./static/css/animations.css">
 </head>
 <body>
-    
+    <div class="loading" id="loading">
+        <svg width="100px" height="100px">
+            <circle cx="50" cy="50" r="40" stroke="blue" stroke-width="4" fill="white" />
+        </svg>
+        <div class="emoji" id="emojiLoad">
+            <div id="emoji"></div>
+        </div>
+    </div>
+    <nav class="topnav">
+        <div class="barner">
+            <h3 class="title"><small>#</small>Graphic Design</h3>
+        </div>
+        <div class="links">
+            <ul class="links">
+                <a href="./index.html"><li><i class="fa fa-home"></i></li></a>
+                <a href="./projects.html"><li><i class="fa fa-space-shuttle"></i></li></a>
+            </ul>
+        </div>
+    </nav>
+    <section class="full">
+        <div class="container" id="app">
+
+        </div>
+    </section>
 </body>
+<script src="static/js/UI.js"></script>
+<script src="static/js/paralax.js"></script>
+<script src="static/js/loading.js"></script>
+<script src="static/js/vue.js"></script>
+<script src="static/js/gd.js"></script>
 </html>
