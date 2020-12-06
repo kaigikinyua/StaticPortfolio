@@ -32,7 +32,11 @@
     </nav>
     <section class="full">
         <div class="container" id="app">
-            
+            <div class="cover" v-for="cover in covers">
+                <div class="thumbnail"></div>
+                <div class="images" v-for="image in cover.images">
+                </div>
+            </div>
         </div>
     </section>
 </body>

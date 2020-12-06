@@ -13,7 +13,11 @@ if (debug == false){
 new Vue({
     el: "#app",
     data: {
-        covers: fetchGD,
+        covers: [
+            {"title":"","thumb_nail":"","images":[]},
+            {"title":"","thumb_nail":"","images":[]},
+            {"title":"","thumb_nail":"","images":[]},
+        ],
     }
 })
 function fetchGD() {
