@@ -1,0 +1,8 @@
+UI:
+    1.Colors
+        Red,Orange,White themed
+    2.Images
+        Minimal
+    3.Icons Intensive
+    
+Data Fetch -> None [no fetch]

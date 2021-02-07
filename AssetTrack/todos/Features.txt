@@ -1,0 +1,5 @@
+MVP Features:
+    1.Assign shops items
+    2.CRUD shops
+    3.Clear shops
+    4.Track repairs

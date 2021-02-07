@@ -1,0 +1,27 @@
+MVP
+    Django Apps
+        1.Frontend(Login) NB:No SignUp Page
+            Landing Page
+            Contacts
+        2.Equipment
+            Categories [Printers,Monitors,CPU,Mpesa Phone,Sim Cards,Mouse,Keyboard etc]
+            Shop MIS inventory
+            MIS inventory
+            External Repairs 
+        3.Receiving
+            Crosscheck with the shops inventory
+        4.Repairs
+            Shopname repairs 
+            Item sent
+            Courier
+
+    DataBase
+        Tables
+            1.Users(pk:email,password,name)
+            2.Equipment(Description,pk:SN)
+            3.Shop inventory(pk:shopname,desc,sn,assigned_date)
+            4.Receiving(from,desc,sn,current_date)
+            5.Transfer(from,to,date,reason)
+            6.Repairs(repairshopname,date_sent,date_returned)
+            7.Clearance(ShopInventory+(Receved[true|false]))
+

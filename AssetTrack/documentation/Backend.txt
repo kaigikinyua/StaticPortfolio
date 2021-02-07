@@ -1,0 +1,13 @@
+Django Apps
+    1.Frontend(Login) NB:No SignUp Page
+    2.Equipment
+        Categories [Printers,Monitors,CPU,Mpesa Phone,Sim Cards,Mouse,Keyboard etc]
+        Shop MIS inventory
+        MIS inventory
+        External Repairs 
+    3.Receiving
+        Crosscheck with the shops inventory
+    4.Repairs
+        Shopname repairs 
+        Item sent
+        Courier 

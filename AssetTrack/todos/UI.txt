@@ -1,0 +1,7 @@
+Theme[Pink | Red and White | Light Gray]
+    Colors [
+       light red:ec524b
+       light gray:fcf8ec
+       light green:61b15a
+       dark_gray_blue:393e46
+    ]

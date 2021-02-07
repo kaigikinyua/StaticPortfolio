@@ -15,7 +15,6 @@ window.onload=()=>{
     getProjects();
  //   setTimeout(()=>{hide('loading')},2000)
 }
-
 //projects page UI
 //get projects
 function getProjects(){
