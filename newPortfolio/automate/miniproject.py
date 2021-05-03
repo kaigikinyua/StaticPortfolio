@@ -22,9 +22,12 @@ class MiniProject:
             {"type":"file","name":"/{n}.html".format(n=projectname)},
             {"type":"folder","name":"/static"},
             {"type":"folder","name":"/static/css"},
+            {"type":"folder","name":"/static/css/main"},
             {"type":"folder","name":"/static/js"},
+            {"type":"folder","name":"/static/js/libs"},
             {"type":"folder","name":"/static/images"},
         ]
+        #creating generic directories and files
         for f in setUpProject:
             created=False
             if(f["type"]=="file"):
@@ -37,19 +40,26 @@ class MiniProject:
                 Console.error("Unkown type '{n}'".format(n=f["type"]))
             if(created!=True):
                 Console.error("Error while creating {t} in the destination {d}".format(t=f["type"],d=projectDir))
+        #copy generic static files[fontawsome[all.min.css,webfonts],react,babel,vue]
         genericLibs=[
             #{"optional":True/False,"src":"base dir is MiniProjectConfigs.genericStatic","destination":"base dir is projectDir"}
             {"optional":False,"src":"/css/base.scss","destination":"static/css"},
             {"optional":False,"src":"/fonts/all.min.css","destination":"static/css/main/"},
             {"optional":True,"src":"/js/vue.js","destination":"static/js/libs/vue.js"},
-            {"optional":True,"src":"/react.js","destination":"static/js/libs/react.js"},
-            {"optional":True,"src":"/react-dom.js","destination":"static/js/libs/react-dom.js"},
-            {"optional":True,"src":"/babel.js","destination":"static/js/libs/babel.js"},
+            {"optional":True,"src":"/js/react.js","destination":"static/js/libs/react.js"},
+            {"optional":True,"src":"/js/react-dom.js","destination":"static/js/libs/react-dom.js"},
+            {"optional":True,"src":"/js/babel.js","destination":"static/js/libs/babel.js"},
             #edge case for webfonts directory
         ]
-        #files to create [projectname.html]
-        #directories to generate[static[images,css,js]]
-        #copy generic static files[fontawsome[all.min.css,webfonts],react,babel,vue]
+        for genLib in genericLibs:
+            if(genLib["optional"]==True):
+                ans=input("Copy {l} to project {pname} \nY/N \n".format(l=genLib["src"],pname=projectname))
+                if(ans.lower()=='y'):
+                    copyfile=Files(genLib["src"])
+                    copyfile.copyFile(MiniProjectConfigs.genericStatic+genLib["src"],projectDir+"/"+genLib["destination"])
+            else:
+                copyfile=Files(genLib["src"])
+                copyfile.copyFile(MiniProjectConfigs.genericStatic+genLib["src"],projectDir+"/"+genLib["destination"])
 
     def editMiniProjectEntry(self):
         pass

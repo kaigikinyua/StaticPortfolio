@@ -28,7 +28,20 @@ class Files:
         else:
             os.mkdir(self.path)
             return True
+    
+    def copyFile(self,src,destination):
+        return_code=os.system('cp {src} {dst}'.format(src=src,dst=destination))
+        if(return_code!=0):
+            Console.error("Could not copy file from {src} to {dst}\n Return code {rC}".format(src=src,dst=destination,rC=return_code))
+            return False
+        return True
 
+    def copyFolder(self,src,destination):
+        return_code=os.system('cp -r {src} {dst}'.format(src=src,dst=destination))
+        if(return_code!=0):
+            Console.error("Could not copy folder from {src} to {dst}\n Return code {rC}".format(src=src,dst=destination,rC=return_code))
+            return False
+        return True
 class JsonFile:
     def __init__(self,path):
         self.filepath=path
