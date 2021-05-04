@@ -3,3 +3,44 @@ header.landing{
     height:100vh;
     width:100vw;
 }
+
+div.slides{
+    position: relative;
+    height:80vh;
+    width:100%;
+    display: flex;
+    overflow-x:hidden;
+}
+div.slide{
+    flex-shrink: 0;
+    position: relative;
+    width:100%;
+    height:100%;
+    text-align: center;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: 1fr;
+}
+div.card_text{
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+    padding:10px;
+}
+
+
+@media only screen and (max-width:600px){
+    div.container{
+        width:90%;
+    }
+    div.slides{
+        position: relative;
+        height:80vh;
+    }
+    div.slide{
+        height:100%;
+        grid-template-rows: 1fr 1fr;
+        grid-template-columns: 1fr;
+    }
+}

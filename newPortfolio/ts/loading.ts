@@ -30,7 +30,7 @@ function finishLoading(){
     currloadValue=maxOut
     incrementLoading()
     setTimeout(()=>{
-        loading_page.setAttribute('style','display:none;')
+        //loading_page.setAttribute('style','display:none;')
         console.log("deleting loading page")
     },500)
 }

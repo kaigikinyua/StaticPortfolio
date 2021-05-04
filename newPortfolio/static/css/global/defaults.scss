@@ -30,7 +30,7 @@ ul.links{
     li{display: inline-block;margin:0px 10px;}
 }
 div.container{
-    width:400px;
+    width:800px;
 }
 
 //alignment classes
@@ -50,7 +50,7 @@ div.container{
 #loading_page{
     height: 100vh;
     width:100vw;
-    div.iron_man{
+    div.iron_man_container{
         background:none;
         height:300px;
         width:300px;
@@ -59,7 +59,7 @@ div.container{
             position: relative;
             background:pink;
             position: relative;
-            height:80%;
+            height:100%;
             width:100%;
             bottom:-100%;
             //animation: 10s 1s reveal_bottom ease-in infinite;
@@ -70,6 +70,18 @@ div.container{
             text-align: center;
             font-size:1.3em;
             padding:10px;
+        }
+        div.iron_man_image{
+            position: relative;
+            width:50%;
+            height:50%;
+            top:0;
+            z-index: 100;
+            background:none;
+            background-image: url('../../images/iron_man_loading.png');
+            //background-attachment:fixed;
+            background-size: cover;
+            background-repeat: no-repeat;
         }
     }
 }

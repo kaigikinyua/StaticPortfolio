@@ -94,7 +94,7 @@ ul.links li {
 }
 
 div.container {
-  width: 400px;
+  width: 800px;
 }
 
 .center {
@@ -124,28 +124,40 @@ div.container {
   width: 100vw;
 }
 
-#loading_page div.iron_man {
+#loading_page div.iron_man_container {
   background: none;
   height: 300px;
   width: 300px;
   overflow: hidden;
 }
 
-#loading_page div.iron_man div.loading_bar {
+#loading_page div.iron_man_container div.loading_bar {
   position: relative;
   background: pink;
   position: relative;
-  height: 80%;
+  height: 100%;
   width: 100%;
   bottom: -100%;
 }
 
-#loading_page div.iron_man #loading_value {
+#loading_page div.iron_man_container #loading_value {
   position: relative;
   height: 30px;
   text-align: center;
   font-size: 1.3em;
   padding: 10px;
+}
+
+#loading_page div.iron_man_container div.iron_man_image {
+  position: relative;
+  width: 50%;
+  height: 50%;
+  top: 0;
+  z-index: 100;
+  background: none;
+  background-image: url("../../images/iron_man_loading.png");
+  background-size: cover;
+  background-repeat: no-repeat;
 }
 
 .banner {

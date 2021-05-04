@@ -36,7 +36,9 @@ class Slide extends React.Component{
     }
 }
 const headerSlides=[
-    {title:"Web Developer",short:"I am a web developer",ctActionLink:"./projects",ctActionTtitle:"My Projects",img:"./static/images/"}
+    {title:"Web Developer",short:"Web development is my main professional focus.",ctActionLink:"./projects",ctActionTtitle:"My Projects",img:"./static/images/"},
+    {title:"3D Graphic Designer",short:"3D Graphic Designer",ctActionLink:"./projects",ctActionTtitle:"My Projects",img:"./static/images/"},
+
 ]
 
 ReactDOM.render(<Slides slides={headerSlides}/>,document.getElementById('slides'))
