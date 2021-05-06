@@ -6,6 +6,7 @@
 }
 body{
     overflow-x:hidden;
+    font-family: Arial, Helvetica, sans-serif;
 }
 a{
     color:currentColor;
@@ -32,7 +33,11 @@ ul.links{
 div.container{
     width:800px;
 }
-
+.call_to_action{
+    padding:10px;
+    border-radius: 10px;
+    cursor: pointer;
+}
 //alignment classes
 .center{
     position: relative;
@@ -90,4 +95,11 @@ div.container{
 .banner{
     font-weight: lighter;
     letter-spacing: 2px;
+}
+.superTitle{
+    font-size: 3em;
+    opacity: 0.7;
+}
+p{
+    font-size: 1.2em;
 }
