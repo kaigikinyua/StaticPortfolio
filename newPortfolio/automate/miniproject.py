@@ -61,20 +61,21 @@ class MiniProject:
                 copyfile=Files(genLib["src"])
                 copyfile.copyFile(MiniProjectConfigs.genericStatic+genLib["src"],projectDir+"/"+genLib["destination"])
 
-    def editMiniProjectEntry(self):
-        pass
     def publishMiniProject(self):
         pass
+
     def deleteMiniProject(self):
         pass
 
 def commandLine(args):
-    actionArg=["createproject","editproject","publishproject","deleteproject","listprojects"]
+    actionArg=["createproject","listprojects","editproject","publishproject","deleteproject"]
     if(args[0].lower() in actionArg):
         miniP=MiniProject()
         if(args[0].lower()==actionArg[0]):
             pname=input("Type the project name\n")
             miniP.createMiniProject(str(pname))
+        elif(args[0].lower()==actionArg[1]):
+            miniP.listprojects()
     else:
         Console.error("Command not found")
     

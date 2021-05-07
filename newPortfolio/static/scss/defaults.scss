@@ -7,6 +7,9 @@
 body{
     overflow-x:hidden;
     font-family: Arial, Helvetica, sans-serif;
+    background-image: url('/static/images/langin_page.png');
+    background-position: center;
+    background-attachment: fixed;
 }
 a{
     color:currentColor;
@@ -18,9 +21,9 @@ nav.topnav{
     top:0px;
     left:0px;
     width:100vw;
-    height:50px;
+    max-height:60px;
     z-index: 100;
-    padding:5px;
+    padding:10px;
     div.container{
         display: flex;
         justify-content: space-between;
@@ -35,7 +38,8 @@ div.container{
 }
 .call_to_action{
     padding:10px;
-    border-radius: 10px;
+    border:1px solid transparent;
+    border-radius: $border_radius;
     cursor: pointer;
 }
 //alignment classes
@@ -52,53 +56,17 @@ div.container{
     @include center_all;
 }
 
-#loading_page{
-    height: 100vh;
-    width:100vw;
-    div.iron_man_container{
-        background:none;
-        height:300px;
-        width:300px;
-        overflow: hidden;
-        div.loading_bar{
-            position: relative;
-            background:pink;
-            position: relative;
-            height:100%;
-            width:100%;
-            bottom:-100%;
-            //animation: 10s 1s reveal_bottom ease-in infinite;
-        }
-        #loading_value{
-            position: relative;
-            height:30px;
-            text-align: center;
-            font-size:1.3em;
-            padding:10px;
-        }
-        div.iron_man_image{
-            position: relative;
-            width:50%;
-            height:50%;
-            top:0;
-            z-index: 100;
-            background:none;
-            background-image: url('../../images/iron_man_loading.png');
-            //background-attachment:fixed;
-            background-size: cover;
-            background-repeat: no-repeat;
-        }
-    }
-}
-
 //fonts
 .banner{
     font-weight: lighter;
     letter-spacing: 2px;
 }
 .superTitle{
-    font-size: 3em;
+    font-size: 4em;
     opacity: 0.7;
+}
+.subTitle{
+    font-size: 3em;
 }
 p{
     font-size: 1.2em;

@@ -42,6 +42,7 @@ class Files:
             Console.error("Could not copy folder from {src} to {dst}\n Return code {rC}".format(src=src,dst=destination,rC=return_code))
             return False
         return True
+
 class JsonFile:
     def __init__(self,path):
         self.filepath=path
@@ -65,7 +66,6 @@ class JsonFile:
             except:
                 Console.error("Error while writing to {f}".format(f=self.filepath))
         return rslt
-
 
 class Console:
     @staticmethod
