@@ -14,14 +14,67 @@ div.landing_card{
     height: 100%;
     display: grid;
     grid-template-columns: 1fr 1fr;
+    border-radius: $border_radius;
 }
 
 div.text_box{
-    border-radius: $border_radius;
     padding:30px 0px;
     display: flex;
     flex-direction: column;
-    justify-content: space-between;
-    height: 50%;
+    justify-content: center;
     text-align: center;
+    align-items: center;
+    h3,a{
+        margin:30px 0px;
+    }
+}
+section.full_section{
+    position: relative;
+    height:100vh;
+    width:100vw;
+}
+section.portfolio{
+    div.container{
+        background:white;
+        padding:10px;
+        border-radius: $border_radius;
+    }
+    .title{
+        padding:10px;
+    }
+}
+div.par{
+    display: flex;
+    margin:25px 0px;
+    border:3px solid transparent;
+    transition:1s;
+    i{
+        padding:10px;
+        font-size: 3em;
+        transition:1s;
+        min-width: 60px;
+        text-align: center;
+    }
+    p{
+        padding: 10px;
+    }
+}
+div.par:hover{
+    border-left:3px solid lightgreen;
+    i{color:lightgreen;}
+}
+div.downloadcv{
+    text-align: center;
+}
+section.contacts{
+    margin-top:50px;
+    background:darken(green,10%);
+    color:white;
+    padding-bottom: 50px;
+    div.container{
+        padding:10px;
+    }
+    li{
+        font-size: 1.3em;
+    }
 }

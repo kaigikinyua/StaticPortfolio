@@ -1,5 +1,15 @@
+@import './colors.scss';
+//mixins
+@mixin  elem_box_shadow {
+    box-shadow:1px 2px 5px 5px $shadow;
+}
+body{
+    background:lightgray;
+}
+
 nav.topnav{
     background:white;
+    @include elem_box_shadow;
 }
 
 .lightContainer{
@@ -12,6 +22,23 @@ nav.topnav{
     background:lightgreen;
 }
 .call_to_action{
-    background:lightgreen;
+    background:$highlight_green;
     color:white;
+    font-weight: bold;
+    @include elem_box_shadow;
+    transition: box-shadow 1s;
+}
+.call_to_action:hover{
+    box-shadow: none;
+}
+
+div.theme{
+    background:$dark_green;
+    color:white;
+    @include elem_box_shadow;
+}
+
+//fonts
+.subTitle,.title{
+    color:$dark_green;
 }
