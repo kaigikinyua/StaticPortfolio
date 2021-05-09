@@ -1,0 +1,103 @@
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>VueJS</title>
+    <link rel="stylesheet" href="./css/main.css">
+    <link rel="stylesheet" href="./css/all.min.css">
+    <script src="./js/vue.js"></script>
+</head>
+<body>
+    <nav>
+        <div class="container">
+            <div class="barner">Hotel Vue</div>
+            <div class="links">
+                <ul class="horizontal links">
+                    <a href="#"><li><i class="fa fa-home"></i> <span></span></li></a>
+                    <a href="login.html"><li>Login <span></span></li></a>
+                    <a href="signup.html"><li>SignUp <span></span></li></a>
+                </ul>
+            </div>
+        </div>
+    </nav>
+    <header class="landing">
+        <div class="container" style="background-image:url(./images/nature_view.jpg);">
+            <div class="slides i_scroll" id="slides">
+                <div class="slide" v-for="slide in slides" v-bind:id="slide.image">
+                    <div class="dual_res">
+                        <div class="text">{{slide.text_content}}</div>
+                        <img class="s_image" v-bind:src="slide.image"/>
+                    </div>
+                </div>
+            </div>
+            <div class="controlls">
+            </div>
+        </div>
+    </header>
+    <section class="full">
+        <div class="container middle">
+            <h3 class="title"><i class="num">#</i> Services</h3>
+            <p>Expedita suscipit eum quasi dolore, inventore maiores earum nihil magnam aliquam soluta</p>
+            <div class="cards" id="hotel">
+                <div class="card" v-for="s in hotels">
+                    <i v-bind:class="s.icon"></i>
+                    <h3 class="sub">{{s.name}}</h3>
+                    <div class="more">{{s.more}}</div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <section class="full">
+        <div class="container middle">
+            <h3 class="title"><i class="num">#</i> Packages</h3>
+            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Voluptate recusandae exercitationem dignissimos quibusdam neque atque corrupti ad veniam numquam porro unde, ullam sit eligendi voluptas fugit nisi molestiae tempora assumenda.</p>
+            <div class="cards" id="packages">
+                <div class="card" v-for="package in packages">
+                    <i v-bind:class="package.icon"></i>
+                    <h3 class="sub">{{package.name}}</h3>
+                    <div class="more">{{package.more}}</div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <section class="full">
+        <div class="container middle">
+            <h3 class="title"><i class="num">#</i> Client Reviews</h3>
+            <div class="reviews" id="reviews">
+                <div class="review" v-for="review in reviews">
+                    <i class="fa fa-user"></i>
+                    <h3 class="title">{{review.username}}</h3>
+                    <p>{{review.review}}</p>
+                </div>
+            </div>
+        </div>
+    </section>
+    <section class="contacts">
+        <div class="container middle dual_res">
+            <div>
+                <h3>Contacts</h3>
+                <table>
+                    <tr><td><i class="fa fa-phone"></i></td><td>+001-356-466</td></tr>
+                    <tr><td><i class="fab fa-facebook-f"></i></td><td>@user</td></tr>
+                    <tr><td><i class="fab fa-twitter"></i></td><td>@user_name</td></tr>
+                    <tr><td><i class="fab fa-instagram"></i></td><td>@user_inst</td></tr>
+                </table>
+            </div>
+            <div>
+                <h3>Location</h3>
+                <table>
+                    <tr><td><i class="fa fa-map-marker"></i></td><td>District, County</td></tr>
+                    <tr><td><i class="fa fa-building"></i></td><td>City</td></tr>
+                </table>
+                <div class="form">
+                    <input type="text" class="text" placeholder="Email"/>
+                    <textarea name="" cols="30" rows="10" placeholder="Message"></textarea>
+                    <button>Submit</button>
+                </div>
+            </div>
+        </div>
+    </section>
+</body>
+<script src="./js/index.js"></script>
+</html>

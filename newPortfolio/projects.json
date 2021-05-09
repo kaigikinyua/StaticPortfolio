@@ -34,7 +34,8 @@
     {
             "projectName":"Hotel Sample Project",
             "smallDesc":"UI implementation of a hotels website",
-            "git":"https://github.com/kaigikinyua/Class_and_Lab/tree/master/Frontend/frameworks_and_libs/vue/vueone",
+            "github":"https://github.com/kaigikinyua/Class_and_Lab/tree/master/web/Frontend/frameworks_and_libs/vue/vueone",
+            "siteLink":"./minisite/hotel/index.html",
             "paragraphs":[
                 {
                     "title":"Introduction",

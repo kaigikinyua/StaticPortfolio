@@ -41,42 +41,29 @@ nav.topnav{
 }
 ul.links{
     list-style-type: none;
-    overflow-x: hidden;
-    overflow-y: show;
+    display: flex;
     li{
         position: relative;
         display: inline-block;
         margin:0px 10px;
-        // overflow-x: hidden;
-        // overflow-y: show;
+        overflow-x: hidden;
         height:30px;
         font-weight: bold;
         letter-spacing: 2px;
+        display: flex;
+        flex-direction: column;
     }
-    li:hover{
-        color:lightgreen;
-    }
-    li::after{
-        content:"";
-        position: absolute;
+    li small{
+        position: relative;
         left:0%;
-        margin-top: 20px;
         height:5px;
         width:0%;
         background:darken(lightgreen,10%);
         border-radius:5px;
         transition:1s;
     }
-    &:hover li::after{
+    li:hover small{
         width:100%;
-    }
-}
-ul.list{
-    list-style-type: none;
-    li{
-        margin:5px;
-        padding:10px;
-        i{margin:0px 5px;}
     }
 }
 .dual{

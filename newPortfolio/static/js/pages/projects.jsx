@@ -2,7 +2,7 @@ class ProjectList extends React.Component{
     //props=>{project List}
     constructor(props,context){
         super(props,context)
-        this.state={ showProject:true,pid:0}
+        this.state={ showProject:false,pid:0}
         this.viewProject=this.viewProject.bind(this)
         this.closeProject=this.closeProject.bind(this)
     }
@@ -38,6 +38,8 @@ class ViewProject extends React.Component{
     render(){
         console.log(this.props.projectList[0])
         var project=this.props.projectList[this.props.pid]
+        var siteLink=project.siteLink?<a href={project.siteLink}><button className="call_to_action"><i className="fa fa-link"></i> Website</button></a>:""
+        var github=project.github?<a href={project.github}><button className="call_to_action"><i className="fab fa-github"></i> GitHub</button></a>:""
         var parElements=project.paragraphs.map((p,index)=>{
             return <Paragraph title={p.title} paragraphs={p.content}/>
         })
@@ -56,10 +58,8 @@ class ViewProject extends React.Component{
                         </div>
                         <div className="actions">
                             {/*render conditionaly if the github repo is available*/}
-                            <button className="call_to_action">
-                                <i className="fab fa github"></i>
-                                GitHub
-                            </button>
+                            {github}
+                            {siteLink}
                             <button className="cancel" onClick={this.cancelProject}>
                                 <i className="fa fa-plus"></i>
                             </button>

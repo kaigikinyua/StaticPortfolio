@@ -67,44 +67,30 @@ nav.topnav div.container {
 
 ul.links {
   list-style-type: none;
-  overflow-x: hidden;
-  overflow-y: show;
+  display: flex;
 }
 ul.links li {
   position: relative;
   display: inline-block;
   margin: 0px 10px;
+  overflow-x: hidden;
   height: 30px;
   font-weight: bold;
   letter-spacing: 2px;
+  display: flex;
+  flex-direction: column;
 }
-ul.links li:hover {
-  color: lightgreen;
-}
-ul.links li::after {
-  content: "";
-  position: absolute;
+ul.links li small {
+  position: relative;
   left: 0%;
-  margin-top: 20px;
   height: 5px;
   width: 0%;
   background: #64e764;
   border-radius: 5px;
   transition: 1s;
 }
-ul.links:hover li::after {
+ul.links li:hover small {
   width: 100%;
-}
-
-ul.list {
-  list-style-type: none;
-}
-ul.list li {
-  margin: 5px;
-  padding: 10px;
-}
-ul.list li i {
-  margin: 0px 5px;
 }
 
 .dual {

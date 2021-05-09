@@ -1,0 +1,19 @@
+section.full{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+section.blogPage{
+    display: grid;
+    grid-template-columns: 1fr 3fr;
+    height:80%;
+}
+
+div.navigation{
+    padding:5px;
+}
+div.search{
+    padding:5px;
+}
+div.blog{
+}
