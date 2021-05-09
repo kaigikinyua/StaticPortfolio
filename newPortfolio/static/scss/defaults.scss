@@ -15,6 +15,15 @@ a{
     color:currentColor;
     text-decoration: none;
 }
+::-webkit-scrollbar{
+    width:7px;
+    height: 7px;
+}
+::-webkit-scrollbar-thumb{
+    width:5px;
+    background:lighten(lightgreen,10%);
+    border-radius: 10px;
+}
 
 //components
 nav.topnav{

@@ -63,7 +63,6 @@ div.actions {
 
 div.paragraph {
   padding: 10px;
-  background: pink;
 }
 div.paragraph h3.title {
   margin-left: -5px;
@@ -104,16 +103,17 @@ div.languages {
   overflow-x: scroll;
   width: 100%;
   text-align: center;
+  justify-content: center;
 }
 div.languages div.language {
   display: flex;
   justify-content: center;
   align-items: center;
-  margin: 0px 10px;
+  margin: 5px 20px;
 }
 div.languages div.l_avatar {
-  height: 30px;
-  width: 30px;
+  height: 20px;
+  width: 20px;
   border-radius: 50%;
   margin: 5px;
 }

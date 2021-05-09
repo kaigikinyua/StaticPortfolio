@@ -61,7 +61,7 @@ div.actions{
 }
 div.paragraph{
     padding:10px;
-    background:pink;
+    //background:pink;
     h3.title{
         margin-left: -5px;
         margin-bottom: 8px;
@@ -97,15 +97,16 @@ div.languages{
     overflow-x:scroll;
     width:100%;
     text-align: center;
+    justify-content: center;
     div.language{
         display: flex;
         justify-content: center;
         align-items: center;
-        margin:0px 10px;
+        margin:5px 20px;
     }
     div.l_avatar{
-        height:30px;
-        width:30px;
+        height:20px;
+        width:20px;
         border-radius: 50%;
         //background:lightseagreen;
         margin:5px;

@@ -1,0 +1,61 @@
+[   
+    {   
+        "projectName":"ProjectOne",
+        "smallDesc":"This is the project Description",
+        "git":"",
+        "paragraphs":[
+            {
+                "title":"Project One",
+                "content":[
+                    "Hello WOrld this is the most used programming language quote"
+                ]
+            },
+            {
+                "title":"Project One",
+                "content":[
+                    "Hello WOrld this is the most used programming language quote"
+                ]
+            }
+        ],
+        "images":[
+            {"src":"./static/images/loading.png","caption":""},
+            {"src":"./static/images/loading.png","caption":""},
+            {"src":"./static/images/loading.png","caption":""},
+            {"src":"./static/images/loading.png","caption":""}
+        ],
+        "languages":[
+            {"language":"HTML5","bg":"crimson"},
+            {"language":"CSS3","bg":"lightblue"},
+            {"language":"JavaScript","bg":"yellow"},
+            {"language":"HTML5","bg":"crimson"},
+            {"language":"CSS3","bg":"lightblue"}
+        ]
+    },
+    {
+            "projectName":"Hotel Sample Project",
+            "smallDesc":"UI implementation of a hotels website",
+            "git":"https://github.com/kaigikinyua/Class_and_Lab/tree/master/Frontend/frameworks_and_libs/vue/vueone",
+            "paragraphs":[
+                {
+                    "title":"Introduction",
+                    "content":[
+                        "This is a project that features a hotel landing page, services, contacts and authentication page.",
+                        "This is website can be customized to fit different industries and ventures."
+                    ]
+                }
+            ],
+            "images":[
+                {"src":"./static/images/loading.png","caption":""},
+            {"src":"./static/images/loading.png","caption":""},
+            {"src":"./static/images/loading.png","caption":""},
+            {"src":"./static/images/loading.png","caption":""}
+            ],
+            "languages":[
+                {"language":"JavaScript","bg":"yellow"},
+                {"language":"VueJs","bg":"lightseagreen"},
+                {"language":"Sass","bg":"pink"},
+                {"language":"HTML5","bg":"crimson"}
+            ]
+            
+    }
+]

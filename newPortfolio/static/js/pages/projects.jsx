@@ -36,10 +36,10 @@ class ViewProject extends React.Component{
         this.props.cancel(this.props.pid)
     }
     render(){
-        console.log(this.props)
+        console.log(this.props.projectList[0])
         var project=this.props.projectList[this.props.pid]
         var parElements=project.paragraphs.map((p,index)=>{
-            return <Paragraph title={p.title} paragraph={p.paragraph}/>
+            return <Paragraph title={p.title} paragraphs={p.content}/>
         })
         var images=project.images.map((p,index)=>{
             return <Image imgsrc={p.src}/>
@@ -83,10 +83,15 @@ class Paragraph extends React.Component{
         super(props,context)
     }
     render(){
+        var paragraphs=this.props.paragraphs.map((p,index)=>{
+            return <p>{p}</p>
+        })
         return (
             <div className="paragraph">
                 <h3 className="title">{this.props.title}</h3>
-                <p className="par">{this.props.paragraph}</p>
+                <div>
+                    {paragraphs}
+                </div>
             </div>
         )
     }
@@ -165,5 +170,16 @@ var projects=[
         ]
     },
 ]
-
-ReactDOM.render(<ProjectList projectList={projects}/>,document.getElementById("projectList"))
+//projects=getProjects()
+const myprojects=async ()=>{
+    var x=await getProjects()
+    console.log(x)
+    ReactDOM.render(<ProjectList projectList={x}/>,document.getElementById("projectList"))
+}
+myprojects()
+async function getProjects(fn){
+    var response=await fetch("http://localhost:5500/projects.json")
+    var data= await response.json()
+    return data
+}
+//console.log(fetchProjects)

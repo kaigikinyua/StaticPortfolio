@@ -40,6 +40,17 @@ a {
   text-decoration: none;
 }
 
+::-webkit-scrollbar {
+  width: 7px;
+  height: 7px;
+}
+
+::-webkit-scrollbar-thumb {
+  width: 5px;
+  background: #bcf5bc;
+  border-radius: 10px;
+}
+
 nav.topnav {
   position: fixed;
   top: 0px;
