@@ -38,8 +38,8 @@ class ViewProject extends React.Component{
     render(){
         console.log(this.props.projectList[0])
         var project=this.props.projectList[this.props.pid]
-        var siteLink=project.siteLink?<a href={project.siteLink}><button className="call_to_action"><i className="fa fa-link"></i> Website</button></a>:""
-        var github=project.github?<a href={project.github}><button className="call_to_action"><i className="fab fa-github"></i> GitHub</button></a>:""
+        var siteLink=project.siteLink?<a href={project.siteLink}><button className="call_to_action"><i className="fa fa-link"></i> <small>Website</small></button></a>:""
+        var github=project.github?<a href={project.github}><button className="call_to_action"><i className="fab fa-github"></i> <small>GitHub</small></button></a>:""
         var parElements=project.paragraphs.map((p,index)=>{
             return <Paragraph title={p.title} paragraphs={p.content}/>
         })
@@ -178,7 +178,7 @@ const myprojects=async ()=>{
 }
 myprojects()
 async function getProjects(fn){
-    var response=await fetch("http://localhost:5500/projects.json")
+    var response=await fetch("http://192.168.0.180:5500/projects.json")
     var data= await response.json()
     return data
 }

@@ -30,8 +30,10 @@ div.viewProject {
   top: 0px;
   left: 0px;
   height: 90vh;
-  z-index: 100;
-  overflow-y: hidden;
+  z-index: 1000;
+  top: 0px;
+  left: 0px;
+  background: rgba(10, 10, 10, 0.5);
 }
 
 div.viewProjectContainer {
@@ -109,7 +111,7 @@ div.languages div.language {
   display: flex;
   justify-content: center;
   align-items: center;
-  margin: 5px 20px;
+  padding: 0px 20px;
 }
 div.languages div.l_avatar {
   height: 20px;
@@ -139,6 +141,16 @@ div.languages div.l_avatar {
   div.projectCard {
     margin: 5px;
     margin-bottom: 20px;
+  }
+
+  div.viewProject, div.viewProjectContainer {
+    width: 100vw;
+    height: 100%;
+    top: 0px;
+  }
+
+  .call_to_action small {
+    display: none;
   }
 }
 @media only screen and (max-width: 500px) {

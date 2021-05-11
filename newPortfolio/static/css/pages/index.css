@@ -3,6 +3,7 @@ header.landing {
   height: 100vh;
   width: 100vw;
 }
+
 header.landing div.container {
   height: 70vh;
 }
@@ -11,21 +12,55 @@ div.landing_card {
   padding: 2em;
   position: relative;
   height: 100%;
+  display: -ms-grid;
   display: grid;
+  -ms-grid-columns: 1fr 1fr;
   grid-template-columns: 1fr 1fr;
   border-radius: 10px;
 }
 
 div.text_box {
   padding: 30px 0px;
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+  -ms-flex-direction: column;
   flex-direction: column;
+  -webkit-box-pack: center;
+  -ms-flex-pack: center;
   justify-content: center;
   text-align: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
   align-items: center;
 }
+
 div.text_box h3, div.text_box a {
   margin: 30px 0px;
+}
+
+div.image {
+  position: relative;
+  height: 100%;
+  width: 100%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+  -ms-flex-direction: column;
+  flex-direction: column;
+  -webkit-box-pack: center;
+  -ms-flex-pack: center;
+  justify-content: center;
+}
+
+img.profile {
+  position: relative;
+  width: 100%;
+  height: auto;
 }
 
 section.full_section {
@@ -39,30 +74,38 @@ section.portfolio div.container {
   padding: 10px;
   border-radius: 10px;
 }
+
 section.portfolio .title {
   padding: 10px;
 }
 
 div.par {
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
-  margin: 25px 0px;
+  margin-bottom: 50px;
   border: 3px solid transparent;
+  -webkit-transition: 1s;
   transition: 1s;
 }
+
 div.par i {
   padding: 10px;
   font-size: 3em;
+  -webkit-transition: 1s;
   transition: 1s;
   min-width: 60px;
   text-align: center;
 }
+
 div.par p {
-  padding: 10px;
+  padding: 20px;
 }
 
 div.par:hover {
   border-left: 3px solid lightgreen;
 }
+
 div.par:hover i {
   color: lightgreen;
 }
@@ -77,11 +120,117 @@ section.contacts {
   color: white;
   padding-bottom: 50px;
 }
+
 section.contacts div.container {
   padding: 10px;
 }
+
 section.contacts li {
   font-size: 1.3em;
 }
+
+@media only screen and (max-width: 800px) {
+  div.container {
+    width: 600px;
+  }
+}
+@media only screen and (max-width: 600px) {
+  div.landing_card {
+    -ms-grid-columns: 1fr;
+    grid-template-columns: 1fr;
+    -ms-grid-rows: 4fr 1fr;
+    grid-template-rows: 4fr 1fr;
+  }
+
+  div.container {
+    width: 500px;
+  }
+}
+@media only screen and (max-width: 500px) {
+  div.landing_card {
+    -ms-grid-columns: 1fr;
+    grid-template-columns: 1fr;
+    -ms-grid-rows: 3fr 1fr;
+    grid-template-rows: 3fr 1fr;
+  }
+
+  div.container {
+    width: 400px;
+  }
+
+  ul.links {
+    display: none;
+  }
+
+  section.full_section {
+    height: 120vh;
+  }
+
+  div.landing_card {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: normal;
+    -ms-flex-direction: row;
+    flex-direction: row;
+    -ms-grid-columns: 1fr;
+    grid-template-columns: 1fr;
+  }
+
+  div.landing_card .superTitle {
+    font-size: 3em;
+  }
+
+  div.landing_card .subTitle {
+    font-size: 2em;
+  }
+
+  div.par {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+    -ms-flex-direction: column;
+    flex-direction: column;
+    margin-top: 50px;
+  }
+
+  div.par i {
+    font-size: 20px;
+  }
+
+  div.par p {
+    padding: 5px;
+  }
+
+  section.contacts {
+    margin-top: 400px;
+  }
+
+  section.contacts .dual {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -ms-grid-columns: 1fr;
+    grid-template-columns: 1fr;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+    -ms-flex-direction: column;
+    flex-direction: column;
+  }
+}
+@media only screen and (max-width: 400px) {
+  div.landing_card {
+    width: 250px;
+    -ms-grid-columns: 1fr;
+    grid-template-columns: 1fr;
+    -ms-grid-rows: 3fr 1fr;
+    grid-template-rows: 3fr 1fr;
+  }
+
+  div.container {
+    width: 300px;
+  }
+}
+/*# sourceMappingURL=index.css.map */
 
 /*# sourceMappingURL=index.css.map */
