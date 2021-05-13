@@ -1,3 +1,47 @@
+const changeThemeButton=document.getElementById('changeTheme')
+changeThemeButton.addEventListener('click',(e)=>{changeTheme()})
+var currTheme="light"
+
+function changeTheme(){
+    var themeCss=document.getElementById("theme")
+    if(currTheme=="light"){
+        themeCss.href="./static/css/theme/dark_theme.css"
+        currTheme="dark"
+    }
+    else{
+        themeCss.href="./static/css/theme/light_theme.css"
+        currTheme="light"
+    }
+    saveTheme(currTheme)
+}
+function saveTheme(theme){
+    try{
+        localStorage.setItem("theme",theme)
+    }catch(e){
+        console.log("cannot save theme")
+    }
+}
+function loadTheme(){
+    const themeLoc={"light":"./static/css/theme/light_theme.css","dark":"/static/css/theme/dark_theme.css"}
+    var theme="light"
+    try{
+        theme=localStorage.getItem("theme")
+        if(theme=="light" || theme=="dark"){
+            var themeCss=document.getElementById("theme")
+            themeCss.href=themeLoc[theme]
+            console.log(themeLoc[theme])
+        }else{
+            saveTheme("light")
+        }
+    }catch(e){
+        console.log("theme was not set")
+    }
+    return theme
+}
+
+
+
+
 const loadingComponent=`
     <div class="loadingComponent" id="loadingComponent">
     <div class="img">
@@ -42,6 +86,7 @@ var loading=setInterval(()=>{
     incrementLoading()
 },100);
 window.onload=()=>{
+    loadTheme()
     setTimeout(()=>{
         clearInterval(loading)
         i=97
