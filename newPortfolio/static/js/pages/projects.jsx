@@ -52,8 +52,8 @@ class ViewProject extends React.Component{
             return <Language language={p.language} bg={p.bg}/>
         })
         return(
-            <div className="viewProject">
-                <div className="viewProjectContainer center">
+            <div className="viewProject higlightedContainer">
+                <div className="viewProjectContainer center higlightedContainer">
                     <div className="appbar dual">
                         <div>
                             <h3 className="title">{project.projectName}</h3>
@@ -136,7 +136,7 @@ class Project extends React.Component{
     }
     render(){
         return(
-            <div className="projectCard">
+            <div className="projectCard lightContainer">
                 <h3 className="title center">{this.props.projectName}</h3>
                 <p>{this.props.smallDesc}</p>
                 <button className="call_to_action" onClick={this.readMore}>Read More</button>

@@ -12,7 +12,6 @@ div.projectList{
 
 div.projectCard{
     padding:20px;
-    background:white;
     border-radius: 10px;
     text-align: center;
     height: 300px;
@@ -37,7 +36,6 @@ div.viewProject{
 }
 div.viewProjectContainer{
     padding:10px;
-    background:white;
     border-radius: $border_radius;
     display: grid;
     height: 100%;

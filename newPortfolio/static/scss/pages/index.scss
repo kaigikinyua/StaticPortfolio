@@ -48,7 +48,6 @@ section.full_section{
 }
 section.portfolio{
     div.container{
-        background:white;
         padding:10px;
         border-radius: $border_radius;
     }
@@ -81,7 +80,6 @@ div.downloadcv{
 }
 section.contacts{
     margin-top:50px;
-    background:darken(green,10%);
     color:white;
     padding-bottom: 50px;
     div.container{

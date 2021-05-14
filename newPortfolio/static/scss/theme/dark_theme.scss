@@ -1,0 +1,61 @@
+$darkGray:#2E2E2E;
+$lightGray:#3F3F3F;
+$higlightGray:#4F4F4F;
+@import './colors.scss';
+//mixins
+@mixin  elem_box_shadow {
+    box-shadow:1px 2px 10px 10px rgba(10,10,10,0.1);
+}
+body{
+    background:$darkGray;
+}
+
+nav.topnav{
+    background:$lightGray;
+    color:whitesmoke;
+    @include elem_box_shadow;
+}
+
+.lightContainer{
+    background:$lightGray;
+    color:whitesmoke;
+}
+.darkContainer{
+    background:$darkGray;
+}
+.higlightedContainer{
+    background:$higlightGray;
+    color:whitesmoke;
+}
+.call_to_action{
+    background:$accent_green;
+    color:white;
+    font-weight: bold;
+    @include elem_box_shadow;
+    transition: box-shadow 1s;
+}
+.call_to_action:hover{
+    box-shadow: none;
+}
+
+div.theme{
+    background:$dark_green;
+    color:white;
+    @include elem_box_shadow;
+}
+
+//fonts
+.subTitle,.title{
+    color:whitesmoke;
+}
+.superTitle,.quote{
+    color:lighten($accent_green,10%);
+}
+div.par {
+    p{color:whitesmoke;}
+    i{color:lightgray;}
+}
+section.contacts{
+    background:$darkGray;
+    color:whitesmoke;
+}

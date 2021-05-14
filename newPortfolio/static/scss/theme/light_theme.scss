@@ -19,7 +19,7 @@ nav.topnav{
     background:lightgray;
 }
 .higlightedContainer{
-    background:lightgreen;
+    background:white;
 }
 .call_to_action{
     background:$highlight_green;
@@ -41,4 +41,11 @@ div.theme{
 //fonts
 .subTitle,.title{
     color:$dark_green;
+}
+
+section.contacts{
+    background:$dark_green;
+    .subTitle{
+        color:$accent_green;
+    }
 }
