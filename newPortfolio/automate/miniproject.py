@@ -18,6 +18,7 @@ class MiniProject:
             return False
         f=Files(projectDir)
         f.createDir()
+        #create the miniproject imageshow directory in the static/siteimages/
         setUpProject=[
             {"type":"file","name":"/{n}.html".format(n=projectname)},
             {"type":"folder","name":"/static"},

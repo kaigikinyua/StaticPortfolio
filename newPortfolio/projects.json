@@ -1,39 +1,81 @@
 [   
-    {   
-        "projectName":"ProjectOne",
-        "smallDesc":"This is the project Description",
-        "git":"",
+    {
+        "projectName":"Dummy API",
+        "smallDesc":"I work with user interfaces alot and most of the time I have to create a backend and in order to simulate data flow into and out from the interface, this can be a lot of work but this project solves that issue.",
+        "github":"https://github.com/kaigikinyua/dumyapi",
+        "paragraphs":[],
+        "images":[
+            {"src":"./minisite/dummyapi/siteimages/1.png","caption":""}
+        ],
+        "languages":[
+            {"language":"HTML5","bg":"crimson"},
+            {"language":"Sass","bg":"pink"},
+            {"language":"Python","bg":"green"},
+            {"language":"Flask","bg":"darkgreen"},
+            {"language":"JavaScript","bg":"yellow"},
+            {"language":"VueJs","bg":"lightseagreen"}
+        ]
+    },
+    {
+        "projectName":"TSBR",
+        "smallDesc":"TSBR is a transcribing software that enables the user to load a video or audio file and manualy type out what he/she hears and the software compiles it to the srt document",
+        "github":"https://github.com/kaigikinyua/tsb",
         "paragraphs":[
             {
-                "title":"Project One",
+                "title":"Features",
                 "content":[
-                    "Hello WOrld this is the most used programming language quote"
+                    "TSBR is a desktop based application that helps a user transcribe an audio/video file manualy. The transcription format should be imported into the vlc media player easily and no post proccessing of the transcription file is needed.",
+                    "Fast and easy to memorise shortcuts are available to the user to enable him/her to listen,type,forward and rewind the audio/video without leaving the keyboard",
+                    "The transcription software is able to add an automatic timestamp to the words typed in by the user since the words were said while the word was being played",
+                    "The user can preview the transcriptions and the time stamps and edit them to make the transcription play along better with the video/audio",
+                    "Due to eye strain the software has a darkmode to reduce the effects blue light has on a user since he/she may be staring at the screen for a long period of time while transcribing",
+                    "The application should be able to work with files the user has locally on the hardrive"
                 ]
             },
             {
-                "title":"Project One",
+                "title":"User Manual",
                 "content":[
-                    "Hello WOrld this is the most used programming language quote"
+                    "Load the video file.",
+                    "Press play (CTRL + SPACE while on the editor to play).",
+                    "Type what you hear.",
+                    "Pause the video( CTRL + SPACEBAR while on the text editor)",
+                    "Submit what you have typed( CTRL + N while on the editor)",
+                    "After you have finished transcribing you can open the preview window to synch your transcription",
+                    "Save the transcription after you are happy with it."
+                ]
+            },
+            {
+                "title":"Keyboard Shortcuts",
+                "content":[
+                    "CTRL + SPACE - Play or pause the video",
+                    "CTRL + N - Submit the transcription",
+                    "CTRL + -> forward the video/audio",
+                    "CTRL + <- rewind the video/audio"
+                ]
+            },
+            {
+                "title":"Licence",
+                "content":[
+                    "The project is free to use for both commercial and personal interests."
                 ]
             }
         ],
         "images":[
-            {"src":"./static/images/loading.png","caption":""},
-            {"src":"./static/images/loading.png","caption":""},
-            {"src":"./static/images/loading.png","caption":""},
-            {"src":"./static/images/loading.png","caption":""}
+            {"src":"./minisite/tsbr/siteimages/1.png","caption":"Dark mode on"},
+            {"src":"./minisite/tsbr/siteimages/3.png","caption":"Dark mode off"},
+            {"src":"./minisite/tsbr/siteimages/2.png","caption":""}
         ],
         "languages":[
-            {"language":"HTML5","bg":"crimson"},
-            {"language":"CSS3","bg":"lightblue"},
             {"language":"JavaScript","bg":"yellow"},
-            {"language":"HTML5","bg":"crimson"},
-            {"language":"CSS3","bg":"lightblue"}
+            {"language":"ElectronJS","bg":"lightseagreen"},
+            {"language":"VueJs","bg":"lightseagreen"},
+            {"language":"Sass","bg":"pink"},
+            {"language":"HTML5","bg":"crimson"}
         ]
     },
     {
             "projectName":"Hotel Sample Project",
-            "smallDesc":"UI implementation of a hotels website",
+            "smallDesc":"Simple static web template to experiment on my skills to use various web technologies. It features a hotel landing page, login and signup page.",
             "github":"https://github.com/kaigikinyua/Class_and_Lab/tree/master/web/Frontend/frameworks_and_libs/vue/vueone",
             "siteLink":"./minisite/hotel/index.html",
             "paragraphs":[
@@ -46,10 +88,10 @@
                 }
             ],
             "images":[
-                {"src":"./static/images/loading.png","caption":""},
-            {"src":"./static/images/loading.png","caption":""},
-            {"src":"./static/images/loading.png","caption":""},
-            {"src":"./static/images/loading.png","caption":""}
+                {"src":"./minisite/hotel/siteimages/1.png","caption":""},
+                {"src":"./minisite/hotel/siteimages/2.png","caption":""},
+                {"src":"./minisite/hotel/siteimages/3.png","caption":""},
+                {"src":"./minisite/hotel/siteimages/4.png","caption":""}
             ],
             "languages":[
                 {"language":"JavaScript","bg":"yellow"},
@@ -58,5 +100,48 @@
                 {"language":"HTML5","bg":"crimson"}
             ]
             
+    },
+    {
+        "projectName":"Finace Logger",
+        "smallDesc":"This is the front-end of a personal finance logger. It features credit and debit system of maintaining finances. I mainly used it to learn TypeScript.",
+        "github":"https://github.com/kaigikinyua/StaticPortfolio/minisite/finance_logger",
+        "siteLink":"./minisite/finance_logger/index.html",
+        "paragraphs":[
+            {
+                "title":"Introduction",
+                "content":[
+                    "The finance logger is mainly a client side project for now to simulate logging of personal finances.",
+                    "The key thing in this application is to add your finances and you can go back to see where your finances are going or comming from."
+                ]
+            },
+            {
+                "title":"Features",
+                "content":[
+                    "Adding a payment in terms of Payment/Invoice",
+                    "Invoice and Payment should be highlighted in the user interface",
+                    "Filtering finance logs using a search bar",
+                    "These were the features of the project and they needed to be this short and simple since the main objective was to learn TypeScript and not build an actual tool that manages finances."
+                ]
+            },
+            {
+                "title":"Experience points",
+                "content":[
+                    "Since the goal of this project was to get my feet wet with TypeScript, I can confidently say that I quite like the way TypeScript code works.",
+                    "Tedious module errors and project layout are some of the key things that I noticed made me include TypeScript in my web development toolbelt.",
+                    "Also the fact that I can control the output of my JavaScript code to support older browsers is something that was a huge concern for me as a developer.",
+                    "However, TypeScript requires installation of the tsc compiler which is something that is a very minor inconvinience but not a problem at all for me."
+                ]
+            }
+        ],
+        "images":[
+            {"src":"./minisite/finance_logger/siteimages/1.png","caption":"Initial Page"},
+            {"src":"./minisite/finance_logger/siteimages/2.png","caption":"Initial Page"},
+            {"src":"./minisite/finance_logger/siteimages/3.png","caption":"View on a smart phone"}
+        ],
+        "languages":[
+            {"language":"TypeScript","bg":"#AAAAFF"},
+            {"language":"Sass","bg":"pink"},
+            {"language":"HTML5","bg":"crimson"}
+        ]
     }
 ]

@@ -38,7 +38,7 @@ class ViewProject extends React.Component{
         this.props.cancel(this.props.pid)
     }
     render(){
-        console.log(this.props.projectList[0])
+        //console.log(this.props.projectList[0])
         var project=this.props.projectList[this.props.pid]
         var siteLink=project.siteLink?<a href={project.siteLink}><button className="call_to_action"><i className="fa fa-link"></i> <small>Website</small></button></a>:""
         var github=project.github?<a href={project.github}><button className="call_to_action"><i className="fab fa-github"></i> <small>GitHub</small></button></a>:""

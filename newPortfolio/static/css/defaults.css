@@ -142,7 +142,8 @@ section.loadingPage {
   height: 100vh;
   width: 100vw;
   z-index: 1000;
-  background: white;
+  background: #4d4d4d;
+  color: white;
 }
 
 #loadingComponent {

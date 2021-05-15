@@ -14,10 +14,14 @@ div.projectCard{
     padding:20px;
     border-radius: 10px;
     text-align: center;
-    height: 300px;
+    height: 250px;
     display: grid;
     grid-template-rows:1fr 4fr 1fr;
     margin:20px;
+    p{
+        font-size: 1.1em;
+        text-align: left;
+    }
     .call_to_action{
         position: relative;
         min-width: 80%;
@@ -31,11 +35,10 @@ div.viewProject{
     z-index: 1000;
     top:0px;
     left:0px;
-    background:rgba(10,10,10,0.5);
+    //background:rgba(10,10,10,0.5);
     //overflow-y: hidden;
 }
 div.viewProjectContainer{
-    padding:10px;
     border-radius: $border_radius;
     display: grid;
     height: 100%;

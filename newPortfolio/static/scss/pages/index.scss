@@ -98,10 +98,6 @@ section.contacts{
 }
 
 @media only screen and (max-width:600px){
-    div.landing_card{
-        grid-template-columns: 1fr;
-        grid-template-rows: 4fr 1fr;
-    }
     div.container{
         width:500px;
     }
@@ -109,10 +105,6 @@ section.contacts{
 }
 
 @media only screen and (max-width:500px){
-    div.landing_card{
-        grid-template-columns: 1fr;
-        grid-template-rows: 3fr 1fr;
-    }
     div.container{
         width:400px;
     }
@@ -123,9 +115,14 @@ section.contacts{
         height:120vh;
     }
     div.landing_card{
-        display: flex;
-        flex-direction: row;
         grid-template-columns: 1fr;
+        grid-template-rows: 1fr 1fr;
+        div.text_box{
+            padding:10px;
+            h3,a{
+                margin:10px;
+            }
+        }
         .superTitle{
             font-size: 3em;
         }
@@ -155,11 +152,6 @@ section.contacts{
 }
 
 @media only screen and (max-width:400px){
-    div.landing_card{
-        width:250px;
-        grid-template-columns: 1fr;
-        grid-template-rows: 3fr 1fr;
-    }
     div.container{
         width:300px;
     }
