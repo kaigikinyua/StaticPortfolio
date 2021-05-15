@@ -63,12 +63,20 @@ div.actions{
     justify-content: space-evenly;
 }
 div.paragraph{
-    padding:10px;
+    padding:20px;
     //background:pink;
     h3.title{
         margin-left: -5px;
         margin-bottom: 8px;
         margin-top:10px;
+        text-decoration: underline;
+        font-size: 1.4em;
+        letter-spacing: 2px;
+    }
+    p{
+        line-height: 1.2em;
+        margin-bottom: 10px;
+        font-size: 1.2em;
     }
 }
 button.call_to_action{
