@@ -1,0 +1,51 @@
+body {
+  background: lightgray;
+}
+
+nav.topnav {
+  background: white;
+  box-shadow: 1px 2px 5px 5px rgba(80, 100, 80, 0.2);
+}
+
+.lightContainer {
+  background: white;
+}
+
+.darkContainer {
+  background: lightgray;
+}
+
+.higlightedContainer {
+  background: white;
+}
+
+.call_to_action {
+  background: #51e98e;
+  color: white;
+  font-weight: bold;
+  box-shadow: 1px 2px 5px 5px rgba(80, 100, 80, 0.2);
+  transition: box-shadow 1s;
+}
+
+.call_to_action:hover {
+  box-shadow: none;
+}
+
+div.theme {
+  background: #1B6A3B;
+  color: white;
+  box-shadow: 1px 2px 5px 5px rgba(80, 100, 80, 0.2);
+}
+
+.subTitle, .title {
+  color: #1B6A3B;
+}
+
+section.contacts {
+  background: #1B6A3B;
+}
+section.contacts .subTitle {
+  color: #24E371;
+}
+
+/*# sourceMappingURL=light_theme.css.map */

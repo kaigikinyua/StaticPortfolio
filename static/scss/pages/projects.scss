@@ -1,0 +1,182 @@
+@import '../mixins.scss';
+section#projectList{
+    margin-top:60px;
+    min-height: 50vh;
+}
+div.projectList{
+    position: relative;
+    height:100%;
+    display: grid;
+    grid-template-columns: repeat(3,1fr);
+}
+
+div.projectCard{
+    padding:20px;
+    border-radius: 10px;
+    text-align: center;
+    height: 250px;
+    display: grid;
+    grid-template-rows:1fr 4fr 1fr;
+    margin:20px;
+    p{
+        font-size: 1.1em;
+        text-align: left;
+    }
+    .call_to_action{
+        position: relative;
+        min-width: 80%;
+    }
+}
+div.viewProject{
+    position: fixed;
+    top:0px;left:0px;
+    height: 90vh;
+    //overflow-y:hidden;
+    z-index: 1000;
+    top:0px;
+    left:0px;
+    //background:rgba(10,10,10,0.5);
+    //overflow-y: hidden;
+}
+div.viewProjectContainer{
+    border-radius: $border_radius;
+    display: grid;
+    height: 100%;
+    div.appbar{
+        padding:10px;
+        text-align: center;
+    }
+    div.projectContent{
+        position: relative;
+        overflow-y: scroll;
+    }
+    div.text_content,div.additionalContent{
+        position: relative;
+        width:100%;
+        //height: 90vh;
+        overflow-x:hidden;
+        overflow-y: scroll;
+    }
+}
+div.actions{
+    display: flex;
+    justify-content: space-evenly;
+}
+div.paragraph{
+    padding:20px;
+    //background:pink;
+    h3.title{
+        margin-left: -5px;
+        margin-bottom: 8px;
+        margin-top:10px;
+        text-decoration: underline;
+        font-size: 1.4em;
+        letter-spacing: 2px;
+    }
+    p{
+        line-height: 1.2em;
+        margin-bottom: 10px;
+        font-size: 1.2em;
+    }
+}
+button.call_to_action{
+    margin:0px;
+    margin-top:0px;
+}
+button.cancel{
+    margin-left: 10px;
+    outline: none;
+    background:none;
+    border:none;
+    color:crimson;
+    font-size: 1.5em;
+    i{transform:rotate(-45deg);}
+}
+
+div.image{
+    position: relative;
+    text-align: center;
+    margin-top:10px;
+    img.projectImage{
+        width: 100%;
+        height:auto;
+    }
+}
+div.languages{
+    position: relative;
+    display: flex;
+    overflow-x:scroll;
+    width:100%;
+    text-align: center;
+    justify-content: center;
+    div.language{
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        padding:0px 20px;
+    }
+    div.l_avatar{
+        height:20px;
+        width:20px;
+        border-radius: 50%;
+        //background:lightseagreen;
+        margin:5px;
+    }
+}
+
+
+@media only screen and (max-width:800px){
+    div.container{
+        width:600px;
+    }
+    div.projectList{
+        grid-template-columns: 1fr 1fr;
+    }
+}
+
+@media only screen and (max-width:600px){
+    div.container{
+        width:500px;
+    }
+    div.projectList{
+        grid-template-columns: 1fr;
+    }
+    div.projectCard{
+        margin:5px;
+        margin-bottom: 20px;
+    }
+    div.viewProject,div.viewProjectContainer{
+        width:100vw;
+        height:100%;
+        top:0px;
+    }
+    .call_to_action small{
+        display: none;
+    }
+}
+
+@media only screen and (max-width:500px){
+    div.container{
+        width:400px;
+    }
+    div.projectList{
+        grid-template-columns: 1fr;
+    }
+    div.projectCard{
+        margin:5px;
+        margin-bottom: 20px;
+    }
+}
+
+@media only screen and (max-width:400px){
+    div.container{
+        width:300px;
+    }
+    div.projectList{
+        grid-template-columns: 1fr;
+    }
+    div.projectCard{
+        margin:5px;
+        margin-bottom: 20px;
+    }
+}

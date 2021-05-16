@@ -1,0 +1,63 @@
+body {
+  background: #2E2E2E;
+}
+
+nav.topnav {
+  background: #3F3F3F;
+  color: whitesmoke;
+  box-shadow: 1px 2px 10px 10px rgba(10, 10, 10, 0.1);
+}
+
+.lightContainer {
+  background: #3F3F3F;
+  color: whitesmoke;
+}
+
+.darkContainer {
+  background: #2E2E2E;
+}
+
+.higlightedContainer {
+  background: #4F4F4F;
+  color: whitesmoke;
+}
+
+.call_to_action {
+  background: #24E371;
+  color: white;
+  font-weight: bold;
+  box-shadow: 1px 2px 10px 10px rgba(10, 10, 10, 0.1);
+  transition: box-shadow 1s;
+}
+
+.call_to_action:hover {
+  box-shadow: none;
+}
+
+div.theme {
+  background: #1B6A3B;
+  color: white;
+  box-shadow: 1px 2px 10px 10px rgba(10, 10, 10, 0.1);
+}
+
+.subTitle, .title {
+  color: whitesmoke;
+}
+
+.superTitle, .quote {
+  color: #51e98e;
+}
+
+div.par p {
+  color: whitesmoke;
+}
+div.par i {
+  color: lightgray;
+}
+
+section.contacts {
+  background: #2E2E2E;
+  color: whitesmoke;
+}
+
+/*# sourceMappingURL=dark_theme.css.map */

@@ -1,0 +1,204 @@
+[   
+    {
+        "projectName":"Dummy API",
+        "smallDesc":"I work with user interfaces alot and most of the time I have to create a backend and in order to simulate data flow into and out from the interface, this can be a lot of work but this project solves that issue.",
+        "github":"https://github.com/kaigikinyua/dumyapi",
+        "paragraphs":[
+            {
+                "title":"Introduction",
+                "content":[
+                    "The dummy api project is an api that serves random json to an application. However it has a powerful feature that enables the client to declare the structure in which the response data is suppossed to be structured.",
+                    "It uses a `language` called the dummy data language. It is quite primitive as of now but it offers great flexibility for most of the projects that I usually do.",
+                    "It is built on the premises that the data we consume is mostly json and it has a finite set.",
+                    "If you think about it the data we mostly consume is eitehr text(numbers, strings and characters) of vatious length, images, videos and audio. Thus a system that spits out this data can work for the need of most applications.",
+                    "That said the dummy api does not have the ability to perform various generic business logic such as authentication."
+                ]
+            },
+            {
+                "title":"Under the hood",
+                "content":[
+                    "The dummy data api has a single server that has a finite amount of data which can be generated or redacted depending on the request size",
+                    "Suppose you have ten uniq first names and 5 uniq last names. You can use these names to generate 50 uniq usernames and emails to testout your authentication system or frontend components that list out the users",
+                    "The Dummy Data API does this only that it does so for various data and it has a larger repository of uniq data set.",
+                    "This gives a front-end developer the ease of developing the user interface, throwing in a pinch of Dummy Data Language and like magic the user interface can be populated with data that almost mirros the real life data to be entered or consumed by a user",
+                    "The major components that build up the Dummy Data API is the server, uniq data set and the data generator.",
+                    "The data generator receives a request to generate data of a particular type and the number, it picks generic data and tops up the remaining balance with generated data.",
+                    "As a full-stack developer this helps me out alot since if I am only concentrating with the front-end I use the DDAPI to simulate a back-end and see how the front-end behaves and if I want to change the data structure it is easy and fast using the Dummy Data Language"
+                ]
+            },
+            {
+                "title":"Dummy Data Language",
+                "content":[
+                    "As you have read the DDAPI has the capability of structuring the data the way you want it and it does so using the Dummy Data Language(DDL)",
+                    "Just like json the ddl is a key value pair. The key can be whatever the user would like as long as it is in double quotation marks.",
+                    "The value is a ddl variable that references a certain data format. It is important that the variable belongs to the ddl otherwise the request won't go through as intended.",
+                    "The general syntax is usually 'key':<ddl variable> if you would like to create an object.",
+                    "Lets say you want to create a dummy list of users for a chat application the syntax would be {'users':[{'username':username,'email':email}|10]}",
+                    "This syntax enables you to create a list of 10 user objects where the user object consists of the username and email. Notice the keys are in quotes and the variables are not. It is important to do so inorder for the ddl to recognize the variable and the key",
+                    "So as to not get too much technical you can view the project by clicking the github button above and read from the soure, pun intended :)"
+                ]
+            },
+            {
+                "title":"Experience Points",
+                "content":[
+                    "This project has intensive use of regular expressions, which at the time during building of this project was not my cup of tea truth be told",
+                    "But from building this project I got to experience intensive use of regex and its potential which was a mind blowing experice for me.",
+                    "I learnt how to intensively document of a project for others to use to get to know the product and use it.",
+                    "Code structuring was another thing which I got to learn and finally I now know why OOP is so important in programming since it saved me alot while creating different entities that structure data differently.",
+                    "It is one of the projects that helped me level up in programming."
+                ]
+            }
+        ],
+        "images":[
+            {"src":"./minisite/dummyapi/siteimages/1.png","caption":""},
+            {"src":"./minisite/dummyapi/siteimages/2.png","caption":""},
+            {"src":"./minisite/dummyapi/siteimages/3.png","caption":""},
+            {"src":"./minisite/dummyapi/siteimages/4.png","caption":""},
+            {"src":"./minisite/dummyapi/siteimages/5.png","caption":""}
+
+        ],
+        "languages":[
+            {"language":"HTML5","bg":"crimson"},
+            {"language":"Sass","bg":"pink"},
+            {"language":"Python","bg":"green"},
+            {"language":"Flask","bg":"darkgreen"},
+            {"language":"JavaScript","bg":"yellow"},
+            {"language":"VueJs","bg":"lightseagreen"}
+        ]
+    },
+    {
+        "projectName":"TSBR",
+        "smallDesc":"TSBR is a transcribing software that enables the user to load a video or audio file and manualy type out what he/she hears and the software compiles it to the srt document",
+        "github":"https://github.com/kaigikinyua/tsb",
+        "paragraphs":[
+            {
+                "title":"Features",
+                "content":[
+                    "TSBR is a desktop based application that helps a user transcribe an audio/video file manualy. The transcription format should be imported into the vlc media player easily and no post proccessing of the transcription file is needed.",
+                    "Fast and easy to memorise shortcuts are available to the user to enable him/her to listen,type,forward and rewind the audio/video without leaving the keyboard",
+                    "The transcription software is able to add an automatic timestamp to the words typed in by the user since the words were said while the word was being played",
+                    "The user can preview the transcriptions and the time stamps and edit them to make the transcription play along better with the video/audio",
+                    "Due to eye strain the software has a darkmode to reduce the effects blue light has on a user since he/she may be staring at the screen for a long period of time while transcribing",
+                    "The application should be able to work with files the user has locally on the hardrive"
+                ]
+            },
+            {
+                "title":"User Manual",
+                "content":[
+                    "Load the video file.",
+                    "Press play (CTRL + SPACE while on the editor to play).",
+                    "Type what you hear.",
+                    "Pause the video( CTRL + SPACEBAR while on the text editor)",
+                    "Submit what you have typed( CTRL + N while on the editor)",
+                    "After you have finished transcribing you can open the preview window to synch your transcription",
+                    "Save the transcription after you are happy with it."
+                ]
+            },
+            {
+                "title":"Keyboard Shortcuts",
+                "content":[
+                    "CTRL + SPACE - Play or pause the video",
+                    "CTRL + N - Submit the transcription",
+                    "CTRL + -> forward the video/audio",
+                    "CTRL + <- rewind the video/audio"
+                ]
+            },
+            {
+                "title":"Licence",
+                "content":[
+                    "The project is free to use for both commercial and personal interests."
+                ]
+            },
+            {
+                "title":"Experience Points",
+                "content":[
+                    "I got to know how to create an electron application and use some node in managing the file system",
+                    "Implementing the dark mode feature was a feature that I was excited about and got to see the various ways of how to implement it in the future."
+                ]
+            }
+        ],
+        "images":[
+            {"src":"./minisite/tsbr/siteimages/1.png","caption":"Dark mode on"},
+            {"src":"./minisite/tsbr/siteimages/3.png","caption":"Dark mode off"},
+            {"src":"./minisite/tsbr/siteimages/2.png","caption":""}
+        ],
+        "languages":[
+            {"language":"JavaScript","bg":"yellow"},
+            {"language":"ElectronJS","bg":"lightseagreen"},
+            {"language":"VueJs","bg":"lightseagreen"},
+            {"language":"Sass","bg":"pink"},
+            {"language":"HTML5","bg":"crimson"}
+        ]
+    },
+    {
+            "projectName":"Hotel Sample Project",
+            "smallDesc":"Simple static web template to experiment on my skills to use various web technologies. It features a hotel landing page, login and signup page.",
+            "github":"https://github.com/kaigikinyua/Class_and_Lab/tree/master/web/Frontend/frameworks_and_libs/vue/vueone",
+            "siteLink":"./minisite/hotel/index.html",
+            "paragraphs":[
+                {
+                    "title":"Introduction",
+                    "content":[
+                        "This is a project that features a hotel landing page, services, contacts and authentication page.",
+                        "This is website can be customized to fit different industries and ventures."
+                    ]
+                }
+            ],
+            "images":[
+                {"src":"./minisite/hotel/siteimages/1.png","caption":""},
+                {"src":"./minisite/hotel/siteimages/2.png","caption":""},
+                {"src":"./minisite/hotel/siteimages/3.png","caption":""},
+                {"src":"./minisite/hotel/siteimages/4.png","caption":""}
+            ],
+            "languages":[
+                {"language":"JavaScript","bg":"yellow"},
+                {"language":"VueJs","bg":"lightseagreen"},
+                {"language":"Sass","bg":"pink"},
+                {"language":"HTML5","bg":"crimson"}
+            ]
+            
+    },
+    {
+        "projectName":"Finace Logger",
+        "smallDesc":"This is the front-end of a personal finance logger. It features credit and debit system of maintaining finances. I mainly used it to learn TypeScript.",
+        "github":"https://github.com/kaigikinyua/StaticPortfolio/minisite/finance_logger",
+        "siteLink":"./minisite/finance_logger/index.html",
+        "paragraphs":[
+            {
+                "title":"Introduction",
+                "content":[
+                    "The finance logger is mainly a client side project for now to simulate logging of personal finances.",
+                    "The key thing in this application is to add your finances and you can go back to see where your finances are going or comming from."
+                ]
+            },
+            {
+                "title":"Features",
+                "content":[
+                    "Adding a payment in terms of Payment/Invoice",
+                    "Invoice and Payment should be highlighted in the user interface",
+                    "Filtering finance logs using a search bar",
+                    "These were the features of the project and they needed to be this short and simple since the main objective was to learn TypeScript and not build an actual tool that manages finances."
+                ]
+            },
+            {
+                "title":"Experience points",
+                "content":[
+                    "Since the goal of this project was to get my feet wet with TypeScript, I can confidently say that I quite like the way TypeScript code works.",
+                    "Tedious module errors and project layout are some of the key things that I noticed made me include TypeScript in my web development toolbelt.",
+                    "Also the fact that I can control the output of my JavaScript code to support older browsers is something that was a huge concern for me as a developer.",
+                    "However, TypeScript requires installation of the tsc compiler which is something that is a very minor inconvinience but not a problem at all for me."
+                ]
+            }
+        ],
+        "images":[
+            {"src":"./minisite/finance_logger/siteimages/1.png","caption":"Initial Page"},
+            {"src":"./minisite/finance_logger/siteimages/2.png","caption":"Initial Page"},
+            {"src":"./minisite/finance_logger/siteimages/3.png","caption":"View on a smart phone"}
+        ],
+        "languages":[
+            {"language":"TypeScript","bg":"#AAAAFF"},
+            {"language":"Sass","bg":"pink"},
+            {"language":"HTML5","bg":"crimson"}
+        ]
+    }
+]
