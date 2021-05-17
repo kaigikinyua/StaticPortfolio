@@ -180,7 +180,7 @@ const myprojects=async ()=>{
 }
 myprojects()
 async function getProjects(fn){
-    var host=debug?"http://localhost:5500":"https://github.com/kaigikinyua/StaticPortfolio"
+    var host=debug?"http://localhost:5500":"https://kaigikinyua.github.io/StaticPortfolio"
     console.log(host)
     var response=await fetch(`${host}/projects.json`)
     var data= await response.json()
