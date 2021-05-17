@@ -3,10 +3,6 @@ header.landing {
   height: 100vh;
   width: 100vw;
 }
-header.landing div.container {
-  height: 70vh;
-}
-
 div.landing_card {
   padding: 2em;
   position: relative;
