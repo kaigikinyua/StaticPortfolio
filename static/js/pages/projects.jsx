@@ -1,4 +1,4 @@
-const debug=true
+const debug=false
 
 class ProjectList extends React.Component{
     //props=>{project List}
@@ -181,6 +181,7 @@ const myprojects=async ()=>{
 myprojects()
 async function getProjects(fn){
     var host=debug?"http://localhost:5500":"https://github.com/kaigikinyua/StaticPortfolio"
+    console.log(host)
     var response=await fetch(`${host}/projects.json`)
     var data= await response.json()
     return data
