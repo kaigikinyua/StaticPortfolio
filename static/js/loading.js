@@ -86,7 +86,9 @@ var loading=setInterval(()=>{
     incrementLoading()
 },100);
 window.onload=()=>{
-    loadTheme()
+    setTimeout(()=>{
+        loadTheme()
+    },3000)
     setTimeout(()=>{
         clearInterval(loading)
         i=97
