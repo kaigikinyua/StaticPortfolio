@@ -4,22 +4,23 @@ class MiniProjectConfigs:
     rootDir="./mini/mini_project_test_dir"
     genericStatic='./mini/genericstatic'
 class MiniProject:
-    def __init__(self):
-        self.projectName=Console.userInput("Enter the project name")
+    def __init__(self,pname):
+        self.projectName=pname
 
     def listprojects(self):
         allProjects=os.listdir(MiniProjectConfigs.rootDir)
         Console.log(allProjects)
-        
+        return allProjects
+
     def createMiniProject(self,projectname):
         #check if name is already taken
         projectDir=MiniProjectConfigs.rootDir+'/'+str(projectname)
         if(os.path.isdir(projectDir)):
             Console.error("Project Name is already in use")
             return False
-        f=Files(projectDir)
-        f.createDir()
         #create the miniproject imageshow directory in the static/siteimages/
+        pdirectory=Files(projectDir)
+        pdirectory.createDir()
         setUpProject=[
             {"type":"file","name":"/{n}.html".format(n=projectname)},
             {"type":"folder","name":"/static"},
@@ -66,7 +67,7 @@ class MiniProject:
 
     def publishMiniProject(self):
         projectList=self.listprojects()
-        if(self.projectName not in ):
+        if(self.projectName not in projectList):
             Console.error('{pName} has not been created\nList of projects {pList}'.format(pName=self.projectName,pList=projectList))
             return False
         pDisplayName=Console.userInput("Project display name")
@@ -77,15 +78,15 @@ class MiniProject:
             "github":gitHubLink,"paragraphs":[{"title":"","content":[""]}],
             "images":[{"src":"","caption":""}],"languages":[{"language":"","bg":""}]
         }
-        projectJsonFile=JsonFile(MiniProjectConfigs.rootDir+str(self.projectName))
-        if(projectJsonFile.exportJson(data)):
+        projectJsonFile=JsonFile(MiniProjectConfigs.rootDir+str("/"+self.projectName+"/details.json"))
+        if(projectJsonFile.exportJson(exportData)):
             Console.success("Project json is ready")
         else:
             Console.error("Error while exporting project")
             ans=Console.userInput("Would you like to export to a temp file?\nY/N")
             if(ans.lower()=='y'):
                 tempFile=JsonFile("./temp.json")
-                tempFile.exportJson(data)
+                tempFile.exportJson(str(exportData))
 
     def deleteMiniProject(self):
         pass
@@ -93,12 +94,14 @@ class MiniProject:
 def commandLine(args):
     actionArg=["createproject","listprojects","editproject","publishproject","deleteproject"]
     if(args[0].lower() in actionArg):
-        miniP=MiniProject()
+        pname=input("Type the project name\n")
+        miniP=MiniProject(pname)
         if(args[0].lower()==actionArg[0]):
-            pname=input("Type the project name\n")
             miniP.createMiniProject(str(pname))
         elif(args[0].lower()==actionArg[1]):
             miniP.listprojects()
+        elif(args[0].lower()==actionArg[3]):
+            miniP.publishMiniProject()
     else:
         Console.error("Command not found")
     

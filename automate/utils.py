@@ -60,11 +60,12 @@ class JsonFile:
     def exportJson(self,data):
         rslt=False
         with open(self.filepath,"w") as f:
-            try:
-                json.dump(f,data)
-                rslt=True
-            except:
-                Console.error("Error while writing to {f}".format(f=self.filepath))
+            #try:
+            json.dump(data,f,indent=4)
+            rslt=True
+            #except:
+            #    print(data)
+            #    Console.error("Error while writing to {f}".format(f=self.filepath))
         return rslt
 
 class Console:
