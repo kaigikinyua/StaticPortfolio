@@ -83,3 +83,8 @@ class Console:
     @staticmethod
     def log(message):
         print(message)
+    @staticmethod
+    def userInput(message):
+        print('{m}'.format(m=message))
+        userInput=input()
+        return userInput

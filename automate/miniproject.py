@@ -5,7 +5,8 @@ class MiniProjectConfigs:
     genericStatic='./mini/genericstatic'
 class MiniProject:
     def __init__(self):
-        pass
+        self.projectName=Console.userInput("Enter the project name")
+
     def listprojects(self):
         allProjects=os.listdir(MiniProjectConfigs.rootDir)
         Console.log(allProjects)
@@ -27,6 +28,7 @@ class MiniProject:
             {"type":"folder","name":"/static/js"},
             {"type":"folder","name":"/static/js/libs"},
             {"type":"folder","name":"/static/images"},
+            {"type":"folder","name":"/siteimages"}
         ]
         #creating generic directories and files
         for f in setUpProject:
@@ -63,7 +65,27 @@ class MiniProject:
                 copyfile.copyFile(MiniProjectConfigs.genericStatic+genLib["src"],projectDir+"/"+genLib["destination"])
 
     def publishMiniProject(self):
-        pass
+        projectList=self.listprojects()
+        if(self.projectName not in ):
+            Console.error('{pName} has not been created\nList of projects {pList}'.format(pName=self.projectName,pList=projectList))
+            return False
+        pDisplayName=Console.userInput("Project display name")
+        smallDesk=Console.userInput("Small description of the project")
+        gitHubLink=Console.userInput("Github link")
+        exportData={
+            "projectname":pDisplayName,"smallDesk":smallDesk,
+            "github":gitHubLink,"paragraphs":[{"title":"","content":[""]}],
+            "images":[{"src":"","caption":""}],"languages":[{"language":"","bg":""}]
+        }
+        projectJsonFile=JsonFile(MiniProjectConfigs.rootDir+str(self.projectName))
+        if(projectJsonFile.exportJson(data)):
+            Console.success("Project json is ready")
+        else:
+            Console.error("Error while exporting project")
+            ans=Console.userInput("Would you like to export to a temp file?\nY/N")
+            if(ans.lower()=='y'):
+                tempFile=JsonFile("./temp.json")
+                tempFile.exportJson(data)
 
     def deleteMiniProject(self):
         pass
