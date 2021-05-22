@@ -1,0 +1,53 @@
+*{
+    padding:0px;
+    margin:0px;
+}
+body{
+    overflow-x: hidden;
+}
+nav.topnav{
+    position: fixed;
+    top:0px;
+    left:0px;
+    width:100vw;
+    display: flex;
+    justify-content: space-between;
+    padding:10px;
+    max-height: 5vh;
+}
+section.app{
+    position: relative;
+    height:93vh;
+    margin-top:50px;
+    width:100vw;
+}
+
+//todo appbar
+div.appbar{
+    padding:10px;
+    max-width: 400px;
+    display: flex;
+    justify-content: space-between;
+}
+
+
+//todo tile
+div.todoTile{
+    margin:5px;
+    width:400px;
+    border-radius: 10px;
+    padding:10px;
+    div.info,div.todoText{
+        padding:10px;
+    }
+    div.info{
+        display: flex;
+        justify-content: space-between;
+    }
+}
+div.state{
+    height:10px;
+    width:50px;
+    background:lightseagreen;
+    border-radius: 20px;
+}
