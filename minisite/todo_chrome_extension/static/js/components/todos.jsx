@@ -1,6 +1,14 @@
 class TodosContainer extends React.Component{
     constructor(props,context){
         super(props,context)
+        this.showAddTodo=this.showAddTodo.bind(this)
+        this.hideAddTodo=this.hideAddTodo.bind(this)
+        this.addNewTodo=this.addNewTodo.bind(this)
+    }
+    showAddTodo(){}
+    hideAddTodo(){}
+    addNewTodo(todo){
+        console.log(todo)
     }
     render(){
         var todoTiles=this.props.todos.map((todo,index)=>{
@@ -10,6 +18,7 @@ class TodosContainer extends React.Component{
         return (
             <div className="todosList">
                 <TodoAppBar/>
+                <AddTodoForm addTodo={this.addNewTodo} hideAddTodo={this.hideAddTodo}/>
                 {todoTiles}
             </div>
         )
@@ -24,10 +33,10 @@ class TodoAppBar extends React.Component{
     render(){
         return (
             <div className="appbar">
-                <h3>Todos</h3>
+                <h3>Todo List</h3>
                 <div className="actions">
-                    <button className="icn_btn">Add</button>
-                    <button className="icon_btn">Select</button>
+                    <button className="icon_btn"><i className="fa fa-plus"></i></button>
+                    <button className="icon_btn"><i className="fa fa-list"></i></button>
                 </div>
             </div>
         )
@@ -56,7 +65,47 @@ class TodoTile extends React.Component{
         )
     }
 }
+class AddTodoForm extends React.Component{
+    constructor(props,context){
+        super(props,context)
+        this.newTodo=this.newTodo.bind(this)
+    }
+    newTodo(){
+        var tododata={
+            todo:document.getElementById("new_todo").value,
+            date:document.getElementById("new_todo_date").value,
+            time:document.getElementById("new_todo_time").value,
+            routine:document.getElementById("routine").value
+        }
+        this.props.addTodo(tododata)
+    }
+    render(){
+        return (
+            <div className="addTodoForm">
+                <div className="field">
+                    <label>Todo</label>
+                    <input id="new_todo" class="text" name="todo" placeholder="Your todo..."/>
+                </div>
+                <div className="field">
+                    <label>Date</label>
+                    <input id="new_todo_date" type="date" name="date" placeholder="Todo date DD-MM-YYYY"/>
+                </div>
+                <div className="field">
+                    <lable>Time</lable>
+                    <input id="new_todo_time" type="time" name="time" placeholder="Time HH:MM"/>
+                </div>
+                <div className="field">
+                    <label>Routine</label>
+                    <input id="routine" type="checkbox" value="1"/>
+                </div>
+                <button className="submit" onClick={this.newTodo}>Submit</button>
+            </div>
+        )
+    }
+}
+
 var todos=[
+    //deadline:{date:'yyyy-mm-dd',time:"hh:mm"}
     {task:"Buy a Graphics card",deadline:{day:6,month:"Jun",year:2021,hour:10,minutes:16},done:false},
     {task:"Buy a Ryzen CPU",deadline:{day:6,month:"Jun",year:2021,hour:15,minutes:30},done:false},
 ]
