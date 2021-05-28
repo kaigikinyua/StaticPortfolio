@@ -42,6 +42,7 @@ class TodoTile extends React.Component{
     }
     deleteTodo(){}
     render(){
+        /*edit to add the new dealine system*/
         var time=`${this.props.todo.deadline.hour}:${this.props.todo.deadline.minutes}, ${this.props.todo.deadline.day}`
         return(
             <div className="todoTile">
@@ -50,6 +51,7 @@ class TodoTile extends React.Component{
                 </div>
                 <div className="info">
                     <div>{time}</div>
+                    <div><i className="fa fa-plus"></i></div>
                     <div className="state"></div>
                 </div>
             </div>
@@ -57,7 +59,28 @@ class TodoTile extends React.Component{
     }
 }
 var todos=[
+    /*task:"",subTasks:[{task:"",done:?}],deadline:{date:"dd/mm/yyy",time:"hh:mm"},done:?*/
     {task:"Buy a Graphics card",deadline:{day:6,month:"Jun",year:2021,hour:10,minutes:16},done:false},
     {task:"Buy a Ryzen CPU",deadline:{day:6,month:"Jun",year:2021,hour:15,minutes:30},done:false},
 ]
+function getTodos(){
+    var usersTodos
+    if(localStorageAvailable()){usersTodos=localStorage.getItem('todos')}
+    else{usersTodos=[]}
+    return usersTodos
+}
+function saveNewTodo(todo){
+    var todos=getTodos()
+    todos.push(todo)
+    localStorage.setItem('todos',todos)
+}
+function addSubTodo({todoID,}){
+
+}
+function localStorageAvailable(){
+    try{if (localStorage){return true}}
+    catch(e){/*display error*/}
+    return false
+}
+
 ReactDOM.render(<TodosContainer todos={todos}/>,document.getElementById('app'))
