@@ -15,14 +15,45 @@ nav.topnav{
     padding:10px;
     max-height: 5vh;
 }
+button{
+    background:none;
+    border:1px solid transparent;
+}
+button.icon_btn{
+    padding:5px;
+    margin:0px 5px;
+}
+div.field{
+    padding:10px;
+    display: flex;
+    flex-direction: column;
+    label{
+        font-size: 1.2em;
+    }
+    input{
+        padding:10px;
+        margin:10px 0px;
+        outline:none;
+    }
+}
+
 section.app{
     position: relative;
     height:93vh;
     margin-top:50px;
     width:100vw;
+    overflow:hidden;
 }
 
 //todo appbar
+div.todosList{
+    position: relative;
+    height: 100vh;
+    max-width:500px;
+    left:50%;
+    transform:translateX(-50%);
+    overflow-y:scroll;
+}
 div.appbar{
     padding:10px;
     max-width: 400px;
@@ -51,3 +82,6 @@ div.state{
     background:lightseagreen;
     border-radius: 20px;
 }
+
+
+//add todo form
