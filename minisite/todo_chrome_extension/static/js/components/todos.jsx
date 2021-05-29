@@ -1,16 +1,18 @@
 class TodosContainer extends React.Component{
     constructor(props,context){
         super(props,context)
+        this.state={addTodoFormDisplay:false}
         this.showAddTodo=this.showAddTodo.bind(this)
         this.hideAddTodo=this.hideAddTodo.bind(this)
         this.addNewTodo=this.addNewTodo.bind(this)
         this.addSubTask=this.addSubTask.bind(this)
         this.todoDone=this.todoDone.bind(this)
     }
-    showAddTodo(){}
-    hideAddTodo(){}
+    showAddTodo(){this.setState({addTodoFormDisplay:true})}
+    hideAddTodo(){this.setState({addTodoFormDisplay:false})}
     addNewTodo(todo){
-        console.log(todo)
+        this.props.todos.push(todo)
+        //save todos
     }
     addSubTask(todoIndex,subtask){
         this.props.todos[todoIndex].subTasks.push({task:subtask,done:false})
@@ -26,27 +28,16 @@ class TodosContainer extends React.Component{
         })
         return (
             <div className="todosList">
-                <TodoAppBar/>
+                <div className="appbar">
+                    <h3>Todo List</h3>
+                    <div className="actions">
+                        <button className="icon_btn" onClick={this.showAddTodo}><i className="fa fa-plus"></i></button>
+                        <button className="icon_btn"><i className="fa fa-list"></i></button>
+                    </div>
+                </div>
                 {/*<AddTodoForm addTodo={this.addNewTodo} hideAddTodo={this.hideAddTodo}/>*/}
                 {todoTiles}
-            </div>
-        )
-    }
-}
-
-
-class TodoAppBar extends React.Component{
-    constructor(props,context){
-        super(props,context)
-    }
-    render(){
-        return (
-            <div className="appbar">
-                <h3>Todo List</h3>
-                <div className="actions">
-                    <button className="icon_btn"><i className="fa fa-plus"></i></button>
-                    <button className="icon_btn"><i className="fa fa-list"></i></button>
-                </div>
+                {this.state.addTodoFormDisplay?<AddTodoForm addTodo={this.addNewTodo} hideAddTodo={this.hideAddTodo}/>:""}
             </div>
         )
     }
@@ -79,7 +70,7 @@ class TodoTile extends React.Component{
     deleteTodo(){}
     render(){
         /*edit to add the new dealine system*/
-        var time=`${this.props.todo.deadline.hour}:${this.props.todo.deadline.minutes}, ${this.props.todo.deadline.day}`
+        var time=`${this.props.todo.deadline.date}`
         var taskSubTasks=this.props.todo.subTasks.map((t,index)=>{
             return <SubTodoTile task={t} key={index.toString()}/>
         })
@@ -130,13 +121,19 @@ class AddTodoForm extends React.Component{
         this.newTodo=this.newTodo.bind(this)
     }
     newTodo(){
+        /*{task:"",subTasks:[{task:"",done:?}],deadline:{date:"dd/mm/yyy",time:"hh:mm"},done:?}*/
         var tododata={
-            todo:document.getElementById("new_todo").value,
-            date:document.getElementById("new_todo_date").value,
-            time:document.getElementById("new_todo_time").value,
-            routine:document.getElementById("routine").value
+            task:document.getElementById("new_todo").value,
+            subTasks:[],
+            deadline:{
+                date:document.getElementById("new_todo_date").value,
+                time:document.getElementById("new_todo_time").value,
+            },
+            routine:document.getElementById("routine").value,
+            done:false
         }
         this.props.addTodo(tododata)
+        this.props.hideAddTodo()
     }
     render(){
         return (
@@ -194,8 +191,8 @@ class AddSubTodo extends React.Component{
 
 var todos=[
     /*task:"",subTasks:[{task:"",done:?}],deadline:{date:"dd/mm/yyy",time:"hh:mm"},done:?*/
-    {task:"Buy a Graphics card",subTasks:[{task:"Sub task one",done:true}],deadline:{day:6,month:"Jun",year:2021,hour:10,minutes:16},done:false},
-    {task:"Buy a Ryzen CPU",subTasks:[],deadline:{day:6,month:"Jun",year:2021,hour:15,minutes:30},done:false},
+    {task:"Buy a Graphics card",subTasks:[{task:"Sub task one",done:true}],deadline:{date:"10/10/2020",time:"00:00"},done:false},
+    {task:"Buy a Ryzen CPU",subTasks:[],deadline:{date:"10/10/2020",time:"00:00"},done:false},
 ]
 function getTodos(){
     var usersTodos
@@ -203,13 +200,12 @@ function getTodos(){
     else{usersTodos=[]}
     return usersTodos
 }
-function saveNewTodo(todo){
-    var todos=getTodos()
-    todos.push(todo)
-    localStorage.setItem('todos',todos)
-}
-function addSubTodo({todoID}){
-
+function saveTodos(todos){
+    if(localStorageAvailable){
+        localStorage.setItem('todos',todos)
+    }else{
+        console.error('Local storage not available')
+    }
 }
 function localStorageAvailable(){
     try{if (localStorage){return true}}
