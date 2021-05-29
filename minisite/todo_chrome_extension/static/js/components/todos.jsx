@@ -4,21 +4,26 @@ class TodosContainer extends React.Component{
         this.showAddTodo=this.showAddTodo.bind(this)
         this.hideAddTodo=this.hideAddTodo.bind(this)
         this.addNewTodo=this.addNewTodo.bind(this)
+        this.addSubTask=this.addSubTask.bind(this)
     }
     showAddTodo(){}
     hideAddTodo(){}
     addNewTodo(todo){
         console.log(todo)
     }
+    addSubTask(todoIndex,subtask){
+        this.props.todos[todoIndex].subTasks.push({task:subtask,done:false})
+        console.log(this.props.todos[todoIndex])
+    }
     render(){
         var todoTiles=this.props.todos.map((todo,index)=>{
             console.log(todo)
-            return <TodoTile todo={todo} key={index.toString()}/>
+            return <TodoTile todo={todo} index={index} key={index.toString()} addSubTask={this.addSubTask}/>
         })
         return (
             <div className="todosList">
                 <TodoAppBar/>
-                <AddTodoForm addTodo={this.addNewTodo} hideAddTodo={this.hideAddTodo}/>
+                {/*<AddTodoForm addTodo={this.addNewTodo} hideAddTodo={this.hideAddTodo}/>*/}
                 {todoTiles}
             </div>
         )
@@ -47,26 +52,69 @@ class TodoTile extends React.Component{
     constructor(props,context){
         super(props,context)
         this.deleteTodo=this.deleteTodo.bind(this)
-        this.state={expired:false}
+        this.state={expired:false,showSubTodoForm:false,subTodoList:false}
+        this.displaySubTodoForm=this.displaySubTodoForm.bind(this)
+        this.hideSubTodoForm=this.hideSubTodoForm.bind(this)
+        this.addSubTodo=this.addSubTodo.bind(this)
+        this.listSubTodos=this.listSubTodos.bind(this)
     }
+    displaySubTodoForm(){this.setState({showSubTodoForm:true})}
+    hideSubTodoForm(){this.setState({showSubTodoForm:false})}
+    addSubTodo(subTask){this.props.addSubTask(this.props.index,subTask)}
+    listSubTodos(){
+        this.setState(prevState=>{
+            prevState.subTodoList=!prevState.subTodoList
+        })
+    }
+    deleteSubTodo(){}
     deleteTodo(){}
     render(){
         /*edit to add the new dealine system*/
         var time=`${this.props.todo.deadline.hour}:${this.props.todo.deadline.minutes}, ${this.props.todo.deadline.day}`
+        var taskSubTasks=this.props.todo.subTasks.map((t,index)=>{
+            return <SubTodoTile task={t} key={index.toString()}/>
+        })
+        var subTasks=this.props.todo.subTasks
         return(
             <div className="todoTile">
-                <div className="todoText">
+                <div className="todoText dual" onClick={subTasks.length>0?this.listSubTodos:console.log("Hello")}>
                     <h3>{this.props.todo.task}</h3>
                 </div>
                 <div className="info">
-                    <div>{time}</div>
-                    <div><i className="fa fa-plus"></i></div>
                     <div className="state"></div>
+                    <div>{time}</div>
+                    <div class="actions">
+                        <button className="icn-btn"><i className="fa fa-check"></i></button>
+                        <button className="icn-btn" onClick={this.displaySubTodoForm}><i className="fa fa-plus"></i></button>
+                        <button className="icn-btn"><i className="fa fa-trash"></i></button>
+                    </div>
+                </div>
+                {this.state.subTodoList?taskSubTasks:""}
+                {this.state.showSubTodoForm?<AddSubTodo cancel={this.hideSubTodoForm} add={this.addSubTodo}/>:""}
+            </div>
+        )
+    }
+}
+class SubTodoTile extends React.Component{
+    constructor(props,context){
+        super(props,context)
+    }
+    render(){
+        return (
+            <div className="subTodoTile">
+                <div className="info">
+                    <div>{this.props.task.task}</div>
+                    <div className="actions">
+                        <button className="icn-btn"><i className="fa fa-check"></i></button>
+                        <button className="icon-btn"><i className="fa fa-trash"></i></button>
+                    </div>
+                    <div className={this.props.task.done?"state done":"state undone"}></div>
                 </div>
             </div>
         )
     }
 }
+
 class AddTodoForm extends React.Component{
     constructor(props,context){
         super(props,context)
@@ -105,11 +153,39 @@ class AddTodoForm extends React.Component{
         )
     }
 }
+class AddSubTodo extends React.Component{
+    constructor(props,context){
+        super(props,context)
+        this.cancel=this.cancel.bind(this)
+        this.add=this.add.bind(this)    
+    }
+    cancel(){
+        this.props.cancel()
+    }
+    add(){
+        var subtodo=document.getElementById('subTodo').value
+        this.props.add(subtodo)
+    }
+    render(){
+        return(
+            <div className="subTodoForm">
+                <div className="field">
+                    <label>Sub Task</label>
+                    <input class="text" type="text" id="subTodo"/>
+                    <div className="dual">
+                        <button className="btn" onClick={this.add}>Submit</button>
+                        <button className="btn" onClick={this.cancel}>Cancel</button>
+                    </div>
+                </div>
+            </div>
+        )
+    }
+}
 
 var todos=[
     /*task:"",subTasks:[{task:"",done:?}],deadline:{date:"dd/mm/yyy",time:"hh:mm"},done:?*/
-    {task:"Buy a Graphics card",deadline:{day:6,month:"Jun",year:2021,hour:10,minutes:16},done:false},
-    {task:"Buy a Ryzen CPU",deadline:{day:6,month:"Jun",year:2021,hour:15,minutes:30},done:false},
+    {task:"Buy a Graphics card",subTasks:[],deadline:{day:6,month:"Jun",year:2021,hour:10,minutes:16},done:false},
+    {task:"Buy a Ryzen CPU",subTasks:[],deadline:{day:6,month:"Jun",year:2021,hour:15,minutes:30},done:false},
 ]
 function getTodos(){
     var usersTodos
