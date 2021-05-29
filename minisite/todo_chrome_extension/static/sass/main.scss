@@ -107,3 +107,16 @@ div.state{
 
 
 //add todo form
+div.addTodoForm{
+    padding:10px;
+    //position:fixed;
+    top:0px;
+    //box-shadow: 1px 1px 10px 10px gray;
+    //width:200px;
+    background:white;
+}
+button.submit{
+    padding:10px;
+    width: 100%;
+    text-align: center;
+}

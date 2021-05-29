@@ -112,4 +112,16 @@ div.state {
   border-radius: 20px;
 }
 
+div.addTodoForm {
+  padding: 10px;
+  top: 0px;
+  background: white;
+}
+
+button.submit {
+  padding: 10px;
+  width: 100%;
+  text-align: center;
+}
+
 /*# sourceMappingURL=main.css.map */

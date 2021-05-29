@@ -35,9 +35,9 @@ class TodosContainer extends React.Component{
                         <button className="icon_btn"><i className="fa fa-list"></i></button>
                     </div>
                 </div>
+                {this.state.addTodoFormDisplay?<AddTodoForm addTodo={this.addNewTodo} hideAddTodo={this.hideAddTodo}/>:""}
                 {/*<AddTodoForm addTodo={this.addNewTodo} hideAddTodo={this.hideAddTodo}/>*/}
                 {todoTiles}
-                {this.state.addTodoFormDisplay?<AddTodoForm addTodo={this.addNewTodo} hideAddTodo={this.hideAddTodo}/>:""}
             </div>
         )
     }
