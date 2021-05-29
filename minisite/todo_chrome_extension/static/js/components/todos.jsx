@@ -5,6 +5,7 @@ class TodosContainer extends React.Component{
         this.hideAddTodo=this.hideAddTodo.bind(this)
         this.addNewTodo=this.addNewTodo.bind(this)
         this.addSubTask=this.addSubTask.bind(this)
+        this.todoDone=this.todoDone.bind(this)
     }
     showAddTodo(){}
     hideAddTodo(){}
@@ -15,10 +16,13 @@ class TodosContainer extends React.Component{
         this.props.todos[todoIndex].subTasks.push({task:subtask,done:false})
         console.log(this.props.todos[todoIndex])
     }
+    todoDone(todoIndex){
+        this.props.todos[todoIndex].done=true
+    }
     render(){
         var todoTiles=this.props.todos.map((todo,index)=>{
             console.log(todo)
-            return <TodoTile todo={todo} index={index} key={index.toString()} addSubTask={this.addSubTask}/>
+            return <TodoTile todo={todo} index={index} key={index.toString()} addSubTask={this.addSubTask} onMarkDone={this.todoDone}/>
         })
         return (
             <div className="todosList">
@@ -52,11 +56,12 @@ class TodoTile extends React.Component{
     constructor(props,context){
         super(props,context)
         this.deleteTodo=this.deleteTodo.bind(this)
-        this.state={expired:false,showSubTodoForm:false,subTodoList:false}
+        this.state={expired:false,showSubTodoForm:false,subTodoList:false,done:this.props.todo.done}
         this.displaySubTodoForm=this.displaySubTodoForm.bind(this)
         this.hideSubTodoForm=this.hideSubTodoForm.bind(this)
         this.addSubTodo=this.addSubTodo.bind(this)
         this.listSubTodos=this.listSubTodos.bind(this)
+        this.markDone=this.markDone.bind(this)
     }
     displaySubTodoForm(){this.setState({showSubTodoForm:true})}
     hideSubTodoForm(){this.setState({showSubTodoForm:false})}
@@ -65,6 +70,10 @@ class TodoTile extends React.Component{
         this.setState(prevState=>{
             prevState.subTodoList=!prevState.subTodoList
         })
+    }
+    markDone(){
+        this.props.onMarkDone(this.props.index)
+        this.setState({done:true})
     }
     deleteSubTodo(){}
     deleteTodo(){}
@@ -81,12 +90,12 @@ class TodoTile extends React.Component{
                     <h3>{this.props.todo.task}</h3>
                 </div>
                 <div className="info">
-                    <div className="state"></div>
+                    <div className={this.state.done?"state done":"state undone"}></div>
                     <div>{time}</div>
                     <div class="actions">
-                        <button className="icn-btn"><i className="fa fa-check"></i></button>
                         <button className="icn-btn" onClick={this.displaySubTodoForm}><i className="fa fa-plus"></i></button>
-                        <button className="icn-btn"><i className="fa fa-trash"></i></button>
+                        {this.state.done?"":<button className="icn-btn success" onClick={this.markDone}><i className="fa fa-check"></i></button>}
+                        <button className="icn-btn danger"><i className="fa fa-trash"></i></button>
                     </div>
                 </div>
                 {this.state.subTodoList?taskSubTasks:""}
@@ -106,7 +115,7 @@ class SubTodoTile extends React.Component{
                     <div>{this.props.task.task}</div>
                     <div className="actions">
                         <button className="icn-btn"><i className="fa fa-check"></i></button>
-                        <button className="icon-btn"><i className="fa fa-trash"></i></button>
+                        <button className="icon-btn danger"><i className="fa fa-trash"></i></button>
                     </div>
                     <div className={this.props.task.done?"state done":"state undone"}></div>
                 </div>
@@ -165,6 +174,7 @@ class AddSubTodo extends React.Component{
     add(){
         var subtodo=document.getElementById('subTodo').value
         this.props.add(subtodo)
+        this.props.cancel()
     }
     render(){
         return(
@@ -184,7 +194,7 @@ class AddSubTodo extends React.Component{
 
 var todos=[
     /*task:"",subTasks:[{task:"",done:?}],deadline:{date:"dd/mm/yyy",time:"hh:mm"},done:?*/
-    {task:"Buy a Graphics card",subTasks:[],deadline:{day:6,month:"Jun",year:2021,hour:10,minutes:16},done:false},
+    {task:"Buy a Graphics card",subTasks:[{task:"Sub task one",done:true}],deadline:{day:6,month:"Jun",year:2021,hour:10,minutes:16},done:false},
     {task:"Buy a Ryzen CPU",subTasks:[],deadline:{day:6,month:"Jun",year:2021,hour:15,minutes:30},done:false},
 ]
 function getTodos(){

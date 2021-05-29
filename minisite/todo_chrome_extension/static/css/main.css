@@ -18,14 +18,40 @@ nav.topnav {
   max-height: 5vh;
 }
 
+.dual {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+}
+
 button {
   background: none;
   border: 1px solid transparent;
+  outline: none;
 }
 
-button.icon_btn {
+.btn {
+  padding: 10px;
+}
+
+button.icon_btn, button.icn-btn {
   padding: 5px;
   margin: 0px 5px;
+}
+
+button.danger {
+  color: crimson;
+}
+
+button.success {
+  color: lightseagreen;
+}
+
+.done {
+  background: lightgreen;
+}
+
+.undone {
+  background: pink;
 }
 
 div.field {
@@ -83,7 +109,6 @@ div.todoTile div.info {
 div.state {
   height: 10px;
   width: 50px;
-  background: lightseagreen;
   border-radius: 20px;
 }
 
