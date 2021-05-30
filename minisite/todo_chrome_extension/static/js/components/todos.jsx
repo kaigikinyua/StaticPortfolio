@@ -12,18 +12,26 @@ class TodosContainer extends React.Component{
     hideAddTodo(){this.setState({addTodoFormDisplay:false})}
     addNewTodo(todo){
         this.props.todos.push(todo)
-        //save todos
+        saveTodos(this.props.todos)
     }
     addSubTask(todoIndex,subtask){
         this.props.todos[todoIndex].subTasks.push({task:subtask,done:false})
-        console.log(this.props.todos[todoIndex])
+        saveTodos(this.props.todos)
+    }
+    deleteSubTask(todoIndex,subtaskIndex){
+        //untested
+        this.props.todos[todoIndex].subTask.splice(subtaskIndex,1)
+    }
+    subTaskDone(todoIndex,subTaskIndex){
+        this.props.todos[todoIndex].subTask[subtaskIndex].done=true
+        saveTodos(this.props.todos)
     }
     todoDone(todoIndex){
         this.props.todos[todoIndex].done=true
+        saveTodos(this.props.todos)
     }
     render(){
         var todoTiles=this.props.todos.map((todo,index)=>{
-            console.log(todo)
             return <TodoTile todo={todo} index={index} key={index.toString()} addSubTask={this.addSubTask} onMarkDone={this.todoDone}/>
         })
         return (
