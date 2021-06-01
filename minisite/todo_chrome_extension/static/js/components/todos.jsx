@@ -197,11 +197,12 @@ class AddSubTodo extends React.Component{
     }
 }
 
-var todos=[
-    /*task:"",subTasks:[{task:"",done:?}],deadline:{date:"dd/mm/yyy",time:"hh:mm"},done:?*/
+var todos=getTodos()
+/*var todos=[
+    /*task:"",subTasks:[{task:"",done:?}],deadline:{date:"dd/mm/yyy",time:"hh:mm"},done:?
     {task:"Buy a Graphics card",subTasks:[{task:"Sub task one",done:true}],deadline:{date:"10/10/2020",time:"00:00"},done:false},
     {task:"Buy a Ryzen CPU",subTasks:[],deadline:{date:"10/10/2020",time:"00:00"},done:false},
-]
+]*/
 function getTodos(){
     var usersTodos
     if(localStorageAvailable()){usersTodos=localStorage.getItem('todos')}
