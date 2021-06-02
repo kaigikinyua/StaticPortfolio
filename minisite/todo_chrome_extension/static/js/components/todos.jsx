@@ -204,14 +204,17 @@ var todos=getTodos()
     {task:"Buy a Ryzen CPU",subTasks:[],deadline:{date:"10/10/2020",time:"00:00"},done:false},
 ]*/
 function getTodos(){
-    var usersTodos
-    if(localStorageAvailable()){usersTodos=localStorage.getItem('todos')}
-    else{usersTodos=[]}
+    var usersTodos=[]
+    if(localStorageAvailable()){
+        usersTodos=localStorage.getItem('todos')
+        usersTodos==null?usersTodos=[]:usersTodos=JSON.parse(usersTodos)
+    }
     return usersTodos
 }
 function saveTodos(todos){
     if(localStorageAvailable){
-        localStorage.setItem('todos',todos)
+        localStorage.setItem('todos',JSON.stringify(todos))
+        console.log(todos)
     }else{
         console.error('Local storage not available')
     }
