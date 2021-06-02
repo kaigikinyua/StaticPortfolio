@@ -219,6 +219,9 @@ function saveTodos(todos){
         console.error('Local storage not available')
     }
 }
+function clearTodos(){
+    localStorage.removeItem('todos')
+}
 function localStorageAvailable(){
     try{if (localStorage){return true}}
     catch(e){/*display error*/}
