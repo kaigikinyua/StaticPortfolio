@@ -2,48 +2,56 @@ class TodosContainer extends React.Component{
     constructor(props,context){
         super(props,context)
         this.state={addTodoFormDisplay:false}
-        this.showAddTodo=this.showAddTodo.bind(this)
-        this.hideAddTodo=this.hideAddTodo.bind(this)
-        this.addNewTodo=this.addNewTodo.bind(this)
-        this.addSubTask=this.addSubTask.bind(this)
-        this.todoDone=this.todoDone.bind(this)
     }
-    showAddTodo(){this.setState({addTodoFormDisplay:true})}
-    hideAddTodo(){this.setState({addTodoFormDisplay:false})}
-    addNewTodo(todo){
-        this.props.todos.push(todo)
-        saveTodos(this.props.todos)
+    //todo form
+    todoForm={
+        showAddTodo:()=>{this.setState({addTodoFormDisplay:true})},
+        hideAddTodo:()=>{this.setState({addTodoFormDisplay:false})},
+        addNewTodo:(todo)=>{
+            this.props.todos.push(todo)
+            saveTodos(this.props.todos)
+        }
     }
-    addSubTask(todoIndex,subtask){
-        this.props.todos[todoIndex].subTasks.push({task:subtask,done:false})
-        saveTodos(this.props.todos)
+    //todoMethods
+    todoMethods={
+        delete:(todoIndex)=>{
+            this.props.todos.splice(todoIndex,1)
+            saveTodos(this.props.todos)
+            this.forceUpdate()
+        },
+        markDone:(todoIndex)=>{
+            this.props.todos[todoIndex].done=true
+            saveTodos(this.props.todos)
+        }
     }
-    deleteSubTask(todoIndex,subtaskIndex){
-        //untested
-        this.props.todos[todoIndex].subTask.splice(subtaskIndex,1)
-    }
-    subTaskDone(todoIndex,subTaskIndex){
-        this.props.todos[todoIndex].subTask[subtaskIndex].done=true
-        saveTodos(this.props.todos)
-    }
-    todoDone(todoIndex){
-        this.props.todos[todoIndex].done=true
-        saveTodos(this.props.todos)
+    subTaskMethods={
+        addSubTask:({todoIndex:todoIndex,subTask:subtask})=>{
+            this.props.todos[todoIndex].subTasks.push({task:subtask,done:false})
+            saveTodos(this.props.todos)
+        },
+        delete:({todoIndex:todoIndex,subTaskIndex:subTaskIndex})=>{
+            this.props.todos[todoIndex].subTask[subTaskIndex].splice(subtaskIndex,1)
+            saveTodos(this.props.todos)
+        },
+        markDone:({todoIndex:todoIndex,subTaskIndex:subTodoIndex})=>{
+            this.props.todos[todoIndex].subTask[subtaskIndex].done=true
+            saveTodos(this.props.todos)
+        }
     }
     render(){
         var todoTiles=this.props.todos.map((todo,index)=>{
-            return <TodoTile todo={todo} index={index} key={index.toString()} addSubTask={this.addSubTask} onMarkDone={this.todoDone}/>
+            return <TodoTile todo={todo} todoMethods={this.todoMethods} index={index} key={index.toString()} subTaskMethods={this.subTaskMethods}/>
         })
         return (
             <div className="todosList">
                 <div className="appbar">
                     <h3>Todo List</h3>
                     <div className="actions">
-                        <button className="icon_btn" onClick={this.showAddTodo}><i className="fa fa-plus"></i></button>
+                        <button className="icon_btn" onClick={this.todoForm.showAddTodo}><i className="fa fa-plus"></i></button>
                         <button className="icon_btn"><i className="fa fa-list"></i></button>
                     </div>
                 </div>
-                {this.state.addTodoFormDisplay?<AddTodoForm addTodo={this.addNewTodo} hideAddTodo={this.hideAddTodo}/>:""}
+                {this.state.addTodoFormDisplay?<AddTodoForm formMethods={this.todoForm}/>:""}
                 {/*<AddTodoForm addTodo={this.addNewTodo} hideAddTodo={this.hideAddTodo}/>*/}
                 {todoTiles}
             </div>
@@ -62,25 +70,34 @@ class TodoTile extends React.Component{
         this.listSubTodos=this.listSubTodos.bind(this)
         this.markDone=this.markDone.bind(this)
     }
-    displaySubTodoForm(){this.setState({showSubTodoForm:true})}
-    hideSubTodoForm(){this.setState({showSubTodoForm:false})}
-    addSubTodo(subTask){this.props.addSubTask(this.props.index,subTask)}
+    markDone(){
+        this.props.todoMethods.markDone(this.props.index)
+        this.setState({done:true})
+    }
+    deleteTodo(){
+        this.props.todoMethods.delete(this.props.index)
+    }
+    //subtask methods
     listSubTodos(){
         this.setState(prevState=>{
             prevState.subTodoList=!prevState.subTodoList
         })
     }
-    markDone(){
-        this.props.onMarkDone(this.props.index)
-        this.setState({done:true})
+    displaySubTodoForm(){this.setState({showSubTodoForm:true})}
+    hideSubTodoForm(){this.setState({showSubTodoForm:false})}
+    addSubTodo(subTask){
+        this.props.subTaskMethods.addSubTask({todoIndex:this.props.index,subTask:subTask})
     }
-    deleteSubTodo(){}
-    deleteTodo(){}
+    subTaskDone(index){
+        this.props.subTaskMethods.markDone(this.props.index,index)
+    }
+    deleteSubTodo(index){}
     render(){
         /*edit to add the new dealine system*/
         var time=`${this.props.todo.deadline.date}`
         var taskSubTasks=this.props.todo.subTasks.map((t,index)=>{
-            return <SubTodoTile task={t} key={index.toString()}/>
+            var methods={markDone:this.subTaskDone,deleteSubTask:this.deleteSubTodo}
+            return <SubTodoTile task={t} key={index.toString()} index={index} methods={this.props.subTaskMethods}/>
         })
         var subTasks=this.props.todo.subTasks
         return(
@@ -94,7 +111,7 @@ class TodoTile extends React.Component{
                     <div class="actions">
                         <button className="icn-btn" onClick={this.displaySubTodoForm}><i className="fa fa-plus"></i></button>
                         {this.state.done?"":<button className="icn-btn success" onClick={this.markDone}><i className="fa fa-check"></i></button>}
-                        <button className="icn-btn danger"><i className="fa fa-trash"></i></button>
+                        <button className="icn-btn danger" onClick={this.deleteTodo}><i className="fa fa-trash"></i></button>
                     </div>
                 </div>
                 {this.state.subTodoList?taskSubTasks:""}
@@ -106,6 +123,14 @@ class TodoTile extends React.Component{
 class SubTodoTile extends React.Component{
     constructor(props,context){
         super(props,context)
+        this.subTodoDone=this.subTodoDone.bind(this)
+        this.deleteSubTodo=this.deleteSubTodo.bind(this)
+    }
+    subTodoDone(){
+        this.props.methods.markDone(this.props.index)
+    }
+    deleteSubTodo(){
+        this.props.methods.deleteSubTask(this.props.index)
     }
     render(){
         return (
@@ -140,8 +165,9 @@ class AddTodoForm extends React.Component{
             routine:document.getElementById("routine").value,
             done:false
         }
-        this.props.addTodo(tododata)
-        this.props.hideAddTodo()
+        console.log(this.props.formMethods)
+        this.props.formMethods.addNewTodo(tododata)
+        this.props.formMethods.hideAddTodo()
     }
     render(){
         return (
@@ -214,12 +240,13 @@ function getTodos(){
 function saveTodos(todos){
     if(localStorageAvailable){
         localStorage.setItem('todos',JSON.stringify(todos))
-        console.log(todos)
+        //console.log(todos)
     }else{
         console.error('Local storage not available')
     }
 }
 function clearTodos(){
+    console.log("Removing todos from local storage")
     localStorage.removeItem('todos')
 }
 function localStorageAvailable(){
