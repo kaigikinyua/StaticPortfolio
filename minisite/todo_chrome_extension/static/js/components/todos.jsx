@@ -30,11 +30,13 @@ class TodosContainer extends React.Component{
             saveTodos(this.props.todos)
         },
         delete:({todoIndex:todoIndex,subTaskIndex:subTaskIndex})=>{
-            this.props.todos[todoIndex].subTask[subTaskIndex].splice(subtaskIndex,1)
+            console.log(subTaskIndex)
+            this.props.todos[todoIndex].subTasks.splice(subTaskIndex,1)
             saveTodos(this.props.todos)
+            this.forceUpdate()
         },
-        markDone:({todoIndex:todoIndex,subTaskIndex:subTodoIndex})=>{
-            this.props.todos[todoIndex].subTask[subtaskIndex].done=true
+        markDone:({todoIndex:todoIndex,subTaskIndex:subTaskIndex})=>{
+            this.props.todos[todoIndex].subTasks[subTaskIndex].done=true
             saveTodos(this.props.todos)
         }
     }
@@ -88,16 +90,11 @@ class TodoTile extends React.Component{
     addSubTodo(subTask){
         this.props.subTaskMethods.addSubTask({todoIndex:this.props.index,subTask:subTask})
     }
-    subTaskDone(index){
-        this.props.subTaskMethods.markDone(this.props.index,index)
-    }
-    deleteSubTodo(index){}
     render(){
         /*edit to add the new dealine system*/
         var time=`${this.props.todo.deadline.date}`
         var taskSubTasks=this.props.todo.subTasks.map((t,index)=>{
-            var methods={markDone:this.subTaskDone,deleteSubTask:this.deleteSubTodo}
-            return <SubTodoTile task={t} key={index.toString()} index={index} methods={this.props.subTaskMethods}/>
+            return <SubTodoTile task={t} todoIndex={this.props.index} key={index.toString()} index={index} methods={this.props.subTaskMethods}/>
         })
         var subTasks=this.props.todo.subTasks
         return(
@@ -125,12 +122,16 @@ class SubTodoTile extends React.Component{
         super(props,context)
         this.subTodoDone=this.subTodoDone.bind(this)
         this.deleteSubTodo=this.deleteSubTodo.bind(this)
+        this.state={
+            done:this.props.task.done
+        }
     }
     subTodoDone(){
-        this.props.methods.markDone(this.props.index)
+        this.props.methods.markDone({todoIndex:this.props.todoIndex,subTaskIndex:this.props.index})
+        this.setState({done:true})
     }
     deleteSubTodo(){
-        this.props.methods.deleteSubTask(this.props.index)
+        this.props.methods.delete({todoIndex:this.props.todoIndex,subTaskIndex:this.props.index})
     }
     render(){
         return (
@@ -138,10 +139,10 @@ class SubTodoTile extends React.Component{
                 <div className="info">
                     <div>{this.props.task.task}</div>
                     <div className="actions">
-                        <button className="icn-btn"><i className="fa fa-check"></i></button>
-                        <button className="icon-btn danger"><i className="fa fa-trash"></i></button>
+                        <button className="icn-btn" onClick={this.subTodoDone}><i className="fa fa-check"></i></button>
+                        <button className="icon-btn danger" onClick={this.deleteSubTodo}><i className="fa fa-trash"></i></button>
                     </div>
-                    <div className={this.props.task.done?"state done":"state undone"}></div>
+                    <div className={this.state.done?"state done":"state undone"}></div>
                 </div>
             </div>
         )
