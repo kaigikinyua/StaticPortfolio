@@ -9,16 +9,16 @@
                 "content":[
                     "The dummy api project is an api that serves random json to an application. However it has a powerful feature that enables the client to declare the structure in which the response data is suppossed to be structured.",
                     "It uses a `language` called the dummy data language. It is quite primitive as of now but it offers great flexibility for most of the projects that I usually do.",
-                    "It is built on the premises that the data we consume is mostly json and it has a finite set.",
-                    "If you think about it the data we mostly consume is eitehr text(numbers, strings and characters) of vatious length, images, videos and audio. Thus a system that spits out this data can work for the need of most applications.",
+                    "It is built on the premises that the data we consume is mostly json and it has a predictable or generic format in most cases.",
+                    "If you think about it the data we mostly consume is either images, videos, audio and text(numbers, strings and characters) of various length. Thus a system that spits out this data can work for the need of most applications.",
                     "That said the dummy api does not have the ability to perform various generic business logic such as authentication."
                 ]
             },
             {
                 "title":"Under the hood",
                 "content":[
-                    "The dummy data api has a single server that has a finite amount of data which can be generated or redacted depending on the request size",
-                    "Suppose you have ten uniq first names and 5 uniq last names. You can use these names to generate 50 uniq usernames and emails to testout your authentication system or frontend components that list out the users",
+                    "The dummy data api has a single server that has a finite amount of data which can be generated depending on the request size",
+                    "Suppose you have ten uniq first names and 5 unique last names. You can use these names to generate 50 unique usernames and emails to test your authentication system or frontend components that list out the users",
                     "The Dummy Data API does this only that it does so for various data and it has a larger repository of uniq data set.",
                     "This gives a front-end developer the ease of developing the user interface, throwing in a pinch of Dummy Data Language and like magic the user interface can be populated with data that almost mirros the real life data to be entered or consumed by a user",
                     "The major components that build up the Dummy Data API is the server, uniq data set and the data generator.",
