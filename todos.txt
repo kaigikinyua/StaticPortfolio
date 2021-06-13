@@ -1,3 +1,6 @@
 1.Finish up with automate
 2.Link up all the libraries [react,vue,fontawsome to one directory]
 3.Create todoapp as a chrome extension
+    [
+        June 13/2021- June 14/2021 [Create a switchable theme]  
+    ]
